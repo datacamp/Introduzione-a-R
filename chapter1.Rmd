@@ -1,6 +1,6 @@
 --- 
 title_meta  : Capitolo 1
-title       : Intro to basics
+title       : Introduzione alle basi di R
 description : "In questo capitolo compirai i tuoi primi passi su R, imparerai ad utilizzare la console come una calcolatrice e come effettuare l'assegnazione delle variabili. Imparerai inoltre a conoscere i principali tipi di dato utilizzati in R. Pronto? Iniziamo!"
 
 --- type:NormalExercise xp:100 skills:1 key:c44b81c96e
