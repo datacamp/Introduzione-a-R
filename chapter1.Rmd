@@ -3,7 +3,7 @@ title_meta  : Capitolo 1
 title       : Intro to basics
 description : "In questo capitolo compirai i tuoi primi passi su R, imparerai ad utilizzare la console come una calcolatrice e come effettuare l'assegnazione delle variabili. Imparerai inoltre a conoscere i principali tipi di dato utilizzati in R. Pronto? Iniziamo!"
 
---- type:NormalExercise xp:100 skills:1
+--- type:NormalExercise xp:100 skills:1 key:c44b81c96e
 ## Come funziona
 
 Nell'editor alla tua destra puoi inserire codice R e per risolvere gli esercizi proposti. Non appena clicchi il pulsante 'Submit Answer', ogni singola riga di codice inserita è interpretata ed eseguita da R e ti verrà ritornato un messaggio contenente preziose informazioni sul buon esito (o meno) dell'operazione. L'output del codice inserito è mostrato nella console in basso a destra dello schermo.
@@ -49,7 +49,7 @@ test_output_contains("18", incorrect_msg = "Assicurati di effettuare l'operazion
 success_msg("Ottimo! La console ritorna il risultato dell'operazione immessa. Adesso che hai preso un minimo di confidenza con l'interfaccia procediamo con qualcosa di più interessante!")
 ```
 
---- type:NormalExercise xp:100 skills:1
+--- type:NormalExercise xp:100 skills:1 key:031440ec4b
 ## Aritmetica di base con R
 
 R può essere utilizzato come una semplice calcolatrice. Per esempio, considera i seguenti operatori aritmetici:
@@ -132,7 +132,7 @@ success_msg("Perfetto! Procediamo alla sezione successiva.")
 ```
 
 
---- type:NormalExercise xp:100 skills:1
+--- type:NormalExercise xp:100 skills:1 key:54e6b2d792
 ## Assegnazione variabili
 
 Un elemento base della programmazione si chiama **variabile**.
@@ -182,7 +182,7 @@ success_msg("Ottimo lavoro! Hai notato che R non stampa nulla a video quando vie
 ```
 
 
---- type:NormalExercise xp:100 skills:1
+--- type:NormalExercise xp:100 skills:1 key:c5ff758977
 ## Assegnazione variabili (2)
 
 Supponi di avere un cestino con cinque mele. Come apprendista data analyst potresti voler immagazzinare il numero di mele in una variabile chiamata, ad esempio, `mie_mele`.
@@ -228,7 +228,7 @@ success_msg("Ottimo! Continua verso l'esercizio successivo!")
 ```
 
 
---- type:NormalExercise xp:100 skills:1
+--- type:NormalExercise xp:100 skills:1 key:f75e6923bb
 ## Assegnazione variabili (3)
 
 Ogni cestino di frutta che si rispetti deve essere un minimo vario, quindi decidiamo di aggiungere sei arance. Come data analyst, la prima cosa che è necessario effettuare è creare la variabile `mie_arance` e assegnarle il valore 6. Successivamente, volendo calcolare quanti pezzi unici di frutta hai in totale, puoi effettuare questa operazione in modo chiaro utilizzando le variabili create precedentemente:
@@ -288,7 +288,7 @@ success_msg("Molto bene! Il grande vantaggio di fare i conti utilizzando le vari
 ```
 
 
---- type:NormalExercise xp:100 skills:1
+--- type:NormalExercise xp:100 skills:1 key:8b34f74e2d
 ## Mele e arance
 
 La fisica ci dice che non si possono sommare mele e arance. Però l'hai appena fatto, no :-)? Le variabili `mie_mele` e `mie_arance` nell'esercizio precedente contenevano entrambe un numero both contained a number in the previous exercise. L'operatore `+` in R funziona con variabili di tipo numerico (numeric). Se avessi provato a sommare variabili di tipo diverso, per esempio assegnando a `mie_arance` una variabile di tipo character (vedi nell'editor editor), effettuando la somma proveresti ad assegnare alla variabile `mia_frutta` una somma tra una variabile di tipo character e una di tipo numerico. Questa operazione, ovviamente, non è possibile.
@@ -342,7 +342,7 @@ success_msg("Eccellente, continua così! Procedi all'esercizio successivo.")
 ```
 
 
---- type:NormalExercise xp:100 skills:1
+--- type:NormalExercise xp:100 skills:1 key:990c0e6588
 ## Tipi di dato base in R
 
 R utilizza diversi tipi di dato. I tipi elementari sono i seguenti:
@@ -404,7 +404,7 @@ success_msg("Ottimo lavoro! Prosegui all'esercizio successivo.")
 ```
 
 
---- type:NormalExercise xp:100 skills:1
+--- type:NormalExercise xp:100 skills:1 key:24b4108d2d
 ## Che cos'è il tipo di dato?
 
 Ricordi che effettuando la somma `5 + "six"` hai ottenuto un errore dovuto al fatto che stavi cercando di sommare due tipi di dato differenti? Prima di effetuare operazioni simili puoi verificare il tipo di dato contenuto in una variabile e prevenire situazioni simili. Per effettuare questa verifica puoi utilizzare la funzione `class()`, come mostrato dal codice sulla destra.
