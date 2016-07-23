@@ -3,7 +3,6 @@ title_meta  : Capitolo 2
 title       : Vettori
 description : "In questo corso ti porteremo a Las Vegas, dove imparerai ad analizzare in R il risultato delle tue scommesse utilizzando i vettori! Dopo aver completato questo capitolo riuscirai a creare vettori in R, assegnare loro nomi, selezionare elementi e comparare vettori differenti."
 
---- type:NormalExercise xp:100 skills:1 key:08b0200a5f
 ## Create a vector
 
 *Rivedere*
@@ -102,15 +101,10 @@ success_msg("Perfetto! Nota che aggiungere uno spazio dopo ogni virgola nella fu
 ```
 
 
-<<<<<<< HEAD
---- type:NormalExercise xp:100 skills:1 key:2b0301eb5d
-## Crea un vettore (3)
-=======
---- type:NormalExercise xp:100 skills:1 key:0e35eb0c97
-## Create a vector (3)
->>>>>>> da65cbb1605c3d5704250408132d76839f46c509
 
-After one week in Las Vegas and still zero Ferraris in your garage, you decide that it is time to start using your data analytical superpowers.
+## Crea un vettore (3)
+
+Dopo una settimana a Las Vegas e ancora nessuna Ferrari nel tuo garage, decidi che è tempo di utilizzare i tuoi superpoteri da di data scientit.
 
 Prima di effettuare una semplice analisi, decidi di raccogliere tutte le vincite e perdite per la settimana scorsa: 
 
@@ -122,7 +116,7 @@ Per il vettore `vettore_poker`:
 - Giovedì hai perso \$120
 - Venerdì hai vinto \$240
 
-For `vettore_roulette`: 
+Per il vettore `vettore_roulette`: 
 
 - Lunedì hai vinto \$24
 - Martedì hai perso \$50
