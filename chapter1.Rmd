@@ -1,0 +1,472 @@
+--- 
+title_meta  : Capitolo 1
+title       : Intro to basics
+description : "In questo capitolo compirai i tuoi primi passi su R, imparerai ad utilizzare la console come una calcolatrice e come effettuare l'assegnazione delle variabili. Imparerai inoltre a conoscere i principali tipi di dato utilizzati in R. Pronto? Iniziamo!"
+
+--- type:NormalExercise xp:100 skills:1
+## Come funziona
+
+Nell'editor alla tua destra puoi inserire codice R e per risolvere gli esercizi proposti. Non appena clicchi il pulsante 'Submit Answer', ogni singola riga di codice inserita è interpretata ed eseguita da R e ti verrà ritornato un messaggio contenente preziose informazioni sul buon esito (o meno) dell'operazione. L'output del codice inserito è mostrato nella console in basso a destra dello schermo.
+
+R utilizza il simbolo `#` per indicare che tutto il testo che segue è un commento. I commenti sono essenziali per permettere a chi legge il codice di capire quali operazioni vengono effettuate. Commentare il codice è molto importante per renderlo più leggibile.
+I commenti sono ignorati completamente dall'interprete, e quindi non influenzeranno in alcun modo il codice che hai scritto. Ad esempio, _Calculate 3 + 4_  nell'editor a destra è un commento.
+
+Puoi eserguire codice in due modi. Il primo, consiste nello scrivere il programma su un file di testo e successivamente eseguirlo, il secondo modo è la modalità interattiva, infatti è possibile eseguire comandi R immettendoli direttamente nella console.
+
+*** =instructions
+- Nell'editor è già presente un esempio di codice R. Riesci a distinguere le linee di codice R dai commenti?
+- Aggiungi una riga di codice che calcola la somma 6 + 12 e clicca il pulsante 'Submit Answer'.
+
+*** =hint
+Immetti la riga di codice R per il calcolo della somma 6 + 12, come nell'esempio.
+
+*** =pre_exercise_code
+```{r}
+# no pec
+```
+
+*** =sample_code
+```{r}
+# Calcola 3 + 4
+3 + 4
+
+# Calcola 6 + 12
+
+```
+
+*** =solution
+```{r}
+# Calcola 3 + 4
+3 + 4
+
+# Calcola 6 + 12
+6 + 12
+```
+
+*** =sct
+```{r}
+test_output_contains("18", incorrect_msg = "Assicurati di effettuare l'operazione `6 + 12` su una nuova riga. Non mettere `#` prima delle istruzioni altrimenti il codice non viene eseguito!")
+success_msg("Ottimo! La console ritorna il risultato dell'operazione immessa. Adesso che hai preso un minimo di confidenza con l'interfaccia procediamo con qualcosa di più interessante!")
+```
+
+--- type:NormalExercise xp:100 skills:1
+## Aritmetica di base con R
+
+R può essere utilizzato come una semplice calcolatrice. Per esempio, considera i seguenti operatori aritmetici:
+
+- Addizione: `+`
+- Sottrazione: `-`
+- Moltiplicazione: `*`
+- Divisione: `/`
+- Elevamento a potenza: `^`
+- Modulo: `%%`
+
+Gli ultimi due operatori potrebbero aver bisogno di qualche spiegazione aggiuntiva:
+- L'operatore `^` eleva il numero alla sua sinistra alla potenza del numero alla sua destra: per esempio, `3^2` ritorna 9.
+- Il modulo ritorna il resto della divisione del numero alla sua sinistra per il numero alla sua destra, ad esempio 5 modulo 3 o `5 %% 3` ritorna 2.
+
+Segui le istruzioni e completa l'esercizio.
+
+*** =instructions
+- Immetti `2^5` nell'editor per calcolare 2 elevato alla 5.
+- Immetti `28 %% 6` per calcolare 28 modulo 6.
+- Clicca 'Submit Answer' e osserva l'output nella console.
+- Nota come il simbolo `#` è utilizzato per aggiungere commenti nel codice.
+
+*** =hint
+Another example of the modulo operator: `9 %% 2` equals `1`.
+
+*** =pre_exercise_code
+```{r}
+# no pec
+```
+
+*** =sample_code
+```{r}
+# Una addizione
+5 + 5 
+
+# Una sottrazione
+5 - 5 
+
+# Una moltiplicazione
+3 * 5
+
+# Una divisione
+(5 + 5) / 2 
+
+# Elevamento a potenza
+
+
+# Modulo
+
+```
+
+*** =solution
+```{r}
+# Una addizione
+5 + 5
+
+# Una sottrazione
+5 - 5 
+
+# Una moltiplicazione
+3 * 5
+
+# Una divisione
+(5 + 5) / 2 
+
+# Elevamento a potenza
+2 ^ 5
+
+# Modulo
+28 %% 6
+```
+
+*** =sct
+```{r}
+msg = "Non rimuovere gli altri esempi di operazioni aritmetiche!"
+test_output_contains("2^5", incorrect_msg = "L'esempio di elevamento a potenza non è corretto. Immetti `2 ^ 5` su una nuova riga.")
+test_output_contains("28 %% 6", incorrect_msg = "Sembra esserci un problema con l'esempio dell'operazione modulo. Scrivi `28 %% 6` su una nuova riga.")
+success_msg("Perfetto! Procediamo alla sezione successiva.")
+```
+
+
+--- type:NormalExercise xp:100 skills:1
+## Assegnazione variabili
+
+Un elemento base della programmazione si chiama **variabile**.
+
+Una variabile è un contenitore con un nome, che consente di memorizzare in R un valore (ad esempio 4), oppure un oggetto (ad esempio una funzione). Successivamente all'assegnazione è possibile utilizzare il nome della variabile per accedere al valore (o all'oggetto) contenuto all'interno della variabile stessa.
+
+Puoi assegnare il valore 4 alla variabile `mia_variabile` con il seguente comando
+
+```
+mia_variabile <- 4
+```
+
+*** =instructions
+Ora tocca a te: completa il codice nell'editor in modo da assegnare il valore 42 alla variabile `x`. Clicca su 'Submit Answer'. Nota che quando chiedi a R di stampare a video `x`, viene stampato il numero 42.
+
+*** =hint
+Osserva come il valore 4 è stato assegnato alla variabileto `mia_variabile` nell'esempio. Fai esattamente la stessa cosa nell'editor ma questa volta assegna il valore 42 alla variabile `x`.
+
+*** =pre_exercise_code
+```{r}
+# no pec
+```
+
+*** =sample_code
+```{r}
+# Assegna il valore 42 a x
+x <- 
+
+# Stampa a video il contenuto di x
+x
+```
+
+*** =solution
+```{r}
+# Assegna il valore 42 a x
+x <- 42
+
+# Stampa a video il contenuto di x
+x
+```
+
+*** =sct
+```{r}
+test_object("x", undefined_msg = "Assicurati di definire una variabile `x`.",
+            incorrect_msg = "Assicurati di assegnare il corretto valore a `x`.") 
+success_msg("Ottimo lavoro! Hai notato che R non stampa nulla a video quando viene effettuata l'assegnazione? `x <- 42` non ha generato nessun output siccome R assume che utilizzerai questa variabile in futuro. Altrimenti non ci sarebbe bisogno di salvare nulla all'interno di una variabile. Procedi alla prossima sezione!")
+```
+
+
+--- type:NormalExercise xp:100 skills:1
+## Assegnazione variabili (2)
+
+Supponi di avere un cestino con cinque mele. Come apprendista data analyst potresti voler immagazzinare il numero di mele in una variabile chiamata, ad esempio, `mie_mele`.
+
+*** =instructions
+- Scrivi il seguente codice nell'editor: `mie_mele <- 5`. Il risultato di questa operazione sarà l'assegnazione del valore 5 alla variabile  `mie_mele`.
+- Inserisci `mie_mele` sotto il secondo commento. Questo comando causerà la stampa a video di `mie_mele`.
+- Clicca 'Submit Answer' e osserva la console: vedrai che il numero 5 è stato stampato. Ora sai che R ha collegato la variabile `mie_mele` al valore 5.
+
+*** =hint
+Ricorda che se vuoi effettuare un'assegnazione in R di un numero o un oggetto ad una variabile puoi utilizzare l'operatore `<-`. Alternativamente, puoi usare il classico operatore `=`, ma `<-` è generalmente preferito nella community R.
+
+*** =pre_exercise_code
+```{r}
+# no pec
+```
+
+*** =sample_code
+```{r}
+# Assegna il valore 5 alla variabile mie_mele
+
+
+# Stampa il contenuto della variabile mie_mele
+
+```
+
+*** =solution
+```{r}
+# Assegna il valore 5 alla variabile mie_mele
+mie_mele <- 5
+
+# Stampa il contenuto della variabile mie_mele
+mie_mele
+```
+
+*** =sct
+```{r}
+test_object("mie_mele", 
+            undefined_msg = "Assicurati di aver definito una variabile `mie_mele`.",
+            incorrect_msg = "Assicurati di aver assegnato il valore corretto alla variabile `mie_mele`.")
+test_output_contains("mie_mele", incorrect_msg = "Hai detto a R in modo esplicito di stampare la variabile `mie_mele` variable nella console?")
+success_msg("Ottimo! Continua verso l'esercizio successivo!")
+```
+
+
+--- type:NormalExercise xp:100 skills:1
+## Assegnazione variabili (3)
+
+Ogni cestino di frutta che si rispetti deve essere un minimo vario, quindi decidiamo di aggiungere sei arance. Come data analyst, la prima cosa che è necessario effettuare è creare la variabile `mie_arance` e assegnarle il valore 6. Successivamente, volendo calcolare quanti pezzi unici di frutta hai in totale, puoi effettuare questa operazione in modo chiaro utilizzando le variabili create precedentemente:
+
+```
+mie_mele + mie_arance
+```
+
+*** =instructions
+- Assegna a `mie_arance` il valore 6.
+- Somma le variabili `mie_mele` e `mie_arance` e fai stampare a R il risultato.
+- Assegna il risultato della somma tra `mie_mele` e `mie_arance` ad una nuova variabile chiamata `mia_frutta`.
+
+*** =hint
+`mia_frutta` è semplicemente la somma tra `mie_mele` e `mie_arance`. Puoi usare l'operatore `+` per effettuare la somma e `<-` per assegnare il risultato a `mia_frutta`.
+
+*** =pre_exercise_code
+```{r}
+# no pec
+```
+
+*** =sample_code
+```{r}
+# Assegna il valore corretto alle variabili mie_mele e mie_arance
+mie_mele <- 5
+
+
+# Somma queste due variabili
+
+
+# Crea la variabile mia_frutta
+
+```
+
+*** =solution
+```{r}
+# Assegna il valore corretto alle variabili mie_mele e mie_arance
+mie_mele  <- 5
+mie_arance <- 6
+
+# Somma queste due variabili
+mie_mele + mie_arance
+
+# Crea la variabile mia_frutta
+mia_frutta <- mie_mele + mie_arance
+```
+
+*** =sct
+```{r}
+test_object("mie_mele", incorrect_msg = "Assegna il valore 5 a `mie_mele`.")
+test_object("mie_arance", incorrect_msg = "Assegna il valore 6 a `mie_arance`.")
+test_output_contains("mie_mele + mie_arance",
+                     incorrect_msg = "Assicurati di stampare il risultato della somma di `mie_mele` e `mie_arance`. Il codice di esempio nella descrizione fornisce già la risposta.")
+msg <- "Hai utilizzato l'assegnazione `mia_frutta <- mie_mele + mie_arance` per creare la variabile `mia_frutta`?"
+test_object("mia_frutta", undefined_msg = msg, incorrect_msg = msg)
+success_msg("Molto bene! Il grande vantaggio di fare i conti utilizzando le variabili è la possibilità di riutilizzare il codice. Se assegnassi a `mie_mele` il valore 12 invece di 5 ed eseguissi nuovamente lo script, `mia_frutta` verrebbe aggiornata automaticamente. Procedi all'esercizio successivo.")
+```
+
+
+--- type:NormalExercise xp:100 skills:1
+## Mele e arance
+
+La fisica ci dice che non si possono sommare mele e arance. Però l'hai appena fatto, no :-)? Le variabili `mie_mele` e `mie_arance` nell'esercizio precedente contenevano entrambe un numero both contained a number in the previous exercise. L'operatore `+` in R funziona con variabili di tipo numerico (numeric). Se avessi provato a sommare variabili di tipo diverso, per esempio assegnando a `mie_arance` una variabile di tipo character (vedi nell'editor editor), effettuando la somma proveresti ad assegnare alla variabile `mia_frutta` una somma tra una variabile di tipo character e una di tipo numerico. Questa operazione, ovviamente, non è possibile.
+
+*** =instructions
+- Clicca 'Submit Answer' e leggi il messaggio di errore. Cerca di capire come mai il codice non è stato eseguito.
+- Aggiusta il codice così che R sappia che hai 6 arance e quindi un cestino di frutta con un totale di 11 pezzi.
+
+*** =hint
+Devi assegnare il valore numerico `6` alla variabile `mie_arance` invece della variabile di tipo character `"sei"`. Nota come le virgolette sono utilizzate per indicare a R che `"sei"` è una variabile di tipo character.
+
+*** =pre_exercise_code
+```{r}
+# no pec
+```
+
+*** =sample_code
+```{r}
+# Assegna il valore alla variabile mie_mele
+mie_mele <- 5 
+
+# Correggi l'assegnazione della variabile mie_arance
+mie_arance <- "sei" 
+
+# Crea la variabile mia_frutta e stampala a video nella console
+mia_frutta <- mie_mele + mie_arance 
+mia_frutta
+```
+
+*** =solution
+```{r}
+# Assegna il valore alla variabile mie_mele
+mie_mele <- 5  
+
+# Correggi l'assegnazione della variabile mie_arance
+mie_arance <- 6
+
+# Crea la variabile mia_frutta e stampala a video nella console
+mia_frutta <- mie_mele + mie_arance 
+mia_frutta
+```
+
+*** =sct
+```{r}
+test_error(incorrect_msg = "You can do this by setting the `mie_arance` variable to a numeric value, not a string!")
+test_object("mie_mele", incorrect_msg = "Assicurati che `mie_mele` contenga `5`.")
+test_object("mie_arance", incorrect_msg = "Assicurati che `mie_arance` contenga `6`.")
+test_object("mia_frutta", incorrect_msg = "Il valore di `mia_frutta` non è corretto. Dovrebbe essere 11, ossia la somma di `mie_mele` e `mie_arance`.")
+test_output_contains("mia_frutta", incorrect_msg = "Non rimuovere la riga che stampa la variabile `mia_frutta`.")
+success_msg("Eccellente, continua così! Procedi all'esercizio successivo.")
+```
+
+
+--- type:NormalExercise xp:100 skills:1
+## Tipi di dato base in R
+
+R utilizza diversi tipi di dato. I tipi elementari sono i seguenti:
+
+- I valori decimali come `4.5` sono chiamati **numerics**.
+- I numeri naturali come `4` sono chiamati **integers**. Attenzione, gli integers sono anche numerics.
+- I valori booleani (`TRUE` o `FALSE`) sono chiamati **logical**.
+- I valori di testo (o stringhe) sono chiamati **characters**.
+
+Nota come le virgolette (semplici o doppie) sono utilizzate per indicare che il loro contenuto è di tipo character.
+
+*** =instructions
+Cambia il valore delle seguenti variabili:
+- Cambia `mia_numeric` al valore `42`.
+- Cambia `mia_character` al valore `"universo"`. Nota che le virgolette indicano che `"universo"` è di tipo character.
+- Cambia `mia_logical` al valore `FALSE`.
+
+Attenzione! R è case sensitive. Questo significa che scrivere `mia_numeric` oppure `Mia_numeric` equivale a scrivere due cose diverse!
+
+*** =hint 
+Cambia i valori nell'editor con quelli forniti dall'esercizio. Per esempio:
+`mia_numeric <- 42` assegna il valore 42 alla variabile `mia_numeric`. 
+
+*** =pre_exercise_code
+```{r}
+# no pec
+```
+
+*** =sample_code
+```{r}
+# Cambia mia_numeric assegnandole il valore 42
+mia_numeric <- 42.5
+
+# Cambia mia_character assegnandole il valore "universo"
+mia_character <- "un testo"
+
+# Cambia mia_logical assegnandole il valore FALSE
+mia_logical <- TRUE
+```
+
+*** =solution
+```{r}
+# Cambia mia_numeric assegnandole il valore 42
+mia_numeric <- 42
+
+# Cambia mia_character assegnandole il valore "universo"
+mia_character <- "universo"
+
+# Cambia mia_logical assegnandole il valore FALSE
+mia_logical <- FALSE
+```
+
+*** =sct
+```{r}
+test_object("mia_numeric", incorrect_msg = "Hai modificato correttamente la dichiarazione di `mia_numeric` così che contanga il valore 42?")
+test_object("mia_character", incorrect_msg = "Hai modificato correttamente `my_character` così che contenga `\"universo\"`? Non dimenticare le virgolette!")
+test_object("mia_logical", incorrect_msg = "Hai modificato correttamente `my_logical` al valore `FALSE`? Nota che tutte le lettere di `FALSE` devono essere maiuscole!")
+success_msg("Ottimo lavoro! Prosegui all'esercizio successivo.")
+```
+
+
+--- type:NormalExercise xp:100 skills:1
+## Che cos'è il tipo di dato?
+
+Ricordi che effettuando la somma `5 + "six"` hai ottenuto un errore dovuto al fatto che stavi cercando di sommare due tipi di dato differenti? Prima di effetuare operazioni simili puoi verificare il tipo di dato contenuto in una variabile e prevenire situazioni simili. Per effettuare questa verifica puoi utilizzare la funzione `class()`, come mostrato dal codice sulla destra.
+
+*** =instructions
+Completa il codice nell'editor e stampa la classe di `mia_character` and `mia_logical`. 
+
+*** =hint
+Il codice che stampa il tipo di dato di `mia_numeric` è già incluso; fai la stessa cosa per `mia_character` e `mia_logical`. 
+
+*** =pre_exercise_code
+```{r}
+# no pec
+```
+
+*** =sample_code
+```{r}
+# Dichiara variabili di diverso tipo
+mia_numeric <- 42
+mia_character <- "universo"
+mia_logical <- FALSE 
+
+# Controlla la classe di mia_numeric
+class(mia_numeric)
+
+# Controlla la classe di mia_character
+
+
+# Controlla la classe di mia_logical
+
+```
+
+*** =solution
+```{r}
+# Declare variables of different types:
+mia_numeric <- 42
+mia_character <- "universe"
+mia_logical <- FALSE
+
+# Controlla la classe di mia_numeric
+class(mia_numeric)
+
+# Controlla la classe di mia_character
+class(mia_character)
+
+# Controlla la classe di mia_logical
+class(mia_logical)
+```
+
+*** =sct
+```{r}
+msg <- "Non cambiare la dichiarazione delle variabili!"
+lapply(c("mia_numeric", "mia_character", "mia_logical"), test_object, undefined_msg = msg, incorrect_msg = msg)
+patt <- "Hai immesso `class(%1$s)` per stampare a video il tipo di dato di `%1$s`?"
+test_output_contains("class(mia_numeric)",
+                     incorrect_msg = "Non rimuovere il codice che stampa il tipo di `my_numeric`.")
+test_output_contains("class(mia_character)",
+                     incorrect_msg = sprintf(patt, "mia_character"))
+test_output_contains("class(mia_logical)",
+                     incorrect_msg = sprintf(patt, "mia_logical"))
+success_msg("Congratulazioni! Questo era l'ultimo esercizio di questo capitolo. Prosegui al prossimo capitolo per iniziare a conoscere il mondo dei vettori in R!")
+```
+
+
+
