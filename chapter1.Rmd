@@ -74,7 +74,7 @@ Segui le istruzioni e completa l'esercizio.
 - Nota come il simbolo `#` è utilizzato per aggiungere commenti nel codice.
 
 *** =hint
-Another example of the modulo operator: `9 %% 2` equals `1`.
+Un altro esempio dell'operatore modulo: `9 %% 2` (leggi: '9 modulo 2') è uguale a `1`.
 
 *** =pre_exercise_code
 ```{r}
