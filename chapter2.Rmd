@@ -3,7 +3,7 @@ title_meta  : Capitolo 2
 title       : Vettori
 description : "In questo corso ti porteremo a Las Vegas, dove imparerai ad analizzare in R il risultato delle tue scommesse utilizzando i vettori! Dopo aver completato questo capitolo riuscirai a creare vettori in R, assegnare loro nomi, selezionare elementi e comparare vettori differenti."
 
---- type:NormalExercise xp:100 skills:1
+--- type:NormalExercise xp:100 skills:1 key:7329436201
 ## Crea un vettore
 
 *Rivedere*
@@ -46,7 +46,7 @@ success_msg("Perfetto! Procedi all'esercizio successivo.")
 ```
 
 
---- type:NormalExercise xp:100 skills:1
+--- type:NormalExercise xp:100 skills:1 key:aabd77b1a8
 ## Crea un vettore (2)
 
 Concentriamoci sui vettori!
@@ -102,7 +102,7 @@ success_msg("Perfetto! Nota che aggiungere uno spazio dopo ogni virgola nella fu
 ```
 
 
---- type:NormalExercise xp:100 skills:1
+--- type:NormalExercise xp:100 skills:1 key:2b0301eb5d
 ## Crea un vettore (3)
 
 Dopo una settimana a Las Vegas e ancora nessuna Ferrari nel tuo garage, decidi che è tempo di utilizzare i tuoi superpoteri di data scientist.
@@ -161,7 +161,7 @@ success_msg("Molto bene! Per visualizzare il contenuto dei vettori, ricordati ch
 ```
 
 
---- type:NormalExercise xp:100 skills:1
+--- type:NormalExercise xp:100 skills:1 key:29a7f48590
 ## Assegnare un nome ad un vettore
 
 Dal punto di vista di un data analyst, è importante avere chiaro in mente che dati stai utilizzando. In particolare, è essenziale capire a cosa si riferisce ogni elemento.
@@ -233,7 +233,7 @@ success_msg("Ben fatto! Prosegui al prossimo esercizio.")
 ```
 
 
---- type:NormalExercise xp:100 skills:1
+--- type:NormalExercise xp:100 skills:1 key:33b17b05db
 ## Assegnare un nome ad un vettore (2)
 
 Se vuoi diventare un buon programmatore devi diventare pigro. (Se sei già pigro, è molto probabile che tu sia già uno di quei talenti nell'ambito della programmazione in attesa di esprimerti.)
@@ -303,7 +303,7 @@ success_msg("Ottimo! Un consiglio: cerca di evitare di duplicare il codice ogni 
 ```
 
 
---- type:NormalExercise xp:100 skills:1
+--- type:NormalExercise xp:100 skills:1 key:6c16c77630
 ## Calcola le vincite totali
 
 Ora che i dati sulle vincite sono stati immagazzinati in vettori puoi iniziare a fare alcuni conti. 
@@ -378,7 +378,7 @@ success_msg("Ottimo lavoro! Prosegui al prossimo esercizio.")
 ```
 
 
---- type:NormalExercise xp:100 skills:1
+--- type:NormalExercise xp:100 skills:1 key:49ee1d095a
 ## Calcola le vincite totali (2)
 
 Ora sai come R effettua operazioni aritmetiche con i vettori. Calcola ora a quanto ammonta il profitto o la perdita totale per giorno della settimana. Il profitto totale giornaliero è la somma dei profitti e delle perdite che hai realizzato a poker sommato al risultato giornaliero del gioco della roulette.
@@ -435,7 +435,7 @@ success_msg("Eccellente! Continua all'esercizio successivo.")
 ```
 
 
---- type:NormalExercise xp:100 skills:1
+--- type:NormalExercise xp:100 skills:1 key:113f861114
 ## Calcola le vincite totali (3)
 
 Sulla base delle analisi effettuate precedentemente, sembra che tu abbia ottenuto un risultato positivo in alcuni giorni e negativo in altri. Questo non è chiaramente il risultato ottimale atteso, e ti chiedo se globalmente ci sia stato un profitto o una perdita.
@@ -521,7 +521,7 @@ success_msg("Ottimo. Questa però è una cattiva notizia...")
 ```
 
 
---- type:NormalExercise xp:100 skills:1
+--- type:NormalExercise xp:100 skills:1 key:4be7ee1045
 ## Comparing total winnings
 
 Oops, sembra che tu stia perdendo invece di vincere. Tempo di rivedere un attimo la strategia! Questo però richiederà analisi più dettagliate...
@@ -592,7 +592,7 @@ success_msg("Ottimo lavoro! Procedi al prossimo esercizio.")
 ```
 
 
---- type:NormalExercise xp:100 skills:1
+--- type:NormalExercise xp:100 skills:1 key:bb0eb55d93
 ## Selezione elementi dei vettori
 
 La tua idea sembra essere corretta. Sembra che il poker ti si addica di più della roulette. 
@@ -651,7 +651,7 @@ success_msg("Eccellente! R permette anche di selezionari più valori. Impara com
 ```
 
 
---- type:NormalExercise xp:100 skills:1
+--- type:NormalExercise xp:100 skills:1 key:ce93f7a2ff
 ## Selezione elementi dei vettori (2)
 
 Perchè non analizzare i risultati infrasettimanali? 
@@ -711,7 +711,7 @@ success_msg("Molto bene! Continua con l'esercizio successivo per specializzarti 
 ```
 
 
---- type:NormalExercise xp:100 skills:1
+--- type:NormalExercise xp:100 skills:1 key:f3419b5483
 ## Selezione elementi dei vettori (3)
 
 Selezionare più elementi da `vettore_poker` utilizzando `c(2, 3, 4)` non è molto comodo. Molti programmatori sono pigri per natura e così hanno creato un metodo più semplice e veloce: `c(2, 3, 4)` può essere abbreviato utilizzando `2:4`, ossia un comando che genera un vettore con tutti i numeri naturali compresi tra 2 e 4, estremi inclusi.
@@ -764,7 +764,7 @@ success_msg("Fantastico! L'operatore due punti è estremamente utile ed è spess
 ```
 
 
---- type:NormalExercise xp:100 skills:1
+--- type:NormalExercise xp:100 skills:1 key:0ed272a349
 ## Selezione elementi dei vettori (4)
 
 Un ulteriore modo per risolvere l'esercizio precedente consiste nell'utilizzare i nomi degli elementi del vettore (nel nostro caso: Lunedì, Martedì, ...) invece degli indici di posizione. Ad esempio, 
@@ -839,7 +839,7 @@ success_msg("Ottimo lavoro! Oltre a partizionare i vettori utilizzando gli indic
 ```
 
 
---- type:NormalExercise xp:100 skills:1
+--- type:NormalExercise xp:100 skills:1 key:9c28970fd6
 ## Selezione attraverso il confronto - Step 1
 
 Utilizzando gli operatori di confronto puoi approcciare il problema affrontato precedentemente in modo differente.
@@ -919,7 +919,7 @@ success_msg("Ottimo!")
 ```
 
 
---- type:NormalExercise xp:100 skills:1
+--- type:NormalExercise xp:100 skills:1 key:682d16f025
 ## Selezione attraverso il confronto - Step 2
 
 L'utilizzo degli operatori di confronto renderà la tua vita come data scientist molto più semplice. Invece di selezionare un sottoinsieme di giorni, puoi chiedere a R di ritornare solo quei giorni dove hai relizzato una vincita al poker.
@@ -990,7 +990,7 @@ success_msg("Ottimo lavoro! Continua verso il prossimo esercizio.")
 ```
 
 
---- type:NormalExercise xp:100 skills:1
+--- type:NormalExercise xp:100 skills:1 key:47735366db
 ## Selezione avanzata
 
 Esattamente come hai appena fatto per il gioco del poker, ti piacerebbe sapere in quali giorni hai vinto alla roulette.
