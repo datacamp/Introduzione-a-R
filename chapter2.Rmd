@@ -3,7 +3,7 @@ title_meta  : Capitolo 2
 title       : Vettori
 description : "In questo corso ti porteremo a Las Vegas, dove imparerai ad analizzare in R il risultato delle tue scommesse utilizzando i vettori! Dopo aver completato questo capitolo riuscirai a creare vettori in R, assegnare loro nomi, selezionare elementi e comparare vettori differenti."
 
-## Create a vector
+## Crea un vettore
 
 *Rivedere*
 ???
@@ -45,7 +45,7 @@ success_msg("Perfetto! Procedi all'esercizio successivo.")
 ```
 
 
---- type:NormalExercise xp:100 skills:1 key:aabd77b1a8
+--- type:NormalExercise xp:100 skills:1
 ## Crea un vettore (2)
 
 Concentriamoci sui vettori!
