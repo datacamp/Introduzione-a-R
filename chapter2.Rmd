@@ -1,13 +1,14 @@
 --- 
-title_meta  : Chapter 2
-title       : Vectors
+title_meta  : Capitolo 2
+title       : Vettori
 description : "In questo corso ti porteremo a Las Vegas, dove imparerai ad analizzare in R il risultato delle tue scommesse utilizzando i vettori! Dopo aver completato questo capitolo riuscirai a creare vettori in R, assegnare loro nomi, selezionare elementi e comparare vettori differenti."
 
 --- type:NormalExercise xp:100 skills:1
-## Create a vector
+## Crea un vettore
 
-?????
-Feeling lucky? You better, because this chapter takes you on a trip to the City of Sins, also known as *Statisticians Paradise*!
+*Rivedere*
+???
+Ti senti fortunato? Speriamo di si siccome questo capitolo ti porta in un Feeling lucky? You better, because this chapter takes you on a trip to the City of Sins, also known as *Statisticians Paradise*!
 
 Thanks to R and your new data-analytical skills, you will learn how to uplift your performance at the tables and fire off your career as a professional gambler. This chapter will show how you can easily keep track of your betting progress and how you can do some simple analyses on past actions. Next stop, Vegas Baby... VEGAS!!
 ???
@@ -102,7 +103,7 @@ success_msg("Perfetto! Nota che aggiungere uno spazio dopo ogni virgola nella fu
 
 
 --- type:NormalExercise xp:100 skills:1
-## Create a vector (3)
+## Crea un vettore (3)
 
 After one week in Las Vegas and still zero Ferraris in your garage, you decide that it is time to start using your data analytical superpowers.
 
@@ -380,7 +381,7 @@ success_msg("Ottimo lavoro! Prosegui al prossimo esercizio.")
 --- type:NormalExercise xp:100 skills:1
 ## Calcola le vincite totali (2)
 
-Ora conosci come R effettua operazioni aritmetiche con i vettori. Calcola ora a quanto ammonta il profitto o la perdita totale per giorno della settimana. Il profitto totale giornaliero è la somma dei profitti e delle perdite che hai realizzato a poker sommato al risultato giornaliero del gioco della roulette.
+Ora sai come R effettua operazioni aritmetiche con i vettori. Calcola ora a quanto ammonta il profitto o la perdita totale per giorno della settimana. Il profitto totale giornaliero è la somma dei profitti e delle perdite che hai realizzato a poker sommato al risultato giornaliero del gioco della roulette.
 
 In R, questa operazione corrisponde semplicemente alla somma di `vettore_roulette` e `vettore_poker`.
 
