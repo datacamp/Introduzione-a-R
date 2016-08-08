@@ -526,13 +526,13 @@ success_msg("Ottimo. Questa però è una cattiva notizia...")
 --- type:NormalExercise xp:100 skills:1 key:4be7ee1045
 ## Confrontare le vincite totali
 
-Oops, sembra che tu stia perdendo invece di vincere. Tempo di rivedere un attimo la strategia! Questo però richiederà analisi più dettagliate...
+Oops, sembra che tu stia perdendo invece di vincere. Tempo di rivedere la tua strategia! Questo però richiederà analisi più dettagliate...
 
-Dopo una breve sessione di brainstorming nella jacuzzi dell'hotel, giungi alla conclusione che è possibile che le tue abilità nel gioco della roulette non siano al livello di quelle del gioco di poker. Può darsi quindi che le tue vincite totali nel poker siano maggiori (o `>` ) rispettoa quelle della roulette.
+Dopo una breve sessione di brainstorming nella jacuzzi dell'hotel, giungi alla conclusione che è possibile che le tue abilità nel gioco della roulette non siano al livello di quelle del gioco del poker. Può darsi quindi che le tue vincite totali a poker siano maggiori (o `>` ) rispetto a quelle della roulette.
 
 *** =instructions
-- Calcola `total_poker` e `total_roulette` come nell'esercizio precedente. Utilizza la funzione `sum()` due volte.
-- Controlla se le vincite totali al poker sono maggiori di quelle alla roulette utilizzando il simbolo di disuguaglianza opportuno. Stampa il risultato del confronto. Cosa puoi concludere? Dovresti focalizzarti più sul poker o sulla roulette.
+- Calcola `totale_poker` e `totale_roulette` come nell'esercizio precedente. Utilizza la funzione `sum()` due volte.
+- Controlla se le vincite totali al poker sono maggiori di quelle alla roulette utilizzando il simbolo di disuguaglianza opportuno. Stampa il risultato del confronto. Cosa puoi concludere? Dovresti focalizzarti più sul poker o sulla roulette?
 
 *** =hint
 - In parte hai già calcolato la risposta a questo esercizio nell'esercizio precedente!
@@ -553,8 +553,8 @@ names(vettore_poker) <- vettore_giorni
 names(vettore_roulette) <- vettore_giorni
 
 # Calcola vincite totali al poker e alla roulette
-total_poker <-
-total_roulette <-
+totale_poker <-
+totale_roulette <-
 
 # Controlla se hai relizzato vincite superiori al poker rispetto alla roulette
 
@@ -570,11 +570,11 @@ names(vettore_poker) <- vettore_giorni
 names(vettore_roulette) <- vettore_giorni
 
 # Calcola vincite totali al poker e alla roulette
-total_poker <- sum(vettore_poker)
-total_roulette <- sum(vettore_roulette)
+totale_poker <- sum(vettore_poker)
+totale_roulette <- sum(vettore_roulette)
 
 # Controlla se hai relizzato vincite superiori al poker rispetto alla roulette
-total_poker > total_roulette
+totale_poker > totale_roulette
 ```
 
 *** =sct
@@ -584,11 +584,11 @@ test_object("vettore_giorni", undefined_msg = msg, incorrect_msg = msg)
 test_object("vettore_poker", eq_condition = "equal", undefined_msg = msg, incorrect_msg = msg)
 test_object("vettore_roulette", eq_condition = "equal", undefined_msg = msg, incorrect_msg = msg)
 
-test_object("total_poker", 
+test_object("totale_poker", 
             incorrect_msg = "Assicurati di assegnare a `total_poker` la somma di `vettore_poker`. Usa `sum()`.")
-test_object("total_roulette",
+test_object("totale_roulette",
             incorrect_msg = "Assicurati di assegnare a `total_roulette` la somma di `vettore_roulette`. Usa `sum()`.")
-test_output_contains("total_poker > total_roulette",
+test_output_contains("totale_poker > totale_roulette",
                      incorrect_msg = "Hai effettuato il confronto in modo corretto? Per verificare se `total_poker` è maggiore di `total_roulette`, puoi utilizzare il codice seguente `total_poker > total_roulette`.")
 success_msg("Ottimo lavoro! Procedi al prossimo esercizio.")
 ```
@@ -866,7 +866,7 @@ Questo comando verifica, per ogni elemento del vettore, se la condizione afferma
 
 *** =instructions
 - Controlla quali elementi di `vettore_poker` sono positivi (i.e. > 0) e assegna il risultato alla variabile `vettore_selezione`. 
-- Stampa `vettore_selezione` in modo da poterla visualizzare. Il risultato stampato ti permette di individuare se hai vinto (`TRUE`) o perso (`FALSE`) in ciascun giorno.
+- Stampa `vettore_selezione` in modo da poterlo visualizzare. Il risultato stampato ti permette di individuare se hai vinto (`TRUE`) o perso (`FALSE`) in ciascun giorno.
 
 *** =hint
 Per verificare in quali giorni i risultati ottenuti a poker sono positivi, R deve verificare la disuguaglianza su ogni elemento del vettore `vettore_poker`. Per effettuare il confronto utilizza una espressione simile a questa: `un_vettore > 0`.
@@ -924,7 +924,7 @@ success_msg("Ottimo!")
 --- type:NormalExercise xp:100 skills:1 key:682d16f025
 ## Selezione attraverso il confronto - Step 2
 
-L'utilizzo degli operatori di confronto renderà la tua vita come data scientist molto più semplice. Invece di selezionare un sottoinsieme di giorni, puoi chiedere a R di ritornare solo quei giorni dove hai relizzato una vincita al poker.
+L'utilizzo degli operatori di confronto renderà la tua vita di data scientist molto più semplice. Invece di selezionare un sottoinsieme di giorni, puoi chiedere a R di selezionare solo quei giorni dove hai relizzato una vincita al poker.
 
 Nell'esercizio precedente hai utilizzato `vettore_selezione <- vettore_poker > 0` per trovare i giorni vincenti. Adesso vorresti sapere non solo i giorni nei quali hai vinto ma anche l'ammontare della vincita.
 
@@ -934,7 +934,7 @@ Puoi selezionare gli elementi desiderati inserendo semplicemente il `vettore_sel
 vettore_poker[vettore_selezione]
 ```
 
-R knows what to do when you pass a logical vector in square brackets: it will only select the elements that correspond to `TRUE` in `vettore_selezione`.
+R sa già cosa fare quando inserisci un vettore logico nelle parentesi quadre: selezionerà solo gli elementi che corrispondono a `TRUE` nel vettore `vettore_selezione`.
 
 *** =instructions
 Utilizza `vettore_selezione` nelle parentesi quadre per assegnare l'ammontare delle vincite dei giorni vincenti alla variabile `poker_giorni_vincenti`.
@@ -1052,7 +1052,7 @@ test_object("vettore_selezione",
 test_object("roulette_giorni_vincenti",
             incorrect_msg = "Sembra che `roulette_giorni_vincenti` non contenga il risultato corretto. Utilizza `vettore_roulette[vettore_selezione]`.")
 
-success_msg("Fantastico! Questo esercizi conclude il capitolo sui vettori. Nel capitolo successivo sarai introdotto alla versione bidimensionale dei vettori: le matrici.")
+success_msg("Fantastico! Questo esercizio conclude il capitolo sui vettori. Nel capitolo successivo sarai introdotto alla versione bidimensionale dei vettori: le matrici.")
 ```
 
 
