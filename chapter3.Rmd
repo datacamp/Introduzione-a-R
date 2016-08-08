@@ -493,7 +493,7 @@ success_msg("Benissimo! Vai al prossimo esercizio e impara a selezionare element
 In modo simile ai vettori, puoi utilizzare le parentesi quadre `[ ]` per selezionare uno o più elementi da una matrice. Mentre i vettori hanno una sola dimensione, le matrici ne hanno due (righe e colonne). Per questo motivo, dovresti utilizzare una virgola per separare l'indicazione della selezione di riga da quella di colonna. Per esempio:
 
 - `mia_matrice[1,2]` seleziona l'elemento nella prima riga e seconda colonna.
-- `mia_matrice[1:3,2:4]` ritorna una matrice con i dati presenti sulle righe rows 1, 2, 3 e colunne 2, 3, 4.
+- `mia_matrice[1:3,2:4]` ritorna una matrice con i dati presenti sulle righe 1, 2, 3 e colonne 2, 3, 4.
 
 Se vuoi selezionare tutti gli elementi di una riga o di una colonna, è necessario non mettere alcun numero prima o dopo la virgola, rispettivamente per la selezione di riga e colonna.
 
@@ -576,7 +576,7 @@ In modo del tutto simile ai vettori, gli operatori `+`, `-`, `/`, `*`, ecc... fu
 
 Per esempio, `2 * mia_matrice` moltiplica ogni elemento di `mia_matrice` per due.
 
-In qualità di data analyst appena assunto da Lucasfilm, è compito tuo capire quante persone hanno visto il film in ogni area geografica. Hai già i ricavi totali nella matrice `all_wars_matrix`. Assumi che il costo di un biglietto fosse 5 dollari. Dividi i numeri del box office per il costo del biglietto e ottieni il numero di spettatori.
+In qualità di data analyst appena assunto da Lucasfilm, è compito tuo capire quante persone hanno visto il film in ogni area geografica. Hai già i ricavi totali nella matrice `all_wars_matrix`. Assumi che il costo di un biglietto sia 5 dollari. Dividi i numeri del box office per il costo del biglietto e ottieni il numero di spettatori.
 
 *** =instructions
 - Dividi `all_wars_matrix` per 5, ottenendo il numero di spettatori in milioni. Assegna la matrice risultato alla variabile `spettatori`.
@@ -622,14 +622,14 @@ test_object("all_wars_matrix", undefined_msg = msg, incorrect_msg = msg)
 test_object("spettatori",
             incorrect_msg = "Sembra che `spettatori` non sia stato calcolato correttamento. Dividi `all_wars_matrix` per 5 e salva la matrice risultante come `spettatori`.")
 test_output_contains("spettatori", incorrect_msg = "Non dimenticarti di stampare `spettatori` in modo da poter ispezionare il risultato.")
-success_msg("Eccezionale! Cosa dicono i risultati? 92 milioni di persone sono andate a vedere Una nuova speranza nelle sale statunitensi! Impressionante! Continua verso il prossimo esercizio.")
+success_msg("Eccezionale! Cosa dicono i risultati? 92 milioni di persone sono andate a vedere Una Nuova Speranza nelle sale statunitensi! Impressionante! Continua verso il prossimo esercizio.")
 ```
 
 
 --- type:NormalExercise xp:100 skills:1 key:99bd83834d
 ## Un pò di aritmetica con le matrici (2) 
 
-Così come `2 * mia_matrice` multiplicava ogni elemento di `mia_matrice` per due, `mia_matrice1 * mia_matrice2` crea una matrice dove ogni elemento è il prodotto degli elementi che occupano la stessa posizione in `mia_matrice1` e `mia_matrice2`. 
+Così come `2 * mia_matrice` moltiplicava ogni elemento di `mia_matrice` per due, `mia_matrice1 * mia_matrice2` crea una matrice dove ogni elemento è il prodotto degli elementi che occupano la stessa posizione in `mia_matrice1` e `mia_matrice2`. 
 
 Dopo aver osservato i risultati del precedente esercizio, il capo, Lucas, fa notare che il prezzo del biglietto è aumentato nel tempo. Per questo motivo, richiede di effetuare nuovamente l'analisi, sulla base dei prezzi che puoi trovare nella matrice `matrice_prezzo_biglietto` (fonte: imagination).
 
@@ -638,7 +638,7 @@ _Chi conosce già le matrici avrà notato che questa operazione di moltiplicazio
 *** =instructions
 - Dividi `all_wars_matrix` per `matrice_prezzo_biglietto` per ottenera la stima del numero di spettatori statunitensi e non per tutti i sei film. Assegna il risultato alla variabile `spettatori`.
 - Dalla matrice `spettatori`, seleziona tutta la prima colonna, rappresentante il numero di spettatori statunitensi. Salva questa selezione come `spettatori_usa`.
-- Calcola il numero media di spettatori statunitensi; stampa a video il risultato.
+- Calcola il numero medio di spettatori statunitensi; stampa nella console il risultato.
 
 *** =hint
 - Puoi utilizzare la funzione `mean()` per calcolare la media dei valori utilizzati come input.
