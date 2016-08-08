@@ -440,21 +440,21 @@ success_msg("Eccellente! Continua all'esercizio successivo.")
 --- type:NormalExercise xp:100 skills:1 key:113f861114
 ## Calcola le vincite totali (3)
 
-Sulla base delle analisi effettuate precedentemente, sembra che tu abbia ottenuto un risultato positivo in alcuni giorni e negativo in altri. Questo non è chiaramente il risultato ottimale atteso, e ti chiedo se globalmente ci sia stato un profitto o una perdita.
+Sulla base delle analisi effettuate precedentemente, sembra che tu abbia ottenuto un risultato positivo in alcuni giorni e negativo in altri. Questo non è chiaramente il risultato ottimale atteso, e ti chiedi se globalmente ci sia stato un profitto o una perdita.
 
 Per rispondere a questa domanda, puoi utilizzare la funzione [`sum()`](http://www.rdocumentation.org/packages/base/functions/sum). Questa funzione accetta un vettore come parametro e calcola la somma di tutti gli elementi di quel vettore. Per esempio, per calcolare il totale vinto/perso a poker, puoi fare nel modo seguente:
 
 ```
-total_poker <- sum(vettore_poker)
+totale_poker <- sum(vettore_poker)
 ```
 
 *** =instructions
-- Calcola il totale che hai vinto/perso al gioco della roulette e assegna il risultato alla variabile `total_roulette`.
-- Ora che hai il risultato totale per entrambi i giochi, puoi calcolare facilmente il risultato globale della settimana `total_week` (che è la somma di tutte le perdite e profitti della settimana).
-- Stampa il contenuto di `total_week` a video.
+- Calcola il totale che hai vinto/perso al gioco della roulette e assegna il risultato alla variabile `totale_roulette`.
+- Ora che hai il risultato totale per entrambi i giochi, puoi calcolare facilmente il risultato globale della settimana `totale_settimana` (che è la somma di tutte le perdite e profitti della settimana).
+- Stampa il contenuto di `totale_settimana` a video.
 
 *** =hint
-Usa la funzione [`sum()`](http://www.rdocumentation.org/packages/base/functions/sum) per sommare tutti gli elementi del vettore `vettore_roulette`. `total_week` è la somma complessiva di `vettore_roulette` e `vettore_poker`.
+Usa la funzione [`sum()`](http://www.rdocumentation.org/packages/base/functions/sum) per sommare tutti gli elementi del vettore `vettore_roulette`. `totale_settimana` è la somma complessiva di `vettore_roulette` e `vettore_poker`.
 
 *** =pre_exercise_code
 ```{r}
@@ -471,13 +471,13 @@ names(vettore_poker) <- vettore_giorni
 names(vettore_roulette) <- vettore_giorni
 
 # Vincite complessive a poker
-total_poker <- sum(vettore_poker)
+totale_poker <- sum(vettore_poker)
 
 # Vincite totali alla roulette
-total_roulette <-  
+totale_roulette <-  
 
 # Vincite complessive
-total_week <- 
+totale_settimana <- 
 
 # Stampa total_week
   
@@ -493,16 +493,16 @@ names(vettore_poker) <- vettore_giorni
 names(vettore_roulette) <- vettore_giorni
 
 # Vincite complessive a poker
-total_poker <- sum(vettore_poker)
+totale_poker <- sum(vettore_poker)
 
 # Vincite totali alla roulette
-total_roulette <-  sum(vettore_roulette)
+totale_roulette <-  sum(vettore_roulette)
 
 # Vincite complessive
-total_week <- total_roulette + total_poker
+totale_settimana <- total_roulette + total_poker
 
 # Stampa total_week
-total_week
+totale_settimana
 ```
 
 *** =sct
@@ -511,14 +511,14 @@ msg = "Non cambiare nulla nella dichiarazione e nell'assegnazione dei nomi di `v
 test_object("vettore_giorni", undefined_msg = msg, incorrect_msg = msg)
 test_object("vettore_poker", eq_condition = "equal", undefined_msg = msg, incorrect_msg = msg)
 test_object("vettore_roulette", eq_condition = "equal", undefined_msg = msg, incorrect_msg = msg)
-test_object("total_poker", 
-            incorrect_msg = "Assicurati di assegnare a `total_poker` la somma del vettore `vettore_poker`.")
-test_object("total_roulette",
-            incorrect_msg = "Assicurati di assegnare a `total_roulette` la somma del vettore `vettore_roulette`.")
-test_object("total_week",
-            incorrect_msg = "Assicurati di assegnare a `total_week` le somme dei due vettori: `total_roulette` e `total_poker`.")
+test_object("totale_poker", 
+            incorrect_msg = "Assicurati di assegnare a `totale_poker` la somma del vettore `vettore_poker`.")
+test_object("totale_roulette",
+            incorrect_msg = "Assicurati di assegnare a `totale_roulette` la somma del vettore `vettore_roulette`.")
+test_object("totale_settimana",
+            incorrect_msg = "Assicurati di assegnare a `totale_settimana` le somme dei due vettori: `totale_roulette` e `totale_poker`.")
 
-test_output_contains("total_week", incorrect_msg = "Non dimenticarti di digitare `total_week` su una nuova riga per stampare il contenuto della variabile.")
+test_output_contains("totale_settimana", incorrect_msg = "Non dimenticarti di digitare `total_week` su una nuova riga per stampare il contenuto della variabile.")
 success_msg("Ottimo. Questa però è una cattiva notizia...")
 ```
 
