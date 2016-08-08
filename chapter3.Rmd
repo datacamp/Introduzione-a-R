@@ -285,10 +285,10 @@ big_matrix <- cbind(matrix1, matrix2, vector1 ...)
 ```
 
 *** =instructions
-Aggiungi il vettore `risultato_mondo` come nuova colonna alla matrice `matrice_star_wars` e assegna il risultato complessivo alla matrice `all_star_wars_matrix`. Utilizza la funzione [`cbind()`](http://www.rdocumentation.org/packages/base/functions/cbind).
+Aggiungi il vettore `risultato_mondo` come nuova colonna alla matrice `matrice_star_wars` e assegna il risultato complessivo alla matrice `all_wars_matrix`. Utilizza la funzione [`cbind()`](http://www.rdocumentation.org/packages/base/functions/cbind).
 
 *** =hint
-In questo esercizio, devi passare due variabili a `cbind()`: `matrice_star_wars` e `risultato_mondo`, in questo preciso ordine. Assegna il risultato a `all_star_wars_matrix`.
+In questo esercizio, devi passare due variabili a `cbind()`: `matrice_star_wars` e `risultato_mondo`, in questo preciso ordine. Assegna il risultato a `all_wars_matrix`.
 
 *** =pre_exercise_code
 ```{r}
@@ -307,7 +307,7 @@ matrice_star_wars <- matrix(box_office, nrow = 3, byrow = TRUE,
 risultato_mondo <- rowSums(matrice_star_wars)
 
 # Unisci per colonna la nuova variabile risultato_mondo alla matrice matrice_star_wars
-all_star_wars_matrix <- 
+all_wars_matrix <- 
 ```
 
 *** =solution
@@ -322,7 +322,7 @@ matrice_star_wars <- matrix(box_office, nrow = 3, byrow = TRUE,
 risultato_mondo <- rowSums(matrice_star_wars)
 
 # Unisci per colonna la nuova variabile risultato_mondo alla matrice matrice_star_wars
-all_star_wars_matrix <- cbind(matrice_star_wars, risultato_mondo)
+all_wars_matrix <- cbind(matrice_star_wars, risultato_mondo)
 ```
 
 *** =sct
@@ -334,15 +334,15 @@ test_object("risultato_mondo",
             incorrect_msg = "Salva il risultato di `rowSums(matrice_star_wars)` in `risultato_mondo`.")
 
 # TODO: Fix in testwhat
-msg <- "Hai usato `cbind()` per aggiungere `risultato_mondo` a `matrice_star_wars`? Dovresti passare `matrice_star_wars` e `world_wide_vector` a `cbind()`, in questo ordine. La matrice risultante, `all_star_wars_matrix`, dovrebbe avere tre righe e tre colonne."
-test_object("all_star_wars_matrix", eval = FALSE)
+msg <- "Hai usato `cbind()` per aggiungere `risultato_mondo` a `matrice_star_wars`? Dovresti passare `matrice_star_wars` e `world_wide_vector` a `cbind()`, in questo ordine. La matrice risultante, `all_wars_matrix`, dovrebbe avere tre righe e tre colonne."
+test_object("all_wars_matrix", eval = FALSE)
 test_what(
   expect_equal(
-    dim(get("all_star_wars_matrix", get_solution_env())), 
-    dim(get("all_star_wars_matrix", .GlobalEnv))),
+    dim(get("all_wars_matrix", get_solution_env())), 
+    dim(get("all_wars_matrix", .GlobalEnv))),
   feedback = msg)
 
-test_object("all_star_wars_matrix", incorrect_msg = msg)
+test_object("all_wars_matrix", incorrect_msg = msg)
 success_msg("Ottimo lavoro! Dopo aver aggiunto una colonna ad una matrice, il prossimo step è aggiungere righe! Impara come nell'esercizio successivo.")
 ```
 
@@ -360,14 +360,14 @@ Il tuo workspace R, dove "vivono" tutte le variabili che hai definito ([verifica
 Scrivi i nomi di queste matrici nella console e premi Invio se vuoi ispezionare il loro contenuto. Se vuoi ispezionare il contenuto dello workspace, puoi digitare `ls()` nella console.
 
 *** =instructions
-Utilizza `rbind()` per unire per riga `matrice_star_wars` e `matrice_star_wars2`, in questo preciso ordine. Assegna il risultato alla matrice `all_star_wars_matrix`.
+Utilizza `rbind()` per unire per riga `matrice_star_wars` e `matrice_star_wars2`, in questo preciso ordine. Assegna il risultato alla matrice `all_wars_matrix`.
 
 *** =hint
 Unisci le due matrici insieme nel modo seguente:
 ```
 rbind(matrix1, matrix2)
 ```
-Assegna il risultato a `all_star_wars_matrix`.
+Assegna il risultato a `all_wars_matrix`.
 
 
 *** =pre_exercise_code
@@ -383,7 +383,7 @@ box_office_all2 <- c(474.5, 552.5, 310.7, 338.7, 380.3, 468.5)
 movie_names2 <- c("The Phantom Menace", "Attack of the Clones", "Revenge of the Sith")
 matrice_star_wars2 <- matrix(box_office_all2, nrow=3, byrow = TRUE, dimnames = list(movie_names2, col_titoli))
 
-# Rimuovi tutto tranne all_star_wars_matrix
+# Rimuovi tutto tranne all_wars_matrix
 rm(box_office_all)
 rm(movie_names)
 rm(col_titoli)
@@ -398,7 +398,7 @@ matrice_star_wars
 matrice_star_wars2 
 
 # Combina entrambe le matrici dei film di Star Wars in una matrice
-all_star_wars_matrix <- 
+all_wars_matrix <- 
 ```
 
 *** =solution
@@ -408,7 +408,7 @@ matrice_star_wars
 matrice_star_wars2 
 
 # Combina entrambe le matrici dei film di Star Wars in una matrice
-all_star_wars_matrix <- rbind(matrice_star_wars, matrice_star_wars2)
+all_wars_matrix <- rbind(matrice_star_wars, matrice_star_wars2)
 ```
 
 *** =sct
@@ -419,17 +419,17 @@ test_object("matrice_star_wars2", eq_condition = "equal", undefined_msg = msg, i
 
 # Fix until testwhat gets updated again
 # TODO: Fix in testwhat
-test_object("all_star_wars_matrix", eval = FALSE)
+test_object("all_wars_matrix", eval = FALSE)
 test_what(
   expect_equal(
-    dim(get("all_star_wars_matrix", get_solution_env())), 
-    dim(get("all_star_wars_matrix", .GlobalEnv))),
+    dim(get("all_wars_matrix", get_solution_env())), 
+    dim(get("all_wars_matrix", .GlobalEnv))),
   feedback = 
     paste("Assicurati di utilizzare la funzione `rbind()` con 2 argomenti: `matrice_star_wars`",
           "e `matrice_star_wars2`. Dovresti ottenere una matrice",
           "con le seguenti dimensioni: 6 righe e 2 colonne."))
 
-test_object("all_star_wars_matrix", incorrect_msg = "Hai utilizzato `rbind()` in modo corretto per creare `all_star_wars_matrix()`? `rbind()` dovrebbe prendere due argomenti: `matrice_star_wars` e `matrice_star_wars2`, in questo ordine.")
+test_object("all_wars_matrix", incorrect_msg = "Hai utilizzato `rbind()` in modo corretto per creare `all_wars_matrix()`? `rbind()` dovrebbe prendere due argomenti: `matrice_star_wars` e `matrice_star_wars2`, in questo ordine.")
 
 success_msg("Fantastico! Continua con l'esercizio successivo e scopri come puoi combinare i risultati della funzione `rbind()` con la funzione `colSums()`!")
 ```
@@ -438,7 +438,7 @@ success_msg("Fantastico! Continua con l'esercizio successivo e scopri come puoi 
 --- type:NormalExercise xp:100 skills:1 key:8d4ad6d232
 ## Il risultato totale al box office per l'intera saga
 
-Così come ogni funzione [`cbind()`](http://www.rdocumentation.org/packages/base/functions/cbind) ha la sua controparte [`rbind()`](http://www.rdocumentation.org/packages/base/functions/cbind), ogni funzione [`colSums()`](http://www.rdocumentation.org/packages/base/functions/colSums) ha una controparte in [`rowSums()`](http://www.rdocumentation.org/packages/base/functions/colSums). Il tuo workspace R contiene già la matrice `all_star_wars_matrix` che hai costruito nell'esercizio precedente; digita `all_star_wars_matrix` nella console per ispezionarla. Adesso calcoliamo i ricavi totali ottenuti al box office per l'intera saga.
+Così come ogni funzione [`cbind()`](http://www.rdocumentation.org/packages/base/functions/cbind) ha la sua controparte [`rbind()`](http://www.rdocumentation.org/packages/base/functions/cbind), ogni funzione [`colSums()`](http://www.rdocumentation.org/packages/base/functions/colSums) ha una controparte in [`rowSums()`](http://www.rdocumentation.org/packages/base/functions/colSums). Il tuo workspace R contiene già la matrice `all_wars_matrix` che hai costruito nell'esercizio precedente; digita `all_wars_matrix` nella console per ispezionarla. Adesso calcoliamo i ricavi totali ottenuti al box office per l'intera saga.
 
 *** =instructions
 - Calcola i ricavi totali per gli Stati Uniti e il resto del mondo e assegna il risultato alla variabile `vettore_ricavi_totali`. Puoi utilizzare la funzione [`colSums()`](http://www.rdocumentation.org/packages/base/functions/colSums).
@@ -449,13 +449,13 @@ Dovresti utilizzare la funzione [`colSums()`](http://www.rdocumentation.org/pack
 
 *** =pre_exercise_code
 ```{r}
-load(url("http://s3.amazonaws.com/assets.datacamp.com/course/intro_to_r/all_star_wars_matrix.RData"))
+load(url("http://s3.amazonaws.com/assets.datacamp.com/course/intro_to_r/all_wars_matrix.RData"))
 ```
 
 *** =sample_code
 ```{r}
-# all_star_wars_matrix è disponibile nel tuo workspace
-all_star_wars_matrix
+# all_wars_matrix è disponibile nel tuo workspace
+all_wars_matrix
 
 # Ricavi totali per Stati Uniti e resto del mondo
 vettore_ricavi_totali <- 
@@ -465,11 +465,11 @@ vettore_ricavi_totali <-
 
 *** =solution
 ```{r}
-# all_star_wars_matrix è disponibile nel tuo workspace
-all_star_wars_matrix
+# all_wars_matrix è disponibile nel tuo workspace
+all_wars_matrix
 
 # Ricavi totali per Stati Uniti e resto del mondo
-vettore_ricavi_totali <- colSums(all_star_wars_matrix)
+vettore_ricavi_totali <- colSums(all_wars_matrix)
 
 # Stampa a video vettore_ricavi_totali
 vettore_ricavi_totali
@@ -477,11 +477,11 @@ vettore_ricavi_totali
 
 *** =sct
 ```{r}
-msg = "Non modificare il contenuto di `all_star_wars_matrix`; è stata già caricata per te nel workspace."
-test_object("all_star_wars_matrix", eq_condition = "equal", undefined_msg = msg, incorrect_msg = msg)
-test_function("colSums", "x", incorrect_msg = "Hai utilizzato la funzione `colSums()` sulla matrice all_star_wars_matrix?")
+msg = "Non modificare il contenuto di `all_wars_matrix`; è stata già caricata per te nel workspace."
+test_object("all_wars_matrix", eq_condition = "equal", undefined_msg = msg, incorrect_msg = msg)
+test_function("colSums", "x", incorrect_msg = "Hai utilizzato la funzione `colSums()` sulla matrice all_wars_matrix?")
 test_object("vettore_ricavi_totali",
-            incorrect_msg = "Hai assegnato il risultato di `colSums(all_star_wars_matrix)` a `vettore_ricavi_totali`?")
+            incorrect_msg = "Hai assegnato il risultato di `colSums(all_wars_matrix)` a `vettore_ricavi_totali`?")
 test_output_contains("vettore_ricavi_totali", incorrect_msg = "Non dimenticari ti stampare a video  `vettore_ricavi_totali`!")
 success_msg("Benissimo! Vai al prossimo esercizio e impara a selezionare elementi da una matrice.")
 ```
@@ -500,12 +500,12 @@ Se vuoi selezionare tutti gli elementi di una riga o di una colonna, è necessar
 - `mia_matrice[,1]` seleziona tutti gli elementi della prima colonna.
 - `mia_matrice[1,]` seleziona tutti gli elementi della prima riga.
 
-Torniamo a Star Wars con le conoscenze appena acquisite! Come nell'esercizio precedente, `all_star_wars_matrix` è già disponibile nel workspace.
+Torniamo a Star Wars con le conoscenze appena acquisite! Come nell'esercizio precedente, `all_wars_matrix` è già disponibile nel workspace.
 
 *** =instructions
-- Seleziona i ricavi ottenuti nel resto del mondo per tutti i film (tutta la seconda colonna di `all_star_wars_matrix`), salva il risultato come `tutti_non_usa`.
+- Seleziona i ricavi ottenuti nel resto del mondo per tutti i film (tutta la seconda colonna di `all_wars_matrix`), salva il risultato come `tutti_non_usa`.
 - Utilizza `mean()` su `tutti_non_usa` per calcolare i ricavi medi per tutti i film al di fuori degli Stati Uniti. Stampa il risultato a video.
-- Questa volta, seleziona i ricavi nel resto del mondo per i primi due film in `all_star_wars_matrix`. Salva il risultato come `alcuni_non_usa`.
+- Questa volta, seleziona i ricavi nel resto del mondo per i primi due film in `all_wars_matrix`. Salva il risultato come `alcuni_non_usa`.
 - Utilizza `mean()` di nuovo per stampare il valore medio di `alcuni_non_usa`.
 
 *** =hint
@@ -513,13 +513,13 @@ Puoi selezionare tutta la seconda colonna di una matrice `mia_matrice` utilizzan
 
 *** =pre_exercise_code
 ```{r}
-load(url("http://s3.amazonaws.com/assets.datacamp.com/course/intro_to_r/all_star_wars_matrix.RData"))
+load(url("http://s3.amazonaws.com/assets.datacamp.com/course/intro_to_r/all_wars_matrix.RData"))
 ```
 
 *** =sample_code
 ```{r}
-# all_star_wars_matrix è disponibile nel workspace
-all_star_wars_matrix
+# all_wars_matrix è disponibile nel workspace
+all_wars_matrix
 
 # Seleziona i ricavi ottenuti nel resto del mondo per tutti i film
 tutti_non_usa <- 
@@ -536,17 +536,17 @@ alcuni_non_usa <-
 
 *** =solution
 ```{r}
-# all_star_wars_matrix è disponibile nel workspace
-all_star_wars_matrix
+# all_wars_matrix è disponibile nel workspace
+all_wars_matrix
 
 # Seleziona i ricavi ottenuti nel resto del mondo per tutti i film
-tutti_non_usa <- all_star_wars_matrix[,2]
+tutti_non_usa <- all_wars_matrix[,2]
   
 # Media ricavi nel resto del mondo
 mean(tutti_non_usa)
   
 # Seleziona i ricavi ottenuti nel resto del mondo per i primi due film
-alcuni_non_usa <- all_star_wars_matrix[1:2,2]
+alcuni_non_usa <- all_wars_matrix[1:2,2]
   
 # Media ricavi nel resto del mondo per i primi due film
 mean(alcuni_non_usa)
@@ -554,11 +554,11 @@ mean(alcuni_non_usa)
 
 *** =sct
 ```{r}
-msg = "Non cambiare il contenuto di `all_star_wars_matrix`; questa matrice è già stata caricata per te nel workspace."
-test_object("all_star_wars_matrix", undefined_msg = msg, incorrect_msg = msg)
+msg = "Non cambiare il contenuto di `all_wars_matrix`; questa matrice è già stata caricata per te nel workspace."
+test_object("all_wars_matrix", undefined_msg = msg, incorrect_msg = msg)
 
 test_object("tutti_non_usa",
-            incorrect_msg = "Hai assegnato a `tutti_non_usa` la seconda colonna di `all_star_wars_matrix`? Per farlo puoi utilizzare `[, 2]`!")
+            incorrect_msg = "Hai assegnato a `tutti_non_usa` la seconda colonna di `all_wars_matrix`? Per farlo puoi utilizzare `[, 2]`!")
 test_output_contains("mean(tutti_non_usa)",
                      incorrect_msg = "Hai calcolato il valore medio di `tutti_non_usa` digitando `mean(tutti_non_usa)`? Stampa a video il risultato.")
 test_object("alcuni_non_usa",
@@ -576,24 +576,24 @@ In modo del tutto simile ai vettori, gli operatori `+`, `-`, `/`, `*`, ecc... fu
 
 Per esempio, `2 * mia_matrice` moltiplica ogni elemento di `mia_matrice` per due.
 
-In qualità di data analyst appena assunto da Lucasfilm, è compito tuo capire quante persone hanno visto il film in ogni area geografica. Hai già i ricavi totali nella matrice `all_star_wars_matrix`. Assumi che il costo di un biglietto fosse 5 dollari. Dividi i numeri del box office per il costo del biglietto e ottieni il numero di spettatori.
+In qualità di data analyst appena assunto da Lucasfilm, è compito tuo capire quante persone hanno visto il film in ogni area geografica. Hai già i ricavi totali nella matrice `all_wars_matrix`. Assumi che il costo di un biglietto fosse 5 dollari. Dividi i numeri del box office per il costo del biglietto e ottieni il numero di spettatori.
 
 *** =instructions
-- Dividi `all_star_wars_matrix` per 5, ottenendo il numero di spettatori in milioni. Assegna la matrice risultato alla variabile `spettatori`.
+- Dividi `all_wars_matrix` per 5, ottenendo il numero di spettatori in milioni. Assegna la matrice risultato alla variabile `spettatori`.
 - Stampa `spettatori` così da poter ispezionare il suo contenuto.
 
 *** =hint
-Il numero di spettatori è dato da `all_star_wars_matrix` diviso per 5.
+Il numero di spettatori è dato da `all_wars_matrix` diviso per 5.
 
 *** =pre_exercise_code
 ```{r}
-load(url("http://s3.amazonaws.com/assets.datacamp.com/course/intro_to_r/all_star_wars_matrix.RData"))
+load(url("http://s3.amazonaws.com/assets.datacamp.com/course/intro_to_r/all_wars_matrix.RData"))
 ``` 
 
 *** =sample_code
 ```{r}
-# all_star_wars_matrix è disponibile nel workspace
-all_star_wars_matrix
+# all_wars_matrix è disponibile nel workspace
+all_wars_matrix
 
 # Stima gli spettatori
 spettatori <- 
@@ -604,11 +604,11 @@ spettatori <-
 
 *** =solution
 ```{r}
-# all_star_wars_matrix è disponibile nel workspace
-all_star_wars_matrix
+# all_wars_matrix è disponibile nel workspace
+all_wars_matrix
 
 # Stima gli spettatori
-spettatori <- all_star_wars_matrix / 5
+spettatori <- all_wars_matrix / 5
 
 # Stampa la stima nella console
 spettatori
@@ -616,11 +616,11 @@ spettatori
 
 *** =sct
 ```{r}
-msg = "Non cambiare il contenuto di `all_star_wars_matrix`; questa matrice è già stata caricata per te nel workspace."
-test_object("all_star_wars_matrix", undefined_msg = msg, incorrect_msg = msg)
+msg = "Non cambiare il contenuto di `all_wars_matrix`; questa matrice è già stata caricata per te nel workspace."
+test_object("all_wars_matrix", undefined_msg = msg, incorrect_msg = msg)
 
 test_object("spettatori",
-            incorrect_msg = "Sembra che `spettatori` non sia stato calcolato correttamento. Dividi `all_star_wars_matrix` per 5 e salva la matrice risultante come `spettatori`.")
+            incorrect_msg = "Sembra che `spettatori` non sia stato calcolato correttamento. Dividi `all_wars_matrix` per 5 e salva la matrice risultante come `spettatori`.")
 test_output_contains("spettatori", incorrect_msg = "Non dimenticarti di stampare `spettatori` in modo da poter ispezionare il risultato.")
 success_msg("Eccezionale! Cosa dicono i risultati? 92 milioni di persone sono andate a vedere Una nuova speranza nelle sale statunitensi! Impressionante! Continua verso il prossimo esercizio.")
 ```
@@ -636,7 +636,7 @@ Dopo aver osservato i risultati del precedente esercizio, il capo, Lucas, fa not
 _Chi conosce già le matrici avrà notato che questa operazione di moltiplicazione non è la moltiplicazione tra matrici insegnata nei corsi di algebra lineare. Per effettuare quel tipo di moltiplicazione in R è necessario utilizzare l'operatore `%*%`._
 
 *** =instructions
-- Dividi `all_star_wars_matrix` per `matrice_prezzo_biglietto` per ottenera la stima del numero di spettatori statunitensi e non per tutti i sei film. Assegna il risultato alla variabile `spettatori`.
+- Dividi `all_wars_matrix` per `matrice_prezzo_biglietto` per ottenera la stima del numero di spettatori statunitensi e non per tutti i sei film. Assegna il risultato alla variabile `spettatori`.
 - Dalla matrice `spettatori`, seleziona tutta la prima colonna, rappresentante il numero di spettatori statunitensi. Salva questa selezione come `spettatori_usa`.
 - Calcola il numero media di spettatori statunitensi; stampa a video il risultato.
 
@@ -646,7 +646,7 @@ _Chi conosce già le matrici avrà notato che questa operazione di moltiplicazio
 
 *** =pre_exercise_code
 ```{r}
-load(url("http://s3.amazonaws.com/assets.datacamp.com/course/intro_to_r/all_star_wars_matrix.RData"))
+load(url("http://s3.amazonaws.com/assets.datacamp.com/course/intro_to_r/all_wars_matrix.RData"))
 movie_names <- c("Una nuova speranza","L'impero colpisce ancora","Il ritorno dello Jedi", "The Phantom Menace", "Attack of the Clones", "Revenge of the Sith")
 col_titoli <- c("US","non-US")
 matrice_prezzo_biglietto <- matrix(c(5, 5, 6, 6, 7, 7, 4, 4, 4.5, 4.5, 4.9, 4.9), nrow = 6, byrow = TRUE, dimnames = list(movie_names,col_titoli))
@@ -654,8 +654,8 @@ matrice_prezzo_biglietto <- matrix(c(5, 5, 6, 6, 7, 7, 4, 4, 4.5, 4.5, 4.9, 4.9)
 
 *** =sample_code
 ```{r}
-# all_star_wars_matrix e matrice_prezzo_biglietto sono già disponibili nel workspace
-all_star_wars_matrix
+# all_wars_matrix e matrice_prezzo_biglietto sono già disponibili nel workspace
+all_wars_matrix
 matrice_prezzo_biglietto
 
 # Numero stimato di spettatori
@@ -670,12 +670,12 @@ spettatori_usa <-
 
 *** =solution
 ```{r}
-# all_star_wars_matrix e matrice_prezzo_biglietto sono già disponibili nel workspace
-all_star_wars_matrix
+# all_wars_matrix e matrice_prezzo_biglietto sono già disponibili nel workspace
+all_wars_matrix
 matrice_prezzo_biglietto
 
 # Numero stimato di spettatori
-spettatori <- all_star_wars_matrix / matrice_prezzo_biglietto
+spettatori <- all_wars_matrix / matrice_prezzo_biglietto
 
 # Spettatori statunitensi
 spettatori_usa <- spettatori[ ,1]
@@ -686,12 +686,12 @@ mean(spettatori_usa)
 
 *** =sct
 ```{r}
-msg <- "Non cambiare il contenuto di `all_star_wars_matrix`; questa matrice è già stata caricata per te nel workspace."
-test_object("all_star_wars_matrix", undefined_msg = msg, incorrect_msg = msg)
+msg <- "Non cambiare il contenuto di `all_wars_matrix`; questa matrice è già stata caricata per te nel workspace."
+test_object("all_wars_matrix", undefined_msg = msg, incorrect_msg = msg)
 test_object("matrice_prezzo_biglietto", undefined_msg = msg, incorrect_msg = msg)
 
 test_object("spettatori",
-            incorrect_msg = "Hai creato la matrice `spettatori`? Dovresti dividere `all_star_wars_matrix` per `matrice_prezzo_biglietto` per ottenerla.")
+            incorrect_msg = "Hai creato la matrice `spettatori`? Dovresti dividere `all_wars_matrix` per `matrice_prezzo_biglietto` per ottenerla.")
 test_object("spettatori_usa", incorrect_msg = "Per creare `spettatori_usa`, dovresti selezionare tutta la prima colonna da `spettatori`. Per farlo puoi utilizzare `[,1]`!")
 test_output_contains("mean(spettatori_usa)", incorrect_msg = "Una volta che hai creato `spettatori_usa`, puoi usare `mean()` per calcolare il numero medio di visitatori negli Stati Uniti. Assicurati di stampare a video il risultato.")
 
