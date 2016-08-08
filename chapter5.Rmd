@@ -132,7 +132,7 @@ success_msg("Perfetto! Riesci a trovare tutte le informazioni elencate nella con
 ```
 
 
---- typeNormalExercise xp:100 skills:1
+--- type:NormalExercise xp:100 skills:1
 ## Creare un data frame
 
 Siccome utilizzare data sets disponibili di default non è molto divertente, il resto del capitolo è focalizzato su un data set creato da te. Allacciati il ket pack siccome è tempo di esplorare lo spazio!
@@ -208,7 +208,7 @@ success_msg("Ottimo lavoro! Prosegui al prossimo esercizio. Il prossimo passo, c
 ```
 
 
---- tipo:NormalExercise xp:100 skills:1
+--- type:NormalExercise xp:100 skills:1
 ## Creare un data frame (2)
 
 Il data frame `pianeti_df` dovrebbe contenere 8 osservazioni di 5 variabili. `pianeti_df` è stato già caricato nel workspace così che tu possa utilizzarlo direttamente.
