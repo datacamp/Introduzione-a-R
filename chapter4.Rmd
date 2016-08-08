@@ -3,7 +3,7 @@ title_meta  : Capitolo 4
 title       : Fattori
 description : Molto spesso i dati possono essere raggruppati in un certo numero di categorie. Per esempio, le persone possono essere di sesso maschile o femminile. In R, le variabili di tipo categorico sono salvate come fattori. Data l'importanza dei fattori nell'analisi dati, in questo capitolo imparerai come creare, suddividere e confrontare i fattori.
 
---- type:NormalExercise xp:100 skills:1
+--- type:NormalExercise xp:100 skills:1 key:dbe6d76e3b
 ## Che cos'è un fattore e perchè dovresti utilizzarlo?
 
 In questo capitolo ti immergerai nell'incredibile mondo dei **fattori**.
@@ -43,7 +43,7 @@ success_msg("Ottimo lavoro! Pronto per iniziare? Continua al prossimo esercizio!
 ```
 
 
---- type:NormalExercise xp:100 skills:1
+--- type:NormalExercise xp:100 skills:1 key:94c97abb9f
 ## Che cos'è un fattore e perchè dovresti utilizzarlo? (2)
 
 Per creare un fattore in R si utilizza la funzione [`factor()`](http://www.rdocumentation.org/packages/base/functions/factor). La prima cosa da fare è creare un vettore che contiene tutte le osservazioni che appartengono ad un numero limitato di categorie. Per esempio, `vettore_genere` contiene il sesso di 5 differenti individui: 
@@ -105,7 +105,7 @@ success_msg("Ottimo! Se vuoi scoprire qualcosa di più sulla funzione `factor()`
 ```
 
 
---- type:NormalExercise xp:100 skills:1
+--- type:NormalExercise xp:100 skills:1 key:fe4e25a842
 ## Che cos'è un fattore e perchè dovresti utilizzarlo? (3)
 
 Esistono due tipi di variabili categoriche: le **variabili categoriche nominali** e le **variabili categoriche ordinali**. 
@@ -164,7 +164,7 @@ success_msg("Riesci ad intuire il risultato dell'operazione effettuata in questo
 ```
 
 
---- type:NormalExercise xp:100 skills:1
+--- type:NormalExercise xp:100 skills:1 key:ee37a6ffb8
 ## I livelli dei fattori
 
 Quando ispezioni un nuovo dataset, noterai spesso che contiene fattori con diversi livelli. Tuttavia, alcune volte ti capiterà di voler cambiare il nome di questi livelli per ragioni di chiarezza (o altro). R ti permette di effettuare questa operazione utilizzando la funzione [`levels()`](http://www.rdocumentation.org/packages/base/functions/levels):
@@ -233,7 +233,7 @@ success_msg("Fantastico! Procedi all'esercizio successivo.")
 ```
 
 
---- type:NormalExercise xp:100 skills:1
+--- type:NormalExercise xp:100 skills:1 key:82549565df
 ## Ottenere un sommario di un fattore
 
 Alla fine di questo corso, una delle tue funzioni preferite sarà [`summary()`](http://www.rdocumentation.org/packages/base/functions/summary). Questa funzione ti permetterà di ottenere un'overview del contenuto di una variabile: 
@@ -297,7 +297,7 @@ success_msg("Ottimo! Osserva il risultato. Il fatto che hai identificato `\"Masc
 ```
 
 
---- type:NormalExercise xp:100 skills:1
+--- type:NormalExercise xp:100 skills:1 key:fd66688336
 ## Battaglia dei sessi
 
 In `factor_vettore_sondaggio` abbiamo un fattore con due livelli: Maschio e Femmina. Ma in che modo R valuta questi livelli tra di loro? In altre parole, quale è il migliore dei due, secondo R?
@@ -359,7 +359,7 @@ success_msg("Sembra che R sia gender-neutral. O forse preferisce tirarsi fuori d
 ```
 
 
---- type:NormalExercise xp:100 skills:1
+--- type:NormalExercise xp:100 skills:1 key:004258a2c5
 ## Fattori ordinali
 
 Siccome `"Maschio"` e `"Femmina"` non sono ordinabili, R ritorna un messaggio di avviso dicendoti che l'operatore di confronto applicato non ha senso in questo caso. Come visto in precedenza, R giudica i livelli sullo stesso piano nel caso in cui essi non siano ordinabili. 
@@ -407,7 +407,7 @@ success_msg("Ottimo lavoro! Continua al prossimo esercizio.")
 ```
 
 
---- type:NormalExercise xp:100 skills:1
+--- type:NormalExercise xp:100 skills:1 key:6dacb53fc3
 ## Fattori ordinali (2)
 
 `vettore_velocita` dovrebbe essere convertito in un fattore ordinale siccome le sue categorie hanno un ordine "naturale". Di default, la funzione [`factor()`](http://www.rdocumentation.org/packages/base/functions/factor) trasforma `vettore_velocita` in un fattore non ordinale. Per creare un fattore ordinale, devi aggiungere due argomenti: `ordered` e `levels`. 
@@ -470,7 +470,7 @@ success_msg("Ottimo! Osserva la console. Come puoi notare, viene indicato che es
 ```
 
 
---- type:NormalExercise xp:100 skills:1
+--- type:NormalExercise xp:100 skills:1 key:9c04b56117
 ## Confrontare due fattori ordinali
 
 Oggi è una giornataccia al lavoro, il 'secondo analista' del tuo gruppo entra in ufficio e si lamenta del fatto che il 'quinto' analista sta rallentando l'intero progetto. Al fine di prendere la giusta decisione, decidi di verificare l'affermazione. 
