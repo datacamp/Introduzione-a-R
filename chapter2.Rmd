@@ -524,7 +524,7 @@ success_msg("Ottimo. Questa però è una cattiva notizia...")
 
 
 --- type:NormalExercise xp:100 skills:1 key:4be7ee1045
-## Comparing total winnings
+## Confrontare le vincite totali
 
 Oops, sembra che tu stia perdendo invece di vincere. Tempo di rivedere un attimo la strategia! Questo però richiederà analisi più dettagliate...
 
