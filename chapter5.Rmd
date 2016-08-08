@@ -1,0 +1,630 @@
+--- 
+title_meta  : Capitolo 5
+title       : Data frames
+description : La maggior parte dei data sets con cui lavorerai sarà immagazzinata in R sotto forma di data frames. Dopo aver completato questo capitolo, sarai in grado di creare un data frame, selezionare solo le parti che ti interessano e ordinarlo in funzione di certe variabili.
+
+--- tipo:NormalExercise xp:100 skills:1
+## Che cos'è un data frame
+
+Potresti ricordarti, dal capitolo sulle matrici, che tutti gli elementi che inserisci in una matrice dovrebbero essere dello stesso tipo. Nell'esempio sulle matrici, il data set di Star Wars conteneva solo dati di tipo numerico.
+
+Quando, ad esempio, effettui una ricerca di mercato, tuttavia, hai diversi tipi di dato che riflettono le risposte a domande del tipo:
+- 'Sei spostato/a?' oppure altre domande a risposta chiusa 'si/no' (`logical`)
+- 'Quanti anni hai?' (`numeric`)
+- 'Qual è la tua opinione su questo prodotto?' oppure altre domande a risposta aperta (`character`)
+- ...
+
+L'output, ossia la risposta di chi compila il questionario, è un data set composto da variabili di diverso tipo. Ti troverai perciò spesso a lavorare con data sets che contengono tipi diversi di dato invece di contenere dati omogenei.
+
+Un data frame immagazzina le variabili di un data set nelle colonne e le osservazioni nelle righe. Questo modo di immagazzinare informazioni è un concetto già noto per coloro che utilizzano altri software statistici come SAS o SPSS.
+
+*** =instructions
+Clicca 'Submit Answer'. Il contenuto del data frame di esempio [`mtcars`](http://www.rdocumentation.org/packages/datasets/functions/mtcars) sarà stampato a video nella console.
+
+*** =hint
+Clicca semplicemente 'Submit Answer' e osserva la magia!
+
+*** =pre_exercise_code
+```{r}
+# no pec
+```
+
+*** =sample_code
+```{r}
+# Stampa il data frame di esempio
+mtcars 
+```
+
+*** =solution
+```{r}
+# Stampa il data frame di esempio
+mtcars 
+```
+
+*** =sct
+```{r}
+test_output_contains("mtcars", incorrect_msg = "Non cambiare nulla nel codice. Assicurati di stampare il contenuto di `mtcars`.")
+success_msg("Ottimo! Prosegui all'esercizio successivo.")
+```
+
+
+--- tipo:NormalExercise xp:100 skills:1
+## Osserva il tuo data set
+
+Wow, contiene informazioni su una miriade di auto! 
+
+Lavorare con grandi data sets è molto comune nell'analisi dati. Quando lavori con data sets estremamente grandi, la tua priorità numero uno è comprendere la sua struttura e gli elementi principali. Per questo motivo, è spesso utile stampare a video una frazione dell'intero data set.
+
+Come puoi svolgere questa operazione in R? La funzione [`head()`](http://www.rdocumentation.org/packages/utils/functions/head) ti permette di visualizzare le prime osservazioni di un data frame. In modo duale, la funzione [`tail()`](http://www.rdocumentation.org/packages/utils/functions/head) stampa le ultime osservazioni contenute nel tuo data set.
+
+Sia [`head()`](http://www.rdocumentation.org/packages/utils/functions/head) che [`tail()`](http://www.rdocumentation.org/packages/utils/functions/head) stampano una riga chiamata 'header', che contiene i nomi delle variabili contenute nel tuo data set.
+
+*** =instructions
+Chiama [`head()`](http://www.rdocumentation.org/packages/utils/functions/head) sul data set [`mtcars`](http://www.rdocumentation.org/packages/datasets/functions/mtcars) per stampare l'header e le prime osservazioni.
+
+*** =hint
+`head(mtcars)` stamperà le prime osservazioni del data frame `mtcars`.
+
+*** =pre_exercise_code
+```{r}
+# no pec
+```
+
+*** =sample_code
+```{r}
+# Chiama head() su mtcars
+
+```
+
+*** =solution
+```{r}
+# Chiama head() su mtcars
+head(mtcars)
+```
+
+*** =sct
+```{r}
+test_function("head", "x", incorrect_msg = "Hai passato correttamente `mtcars` alla funzione `head()`?")
+test_output_contains("head(mtcars)", incorrect_msg = "Stampa semplicemente il risultato della chiamata a `head()`, non è necessario assegnare il risultato ad una nuova variabile.")
+success_msg("Fantastico! Quindi, cosa abbiamo in questo data set? Per esempio, `hp` rappresenta il numero di cavalli del motore dell' auto (horse power); la Datsun ha il numero di cavalli più basso delle 6 auto mostrate nella console. Per maggiori informazioni sul significato delle variabili, digita `?mtcars` nella console e leggi la pagina di help. Continua verso il prossimo esercizio!");
+```
+
+
+--- tipo:NormalExercise xp:100 skills:1
+## Analizziamo la struttura di un data frame
+
+Un altro metodo per ottenere una veloce overview dei tuoi dati è la funzione [`str()`](http://www.rdocumentation.org/packages/utils/functions/str). La funzione [`str()`](http://www.rdocumentation.org/packages/utils/functions/str) stampa la struttura del tuo data set. Nel caso di un data frame, vengono mostrate le seguenti informazioni:
+
+- Il numero totale di osservazioni (32 tipi di auto)
+- Il numero totale di variabili (11 caratteristiche delle auto)
+- Una lista dei nomi delle variabili (`mpg`, `cyl` ... )
+- Il tipo di dato di ogni variabile (esempio: `num`)
+- La prima osservazione
+
+L'utilizzo della funzione [`str()`](http://www.rdocumentation.org/packages/utils/functions/str) sarà spesso la prima operazione che effettuerai quando dovrai lavorare su un data set appena ricevuto. E' un ottima strategia per ottenere alcune informazioni di base sul data set prima di iniziare l'analisi.
+
+*** =instructions
+Osserva attentamente la struttura di [`mtcars`](http://www.rdocumentation.org/packages/datasets/functions/mtcars). Assicurati di vedere gli stessi numeri, le stesse variabili e gli stessi tipi di dato menzionati sopra.
+
+*** =hint
+Usa la funzione [`str()`](http://www.rdocumentation.org/packages/utils/functions/str) sul data frame [`mtcars`](http://www.rdocumentation.org/packages/datasets/functions/mtcars).
+
+*** =pre_exercise_code
+```{r}
+# no pec
+```
+
+*** =sample_code
+```{r}
+# Osserva la struttura di mtcars
+```
+
+*** =solution
+```{r}
+# Osserva la struttura di mtcars
+str(mtcars)
+```
+
+*** =sct
+```{r}
+test_output_contains("str(mtcars)", incorrect_msg = "Hai chiamato correttamente la funzione `str()` su `mtcars`?")
+success_msg("Perfetto! Riesci a trovare tutte le informazioni elencate nella consegna? Continua verso il prossimo esercizio.")
+```
+
+
+--- tipo:NormalExercise xp:100 skills:1
+## Creare un data frame
+
+Siccome utilizzare data sets disponibili di default non è molto divertente, il resto del capitolo è focalizzato su un data set creato da te. Allacciati il ket pack siccome è tempo di esplorare lo spazio!
+
+Come primo obiettivo, vuoi costruire un data frame che descrive le principali caratteristiche di otto pianeti nel nostro sistema solare. Secondo il tuo buon amico Buzz, le prinicipali caratteristiche di un pianeta sono:
+
+- Il tipo di pianeta (Terrestre o Gigante Gassoso).
+- Il diametro del pianeta, relativamente al diametro della Terra.
+- La rotazione del pianeta attorno al sole, relativamente a quella della Terra.
+- Se il pianeta ha anelli. (TRUE oppure FALSE).
+
+Dopo aver svolto una breve ricerca su [Wikipedia](http://en.wikipedia.org/wiki/Planet), ti senti abbastanza sicuro di te stesso per creare tutti i vettori necessari: `nome`, `tipo`, `diametro`, `rotazione` e `anelli`; questi vettori sono già stati inseriti nel codice in alto a destra. Il primo elemento di ciascun vettore corrisponde alla prima osservazione.
+
+Costruisci un data frame con la funzione [`data.frame()`](http://www.rdocumentation.org/packages/base/functions/data.frame). Passa alla funzione i vettori costruiti precedentemente come argomenti: ciascun vettore diventerà una colonna del tuo nuovo data frame. Siccome ogni colonna ha la stessa lunghezza, i vettori passati devono avere la stessa lunghezza (leggi: contenere lo stesso numero di elementi).
+
+*** =instructions
+Usa la funzione [`data.frame()`](http://www.rdocumentation.org/packages/base/functions/data.frame) per costruire un data frame. Passa i vettori `nome`, `tipo`, `diametro`, `rotazione` e `anelli` (in quest'ordine) come argomenti a `data.frame()`. Chiama il data frame ottenuto `pianeti_df`.
+
+*** =hint
+La chiamata a `data.frame()` si effettua nel modo seguente:
+```
+data.frame(planets, tipo, diametro)
+```
+Riesci a completare il codice?
+
+*** =pre_exercise_code
+```{r}
+# no pec
+```
+
+*** =sample_code
+```{r}
+# Definizione dei vettori
+nome <- c("Mercury", "Venus", "Earth", "Mars", "Jupiter", "Saturn", "Uranus", "Neptune")
+tipo <- c("Terrestrial planet", "Terrestrial planet", "Terrestrial planet", 
+          "Terrestrial planet", "Gas giant", "Gas giant", "Gas giant", "Gas giant")
+diametro <- c(0.382, 0.949, 1, 0.532, 11.209, 9.449, 4.007, 3.883)
+rotazione <- c(58.64, -243.02, 1, 1.03, 0.41, 0.43, -0.72, 0.67)
+anelli <- c(FALSE, FALSE, FALSE, FALSE, TRUE, TRUE, TRUE, TRUE)
+
+# Crea un data frame con i vettori
+pianeti_df <-
+
+```
+
+*** =solution
+```{r}
+# Definizione dei vettori
+nome <- c("Mercury", "Venus", "Earth", "Mars", "Jupiter", "Saturn", "Uranus", "Neptune")
+tipo <- c("Terrestrial planet", "Terrestrial planet", "Terrestrial planet", 
+          "Terrestrial planet", "Gas giant", "Gas giant", "Gas giant", "Gas giant")
+diametro <- c(0.382, 0.949, 1, 0.532, 11.209, 9.449, 4.007, 3.883)
+rotazione <- c(58.64, -243.02, 1, 1.03, 0.41, 0.43, -0.72, 0.67)
+anelli <- c(FALSE, FALSE, FALSE, FALSE, TRUE, TRUE, TRUE, TRUE)
+
+# Crea un data frame con i vettori
+pianeti_df <- data.frame(nome, tipo, diametro, rotazione, anelli)
+```
+
+*** =sct
+```{r}
+msg = "Non cambiare nulla nella definizione dei vettori. Aggiungi una chiamata a `data.frame()` per creare `pianeti_df`."
+test_object("nome", undefined_msg = msg, incorrect_msg = msg)
+test_object("tipo", undefined_msg = msg, incorrect_msg = msg)
+test_object("diametro", undefined_msg = msg, incorrect_msg = msg)
+test_object("rotazione", undefined_msg = msg, incorrect_msg = msg)
+test_object("anelli", undefined_msg = msg, incorrect_msg = msg)
+
+test_object("pianeti_df",
+            incorrect_msg = "Hai chiamato correttamente `data.frame()` per creare `pianeti_df`?. Assicurati di passare a `data.frame()` tutti i vettori nell'ordine corretto: `nome`, `tipo`, `diametro`, `rotazione` ed infine `anelli`.")
+
+success_msg("Ottimo lavoro! Prosegui al prossimo esercizio. Il prossimo passo, come avrai già intuito, è ispezionare il data frame appena creato. Via al prossimo esercizio!");
+```
+
+
+--- tipo:NormalExercise xp:100 skills:1
+## Creare un data frame (2)
+
+Il data frame `pianeti_df` dovrebbe contenere 8 osservazioni di 5 variabili. `pianeti_df` è stato già caricato nel workspace così che tu possa utilizzarlo direttamente.
+
+*** =instructions
+Utilizza [`str()`](http://www.rdocumentation.org/packages/utils/functions/str) per analizzare la struttura della nuova variabile `pianeti_df`.
+
+*** =hint
+`pianeti_df` è già nel workspace, digita semplicemente `str(pianeti_df)`.
+
+*** =pre_exercise_code
+```{r}
+load(url("http://s3.amazonaws.com/assets.datacamp.com/course/intro_to_r/planets.RData"))
+```
+
+*** =sample_code
+```{r}
+# Analizza la struttura di pianeti_df
+```
+
+*** =solution
+```{r}
+# Analizza la struttura di pianeti_df
+str(pianeti_df)
+```
+
+*** =sct
+```{r}
+msg = "Non cancellare o sovrascrivere il data frame `pianeti_df` che è già disponibile nel workspace!"
+test_object("pianeti_df", undefined_msg = msg, incorrect_msg = msg)
+test_output_contains("str(pianeti_df)", incorrect_msg = "Hai stampato correttamente la struttura di `pianeti_df`? Utilizza la funzione `str()` per farlo!")
+success_msg("Fantastico! Ora che hai una chiara immagine della struttura di `pianeti_df`, è tempo di vedere come puoi selezionare elementi dal tuo data frame. La selezione di elementi da un data frame è trattata nell'esercizio successivo!")
+```
+
+
+--- tipo:NormalExercise xp:100 skills:1
+## Selezione di elementi da un data frame
+
+In modo simile ai vettori e alle matrici, puoi selezionare elementi da un data frame utilizzando le parentesi quadre `[ ]`. Utilizzando una virgola, puoi indicare cosa selezionare, rispettivamente, dalle righe e dalle colonne. Per esempio:
+
+- `mio_df[1,2]` seleziona il valore nella prima riga e seconda colonna di `mio_df`.
+- `mio_df[1:3,2:4]` seleziona le righe 1, 2, 3 e le colonne 2, 3, 4 di `mio_df`.
+
+Qualche volta potresti voler selezionare tutti gli elementi di una riga o colonna. Per esempio, `mio_df[1, ]` seleziona tutti gli elementi della prima riga. Facciamo alcuni esperimenti su `pianeti_df`!
+
+*** =instructions
+- Seleziona da `pianeti_df` il diametro di Mercurio: questa informazione si trova nella prima riga e terza colonna. Stampa il risultato a video.
+- Seleziona da `pianeti_df` tutti i dati su Marte (quarta riga). Stampa il risultato a video.
+
+*** =hint
+Per selezionare il diametro di Venere (seconda riga), dovresti digitare: `pianeti_df[2,3]`. Cosa devi fare invece per Mercurio?
+
+*** =pre_exercise_code
+```{r}
+load(url("http://s3.amazonaws.com/assets.datacamp.com/course/intro_to_r/planets.RData"))
+```
+
+*** =sample_code
+```{r}
+# Il data frame pianeti_df dell'esercizio precedente è già disponibile nel workspace
+
+# Stampa il diametro di Mercurio (riga 1, colonna 3)
+
+
+# Stampa tutti i dati di Marte (tutta la quarta riga)
+
+```
+
+*** =solution
+```{r}
+# Il data frame pianeti_df dell'esercizio precedente è già disponibile nel workspace
+
+# Stampa il diametro di Mercurio (riga 1, colonna 3)
+pianeti_df[1,3]
+
+# Stampa tutti i dati di Marte (tutta la quarta riga)
+pianeti_df[4, ]
+```
+
+*** =sct
+```{r}
+msg = "Non cambiare o sovrascrivere il data frame `pianeti_df`!"
+test_object("pianeti_df", undefined_msg = msg, incorrect_msg = msg)
+test_output_contains("pianeti_df[1,3]", incorrect_msg = "Hai selezionato e stampato il diametro di Mercurio? Puoi utilizzare `[1,3]`.")
+test_output_contains("pianeti_df[4, ]", incorrect_msg = "Hai selezionato e stampato tutti i dati di Marte? Puoi utilizzare `[4,]`.")
+success_msg("Eccezionale! Oltre a selezionare gli elementi utilizzando il numero di riga e colonna puoi utilizzare anche i nomi delle colonne. Per imparare come, prosegui all'esercizio successivo.")
+```
+
+
+--- tipo:NormalExercise xp:100 skills:1
+## Selezione di elementi da un data frame (2)
+
+Invece di utilizzare il numero di riga e colonna per selezionare elementi, puoi utilizzare anche il nome delle variabili per selezionare le colonne di un data frame. 
+
+Supponi di voler selezionare i primi tre elementi della colonna `tipo`. Un modo per farlo è
+
+```
+pianeti_df[1:3,1]
+```
+
+Un possibile svantaggio di questo approccio è che devi sapere (o andare a cercare) l'indice della colonna `tipo`, operazione che diventa noiosa quando hai un numero elevato di variabili. Spesso è più rapido utilizzare direttamente il nome della variabile:
+
+```
+pianeti_df[1:3,"tipo"]
+```
+
+*** =instructions
+Seleziona e stampa i primi cinque valori della variabile `"diametro"` di `pianeti_df`.
+
+*** =hint
+Puoi selezionare i primi cinque elementi utilizzando `pianeti_df[1:5, ...]`. Riesci a riempire i puntini `...` in modo da selezionare solo la colonna `"diametro"`?
+
+*** =pre_exercise_code
+```{r}
+load(url("http://s3.amazonaws.com/assets.datacamp.com/course/intro_to_r/planets.RData"))
+```
+
+*** =sample_code
+```{r}
+# Il data frame pianeti_df dell'esercizio precedente è già disponibile nel workspace
+
+# Puoi selezionare i primi cinque elementi della colonna diametro
+
+```
+
+*** =solution
+```{r}
+# Il data frame pianeti_df dell'esercizio precedente è già disponibile nel workspace
+
+# Puoi selezionare i primi cinque elementi della colonna diametro
+pianeti_df[1:5, "diametro"]
+```
+
+*** =sct
+```{r}
+msg = "Non rimuovere o sovrascrivere il data frame `pianeti_df`!"
+test_object("pianeti_df", undefined_msg = msg, incorrect_msg = msg)
+test_output_contains("pianeti_df[1:5, \"diametro\"]", incorrect_msg = "Hai selezionato correttamente i primi cinque valori della colonna diametro e ti sei ricordato di stamparli? Per farlo puoi utilizzare `[1:5, \"diametro\"]`.")
+success_msg("Molto bene! Prosegui all'esercizio successivo!")
+```
+
+
+--- tipo:NormalExercise xp:100 skills:1
+## Solo pianeti con anelli
+
+Speeso ti capiterà di voler scegliere una colonna intera, ossia una variabile specifica, dal tuo data frame. Se vuoi selezionare tutti gli elementi della variabile `diametro`, ad esempio, le seguenti linee di codice ti permetteranno entrambe di raggiungere l'obiettivo:
+
+```
+pianeti_df[,3]
+pianeti_df[,"diametro"]
+```
+
+Tuttavia, c'è una scorciatoia. Se le colonne hanno un nome, puoi utilizzare il simbolo `$` nel modo seguente:
+
+```
+pianeti_df$diametro
+```
+
+*** =instructions
+- Usa `$` per selezionare la variabile `anelli` da `pianeti_df`. Salva il vettore ottenuto come `vettore_anelli`.
+- Stampa `vettore_anelli` per vedere se hai effettuato l'operazione correttamente.
+
+*** =hint
+`pianeti_df$diametro` seleziona la variabile (colonna) `diametro` da `pianeti_df`; cosa devi fare per selezionare la variabile `anelli` invece?
+
+*** =pre_exercise_code
+```{r}
+load(url("http://s3.amazonaws.com/assets.datacamp.com/course/intro_to_r/planets.RData"))
+```
+
+*** =sample_code
+```{r}
+# pianeti_df è già caricato nel workspace
+
+# Seleziona la variabile anelli da pianeti_df
+vettore_anelli <- 
+  
+# Stampa vettore_anelli
+```
+
+*** =solution
+```{r}
+# pianeti_df è già caricato nel workspace
+
+# Seleziona la variabile anelli da pianeti_df
+vettore_anelli <- pianeti_df$anelli
+
+# Stampa vettore_anelli
+vettore_anelli
+```
+
+*** =sct
+```{r}
+msg = "Non cancellare o modificare il data frame `pianeti_df`!"
+test_object("pianeti_df", undefined_msg = msg, incorrect_msg = msg)
+test_object("vettore_anelli",
+            incorrect_msg = "Hai selezionato correttamente la variabile `anelli` da `pianeti_df`? Usa `$anelli`. Salva il risultato come `vettore_anelli`.")
+test_output_contains("vettore_anelli", incorrect_msg = "Non dimenticarti di stampare `vettore_anelli` dopo averlo creato!")
+success_msg("Ottimo! Prosegui all'esercizio successivo e scopri un nuovo modo di selezionare parti di un data frame!")
+```
+
+
+--- tipo:NormalExercise xp:100 skills:1
+## Solo pianeti con anelli (2)
+
+Dalle scuole superiori ti ricorderai che qualche pianeta nel Sistema Solare ha gli anelli e altri non li hanno. Ma, a seguito di altre priorità, non ti ricordi i nomi né tantomeno la velocità di rotazione, ecc... 
+
+Possiamo utilizzare R per ottenere queste informazioni?
+
+Se digiti `vettore_anelli` nella console, ottieni il seguente output:
+
+```
+[1] FALSE FALSE FALSE FALSE  TRUE  TRUE  TRUE  TRUE
+```
+
+Questo significa che le prime quattro osserazioni (o meglio i primi quattro pianeti) non hanno anelli (`FALSE`), ma gli altri quattro li hanno (`TRUE`). Tuttavia, così facendo non vedi i nomi dei pianeti, il diametro e tutte le altre informazioni. Proviamo ad utilizzare `vettore_anelli` per selezionare i dati dai quattro pianeti con gli anelli. 
+
+*** =instructions
+Il codice sulla destra selelziona la colonna `nome` da tutti i pianeti che hanno gli anelli. Adatta il codice così che invece della sola colonna `nome`, vengano selezionate _tutte_ le colonne per i pianeti che hanno gli anelli.
+
+*** =hint
+Ricorda che per selezionare _tutte_ le colonne devi semplicemente lasciare vuota la parte riguardante le colonne nelle parentesi quadre `[ ]`, ovvero devi digitare `[vettore_anelli, ]`.
+
+*** =pre_exercise_code
+```{r}
+load(url("http://s3.amazonaws.com/assets.datacamp.com/course/intro_to_r/planets.RData"))
+vettore_anelli <- pianeti_df$anelli
+```
+
+*** =sample_code
+```{r}
+# pianeti_df e vettore_anelli sono già caricati nel workspace
+
+# Adatta il codice per selezionare tutte le colonne per i pianeti con anelli
+pianeti_df[vettore_anelli, "nome"]
+```
+
+*** =solution
+```{r}
+# pianeti_df e vettore_anelli sono già caricati nel workspace
+
+# Adatta il codice per selezionare tutte le colonne per i pianeti con anelli
+pianeti_df[vettore_anelli, ]
+```
+
+*** =sct
+```{r}
+msg <- "Non rimuovere o sovrascrivere `pianeti_df` e `vettore_anelli`!"
+test_object("pianeti_df", undefined_msg = msg, incorrect_msg = msg)
+test_object("vettore_anelli", undefined_msg = msg, incorrect_msg = msg)
+test_output_contains('pianeti_df[vettore_anelli, ]', incorrect_msg = "Hai adattato correttamente il codice per selezionare __tutte__ le colonne dei pianeti che hanno gli anelli? Puoi utilizzare `pianeti_df[vettore_anelli, ]`. Assicurati di digitare la virgola, è essenziale!")
+success_msg("Fantastico! Questa soluzione è un pò tediosa però. Il prossimo esercizio ti mostrerà un modo più conciso.")
+```
+
+
+--- tipo:NormalExercise xp:100 skills:1
+## Solo pianeti con anelli (2)
+
+Quindi, cosa hai imparato negli esercizi precedenti? Hai selezionato un sottoinsieme di dati da un data frame (`pianeti_df`) sulla base di una certa condizione (pianeta con anelli oppure senza), e sei riuscito a recuperare tutti i dati relativi alle osservazioni interessate. Direi che sei a buon punto! La NASA sta probabilmente già flirtando con il tuo CV ;-). 
+
+Adesso facciamo un piccolo step e utilizziamo la funzione [`subset()`](http://www.rdocumentation.org/packages/base/functions/subset). La funzione [`subset()`](http://www.rdocumentation.org/packages/base/functions/subset) può essere vista come una scorciatoia per fare esattamente ciò che hai fatto negli esercizi precedenti. 
+
+```
+subset(mio_df, subset = qualche_condizione)
+``` 
+
+Il primo argomento di [`subset()`](http://www.rdocumentation.org/packages/base/functions/subset) specifica il data set che vuoi utilizzare per la selezione. Il secondo argomento specifica le condizioni per effettuare la selezione.
+
+Il codice sotto produce lo stesso risultato ottenuto negli esercizi precedenti ma questa volta non è stato necessario utilizzare `vettore_anelli`!
+
+```
+subset(pianeti_df, subset = anelli)
+``` 
+
+*** =instructions
+Usa `subset()` su `pianeti_df` per selezionare i pianeti che hanno un diametro inferiore rispetto a quello della Terra. Siccome la variabile `diametro` è una misura relativa del diametro del pianeta rispetto a quello della Terra, la condizione da applicare è `diametro < 1`.
+
+*** =hint
+`subset(pianeti_df, subset = ...)` è quasi la soluzione completa; Riesci a riempire i puntini `...`?
+
+*** =pre_exercise_code
+```{r}
+load(url("http://s3.amazonaws.com/assets.datacamp.com/course/intro_to_r/planets.RData"))
+```
+
+*** =sample_code
+```{r}
+# pianeti_df è già caricato nel workspace
+
+# Seleziona i pianeti con diametro < 1
+
+```
+
+*** =solution
+```{r}
+# pianeti_df è già caricato nel workspace
+
+# Seleziona i pianeti con diametro < 1
+subset(pianeti_df, subset = diametro < 1)
+```
+
+*** =sct
+```{r}
+msg = "Non rimuovere o sovrascrivere il data frame `pianeti_df`!"
+test_object("pianeti_df", undefined_msg = msg, incorrect_msg = msg)
+test_correct({
+  test_output_contains("subset(pianeti_df, subset = diametro < 1)", incorrect_msg = "Hai specificato correttamente l'argomento `subset = ...` dentro la funzione `subset()`?. La condizione, in questo caso, è `diametro < 1`. Stampa semplicemente il risultato.")  
+}, {
+  test_function("subset", args = "x", 
+                not_called_msg = "Assicurati di utilizzare la funzione `subset()` per effettuare la selezione!",
+                incorrect_msg = "Il primo argomento passato a `subset()` dovrebbe essere `pianeti_df`.")
+})
+success_msg("Eccellente! Non solo la funzione `subset()` è più concisa, è probabilmente anche più chiara per chi legge il codice. Prosegui verso il prossimo esercizio!");
+```
+
+
+--- tipo:NormalExercise xp:100 skills:1
+## Riordinare
+
+Creare classifiche è una delle attività preferite degli analisti. Queste classifiche possono essere utili (ad esempio la classifica delle migliori università del mondo), effettuate puramente per divertimento (attori/attrici più seguiti) o inutili (persone che più assomigliano a 007).
+
+Durante l'analisi dei tuoi dati, puoi ordinare le informazioni sulla base di una certa variabile contenuta nel tuo data set. In R questa operazione può essere effettuata utilizzando la funzione [`order()`](http://www.rdocumentation.org/packages/base/functions/order). 
+
+[`order()`](http://www.rdocumentation.org/packages/base/functions/order) è una funzione che ti ritorna l'ordine, ossia il modo in cui gli elementi del vettore passato come argomento dovrebbero essere disposti affinchè siano disposti in ordine crescente. Un esempio chiarirà meglio la nebulosa frase che ho appena scritto:
+
+```
+> a <- c(100, 10, 1000)
+> order(a)
+[1] 2 1 3
+```
+
+10, che è il secondo elemento del vettore `a`, è l'elemento più piccolo, quindi 2 è il primo elemento del vettore di output ottenuto da `order(a)`. 100, che è il primo elemento di a `a` è il secondo elemento più piccolo, quindi 1 si trova nella seconda posizione nel vettore di output ottenuto da `order(a)`.
+
+Questo significa che possiamo utilizzare l'output di `order(a)` per riordinare il vettore `a`:
+    
+```
+> a[order(a)]
+[1]   10  100 1000
+``` 
+
+*** =instructions
+Fai alcuni esperimenti con la funzione [`order()`](http://www.rdocumentation.org/packages/base/functions/order) nella console. Clicca 'Submit Answer' quando sei pronto a continuare.
+
+*** =hint
+Fai alcuni esperimenti con [`order()`](http://www.rdocumentation.org/packages/base/functions/order) nella console!
+
+*** =pre_exercise_code
+```{r}
+# no pec
+```
+
+*** =sample_code
+```{r}
+# Gioca con la funzione order nella console
+```
+
+*** =solution
+```{r}
+# Gioca con la funzione order nella console
+```
+
+*** =sct
+```{r}
+success_msg("Molto bene! Adesso proviamo ad usare la funzione `order()` per ordinare il tuo data frame!")
+```
+
+
+--- tipo:NormalExercise xp:100 skills:1
+## Riordinare il tuo data frame
+
+Bene, ora che conosci la funzione [`order()`](http://www.rdocumentation.org/packages/base/functions/order), utilizziamola per qualcosa di utile. Supponi di voler riordinare il tuo dataframe cosi che inizi con il pianeta più piccolo e finisca con quello più grande. A sort on the `diametro` column.
+
+*** =instructions
+- Chiama `order()` su `pianeti_df$diametro` (la colonna `diametro` di `pianeti_df`). Salva il risultato come `posizioni`.
+- Ora sistema `pianeti_df` utilizzando il `posizioni` come vettore degli indici di riga dentro le parentesi quadrate. Tieni tutte le colonne e poi stampa il risultato.
+
+*** =hint
+- Usa `order(pianeti_df$diametro)` per creare `posizioni`.
+- Ora puoi utilizzare `posizioni` dentro le parentesi quadre: `pianeti_df[...]`; Riesci a riempier i puntini `...`?
+
+*** =pre_exercise_code
+```{r}
+load(url("http://s3.amazonaws.com/assets.datacamp.com/course/intro_to_r/planets.RData"))
+```
+
+*** =sample_code
+```{r}
+# pianeti_df è già stato caricato nel workspace
+
+# Usa order() per creare posizioni
+posizioni <-  
+
+# Usa posizioni per ordinare pianeti_df
+
+```
+
+*** =solution
+```{r}
+# pianeti_df è già stato caricato nel workspace
+
+# Usa order() per creare posizioni
+posizioni <- order(pianeti_df$diametro)
+
+# Usa posizioni per ordinare pianeti_df
+pianeti_df[posizioni, ]
+```
+
+*** =sct
+```{r}
+msg = "Non cancellare o modificare il data frame `pianeti_df`!"
+test_object("pianeti_df", undefined_msg = msg, incorrect_msg = msg)
+test_object("posizioni",
+            incorrect_msg = "Hai calcolato correttamente la variabile `posizioni`? Puoi utilizzare `sort(pianeti_df$diametro)`.")
+test_output_contains("pianeti_df[posizioni,]",
+                     incorrect_msg = "Usa `pianeti_df[posizioni, ]` per riordinare `pianeti_df`; la virgola dentro le parentesi quadre è essenziale!")
+success_msg("Fantastico! Questo esercizio conclude il capitolo sui data frames. Ricorda che i data frames sono estremamente importanti in R, li utilizzerai praticamente sempre. Un'altra struttura dati molto utilizzata è la lista. Le liste saranno oggetto del capitolo successivo!")
+```
+
+
