@@ -6,12 +6,14 @@ description : "In questo capitolo compirai i tuoi primi passi su R, imparerai ad
 --- type:NormalExercise xp:100 skills:1 key:c44b81c96e
 ## Come funziona
 
-Nell'editor alla tua destra puoi inserire codice R e per risolvere gli esercizi proposti. Non appena clicchi il pulsante 'Submit Answer', ogni singola riga di codice inserita è interpretata ed eseguita da R e ti verrà ritornato un messaggio contenente preziose informazioni sul buon esito (o meno) dell'operazione. L'output del codice inserito è mostrato nella console in basso a destra dello schermo.
+Nell'editor alla tua destra puoi inserire codice R per risolvere gli esercizi proposti.
+
+Non appena clicchi il pulsante 'Submit Answer', ogni singola riga di codice inserita è interpretata ed eseguita da R e ti verrà ritornato un messaggio contenente preziose informazioni sul buon esito (o meno) dell'operazione. L'output del codice inserito è mostrato nella console in basso a destra dello schermo.
 
 R utilizza il simbolo `#` per indicare che tutto il testo che segue è un commento. I commenti sono essenziali per permettere a chi legge il codice di capire quali operazioni vengono effettuate. Commentare il codice è molto importante per renderlo più leggibile.
-I commenti sono ignorati completamente dall'interprete, e quindi non influenzeranno in alcun modo il codice che hai scritto. Ad esempio, _Calculate 3 + 4_  nell'editor a destra è un commento.
+I commenti sono ignorati completamente dall'interprete, e quindi non influenzeranno in alcun modo il codice che hai scritto. Ad esempio, _Calcola 3 + 4_  nell'editor a destra è un commento.
 
-Puoi eserguire codice in due modi. Il primo, consiste nello scrivere il programma su un file di testo e successivamente eseguirlo, il secondo modo è la modalità interattiva, infatti è possibile eseguire comandi R immettendoli direttamente nella console.
+Puoi eserguire codice R in due modi. Il primo, consiste nello scrivere il programma su un file di testo e successivamente eseguirlo, il secondo modo è la modalità interattiva, infatti è possibile eseguire comandi R immettendoli direttamente nella console.
 
 *** =instructions
 - Nell'editor è già presente un esempio di codice R. Riesci a distinguere le linee di codice R dai commenti?
@@ -62,7 +64,9 @@ R può essere utilizzato come una semplice calcolatrice. Per esempio, considera 
 - Modulo: `%%`
 
 Gli ultimi due operatori potrebbero aver bisogno di qualche spiegazione aggiuntiva:
+
 - L'operatore `^` eleva il numero alla sua sinistra alla potenza del numero alla sua destra: per esempio, `3^2` ritorna 9.
+
 - Il modulo ritorna il resto della divisione del numero alla sua sinistra per il numero alla sua destra, ad esempio 5 modulo 3 o `5 %% 3` ritorna 2.
 
 Segui le istruzioni e completa l'esercizio.
@@ -133,9 +137,9 @@ success_msg("Perfetto! Procediamo alla sezione successiva.")
 
 
 --- type:NormalExercise xp:100 skills:1 key:54e6b2d792
-## Assegnazione variabili
+## Assegnazione delle variabili
 
-Un elemento base della programmazione si chiama **variabile**.
+Il concetto di **variabile** è un elemento base della programmazione.
 
 Una variabile è un contenitore con un nome, che consente di memorizzare in R un valore (ad esempio 4), oppure un oggetto (ad esempio una funzione). Successivamente all'assegnazione è possibile utilizzare il nome della variabile per accedere al valore (o all'oggetto) contenuto all'interno della variabile stessa.
 
@@ -183,7 +187,7 @@ success_msg("Ottimo lavoro! Hai notato che R non stampa nulla a video quando vie
 
 
 --- type:NormalExercise xp:100 skills:1 key:c5ff758977
-## Assegnazione variabili (2)
+## Assegnazione delle variabili (2)
 
 Supponi di avere un cestino con cinque mele. Come apprendista data analyst potresti voler immagazzinare il numero di mele in una variabile chiamata, ad esempio, `mie_mele`.
 
@@ -229,9 +233,9 @@ success_msg("Ottimo! Continua verso l'esercizio successivo!")
 
 
 --- type:NormalExercise xp:100 skills:1 key:f75e6923bb
-## Assegnazione variabili (3)
+## Assegnazione delle variabili (3)
 
-Ogni cestino di frutta che si rispetti deve essere un minimo vario, quindi decidiamo di aggiungere sei arance. Come data analyst, la prima cosa che è necessario effettuare è creare la variabile `mie_arance` e assegnarle il valore 6. Successivamente, volendo calcolare quanti pezzi unici di frutta hai in totale, puoi effettuare questa operazione in modo chiaro utilizzando le variabili create precedentemente:
+Ogni cestino di frutta che si rispetti deve essere un minimo vario, quindi decidiamo di aggiungere sei arance. Come data analyst, la prima cosa che è necessario effettuare è creare la variabile `mie_arance` e assegnarle il valore 6. Successivamente, volendo calcolare quanti pezzi unici di frutta hai in totale, puoi effettuare questa operazione utilizzando le variabili create precedentemente:
 
 ```
 mie_mele + mie_arance
@@ -291,7 +295,7 @@ success_msg("Molto bene! Il grande vantaggio di fare i conti utilizzando le vari
 --- type:NormalExercise xp:100 skills:1 key:8b34f74e2d
 ## Mele e arance
 
-La fisica ci dice che non si possono sommare mele e arance. Però l'hai appena fatto, no :-)? Le variabili `mie_mele` e `mie_arance` nell'esercizio precedente contenevano entrambe un numero both contained a number in the previous exercise. L'operatore `+` in R funziona con variabili di tipo numerico (numeric). Se avessi provato a sommare variabili di tipo diverso, per esempio assegnando a `mie_arance` una variabile di tipo character (vedi nell'editor editor), effettuando la somma proveresti ad assegnare alla variabile `mia_frutta` una somma tra una variabile di tipo character e una di tipo numerico. Questa operazione, ovviamente, non è possibile.
+La fisica ci dice che non si possono sommare mele e arance. Però l'hai appena fatto, no :-)? Le variabili `mie_mele` e `mie_arance` nell'esercizio precedente contenevano entrambe un numero. L'operatore `+` in R funziona con variabili di tipo numerico (numeric). Se avessi provato a sommare variabili di tipo diverso, per esempio assegnando a `mie_arance` una variabile di tipo character (vedi nell'editor), effettuando la somma proveresti ad assegnare alla variabile `mia_frutta` una somma tra una variabile di tipo character e una di tipo numerico. Questa operazione, ovviamente, non è possibile.
 
 *** =instructions
 - Clicca 'Submit Answer' e leggi il messaggio di errore. Cerca di capire come mai il codice non è stato eseguito.
