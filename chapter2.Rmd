@@ -48,19 +48,21 @@ success_msg("Perfetto! Procedi all'esercizio successivo.")
 
 Concentriamoci sui vettori!
 
-I vettori sono tra le strutture di dato più utilizzate in R. Almeno all'inizio della tua esperienza in R farai sicuramente grande uso dei vettori. Ma che cos'è un vettore? I vettori sono degli array monodimensionali che possono contenere dati di tipo numerico, character e logico. Puoi pensare ad un vettore come un contenitore di dati con più slots. Ad esempio, potresti immagazzinare in un vettore le vincite e perdite giornaliere al casinò.
+I vettori sono tra le strutture dati più utilizzate in R. All'inizio della tua esperienza in R farai sicuramente grande uso dei vettori.
 
-In R puoi creare un vettore con la funzione combina [`c()`](http://www.rdocumentation.org/packages/base/functions/c). Puoi separare gli elementi contenuti nel vettore utilizando una virgola. Per esempio:
+Ma che cos'è un vettore? I vettori sono degli array monodimensionali che possono contenere dati di tipo numerico, character e logico. Puoi pensare ad un vettore come un contenitore di dati con più slots. Ad esempio, potresti immagazzinare in un vettore le vincite e perdite giornaliere al casinò.
+
+In R puoi creare un vettore con la funzione combina [`c()`](http://www.rdocumentation.org/packages/base/functions/c). Puoi separare gli elementi contenuti nel vettore utilizzando una virgola. Per esempio:
 
 ```
-numeric_vector <- c(1, 2, 3)
-character_vector <- c("a", "b", "c")
+numeric_vettore <- c(1, 2, 3)
+character_vettore <- c("a", "b", "c")
 ```
 
 Una volta dichiarati i vettori puoi utilizzarli per effettuare dei conti.
 
 *** =instructions 
-Completa il codice in modo che il vettore `boolean_vettore` contenga i seguenti tre elementi: `TRUE`, `FALSE` and `TRUE` (in questo specifico ordine). 
+Completa il codice in modo che il vettore `boolean_vettore` contenga i seguenti tre elementi: `TRUE`, `FALSE` e `TRUE` (in questo specifico ordine). 
 
 *** =hint 
 Assegna `c(TRUE, FALSE, TRUE)` alla variabile `boolean_vettore` utilizzando l'operatore `<-`.
@@ -81,8 +83,8 @@ boolean_vettore <-
 
 *** =solution
 ```{r}
-numeric_vecttore <- c(1, 10, 49)
-character_vecttore <- c("a", "b", "c")
+numeric_vettore <- c(1, 10, 49)
+character_vettore <- c("a", "b", "c")
 
 # Completa il codice per boolean_vettore
 boolean_vettore <- c(TRUE, FALSE, TRUE)
