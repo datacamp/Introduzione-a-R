@@ -333,7 +333,7 @@ mia_frutta
 
 *** =sct
 ```{r}
-test_error(incorrect_msg = "You can do this by setting the `mie_arance` variable to a numeric value, not a string!")
+test_error(incorrect_msg = "Per superare questo esercizio, alla variabile `mie_arance` deve essere assegnato un valore numerico, non una stringa!")
 test_object("mie_mele", incorrect_msg = "Assicurati che `mie_mele` contenga `5`.")
 test_object("mie_arance", incorrect_msg = "Assicurati che `mie_arance` contenga `6`.")
 test_object("mia_frutta", incorrect_msg = "Il valore di `mia_frutta` non è corretto. Dovrebbe essere 11, ossia la somma di `mie_mele` e `mie_arance`.")
@@ -439,9 +439,9 @@ class(mia_numeric)
 
 *** =solution
 ```{r}
-# Declare variables of different types:
+# Dichiara variabili di diverso tipo
 mia_numeric <- 42
-mia_character <- "universe"
+mia_character <- "universo"
 mia_logical <- FALSE
 
 # Controlla la classe di mia_numeric
