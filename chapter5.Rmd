@@ -412,7 +412,7 @@ success_msg("Ottimo! Prosegui all'esercizio successivo e scopri un nuovo modo di
 
 
 --- type:NormalExercise xp:100 skills:1 key:0044a13a89
-## Solo pianeti con anelli (2)
+## Solo pianeti con anelli ? (2)
 
 Dalle scuole superiori ti ricorderai che qualche pianeta nel Sistema Solare ha gli anelli e altri non li hanno. Ma, a seguito di altre priorità, non ti ricordi i nomi né tantomeno la velocità di rotazione, ecc... 
 
