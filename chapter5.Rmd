@@ -464,7 +464,7 @@ success_msg("Fantastico! Questa soluzione è un pò tediosa però. Il prossimo e
 ```
 
 
---- type:NormalExercise xp:100 skills:1 key:0044a13a89
+--- type:NormalExercise xp:100 skills:1 key:caee1bac7b
 ## Solo pianeti con anelli (2)
 
 Quindi, cosa hai imparato negli esercizi precedenti? Hai selezionato un sottoinsieme di dati da un data frame (`pianeti_df`) sulla base di una certa condizione (pianeta con anelli oppure senza), e sei riuscito a recuperare tutti i dati relativi alle osservazioni interessate. Direi che sei a buon punto! La NASA sta probabilmente già flirtando con il tuo CV ;-). 
