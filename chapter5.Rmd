@@ -3,7 +3,7 @@ title_meta  : Capitolo 5
 title       : Data frames
 description : La maggior parte dei data sets con cui lavorerai sarà immagazzinata in R sotto forma di data frames. Dopo aver completato questo capitolo, sarai in grado di creare un data frame, selezionare solo le parti che ti interessano e ordinarlo in funzione di certe variabili.
 
---- tipo:NormalExercise xp:100 skills:1
+--- type:NormalExercise xp:100 skills:1
 ## Che cos'è un data frame
 
 Potresti ricordarti, dal capitolo sulle matrici, che tutti gli elementi che inserisci in una matrice dovrebbero essere dello stesso tipo. Nell'esempio sulle matrici, il data set di Star Wars conteneva solo dati di tipo numerico.
@@ -48,7 +48,7 @@ success_msg("Ottimo! Prosegui all'esercizio successivo.")
 ```
 
 
---- tipo:NormalExercise xp:100 skills:1
+--- type:NormalExercise xp:100 skills:1
 ## Osserva il tuo data set
 
 Wow, contiene informazioni su una miriade di auto! 
@@ -90,7 +90,7 @@ success_msg("Fantastico! Quindi, cosa abbiamo in questo data set? Per esempio, `
 ```
 
 
---- tipo:NormalExercise xp:100 skills:1
+--- type:NormalExercise xp:100 skills:1
 ## Analizziamo la struttura di un data frame
 
 Un altro metodo per ottenere una veloce overview dei tuoi dati è la funzione [`str()`](http://www.rdocumentation.org/packages/utils/functions/str). La funzione [`str()`](http://www.rdocumentation.org/packages/utils/functions/str) stampa la struttura del tuo data set. Nel caso di un data frame, vengono mostrate le seguenti informazioni:
@@ -132,7 +132,7 @@ success_msg("Perfetto! Riesci a trovare tutte le informazioni elencate nella con
 ```
 
 
---- tipo:NormalExercise xp:100 skills:1
+--- typeNormalExercise xp:100 skills:1
 ## Creare un data frame
 
 Siccome utilizzare data sets disponibili di default non è molto divertente, il resto del capitolo è focalizzato su un data set creato da te. Allacciati il ket pack siccome è tempo di esplorare lo spazio!
@@ -244,7 +244,7 @@ success_msg("Fantastico! Ora che hai una chiara immagine della struttura di `pia
 ```
 
 
---- tipo:NormalExercise xp:100 skills:1
+--- type:NormalExercise xp:100 skills:1
 ## Selezione di elementi da un data frame
 
 In modo simile ai vettori e alle matrici, puoi selezionare elementi da un data frame utilizzando le parentesi quadre `[ ]`. Utilizzando una virgola, puoi indicare cosa selezionare, rispettivamente, dalle righe e dalle colonne. Per esempio:
@@ -298,7 +298,7 @@ success_msg("Eccezionale! Oltre a selezionare gli elementi utilizzando il numero
 ```
 
 
---- tipo:NormalExercise xp:100 skills:1
+--- type:NormalExercise xp:100 skills:1
 ## Selezione di elementi da un data frame (2)
 
 Invece di utilizzare il numero di riga e colonna per selezionare elementi, puoi utilizzare anche il nome delle variabili per selezionare le colonne di un data frame. 
@@ -351,7 +351,7 @@ success_msg("Molto bene! Prosegui all'esercizio successivo!")
 ```
 
 
---- tipo:NormalExercise xp:100 skills:1
+--- type:NormalExercise xp:100 skills:1
 ## Solo pianeti con anelli
 
 Speeso ti capiterà di voler scegliere una colonna intera, ossia una variabile specifica, dal tuo data frame. Se vuoi selezionare tutti gli elementi della variabile `diametro`, ad esempio, le seguenti linee di codice ti permetteranno entrambe di raggiungere l'obiettivo:
@@ -411,7 +411,7 @@ success_msg("Ottimo! Prosegui all'esercizio successivo e scopri un nuovo modo di
 ```
 
 
---- tipo:NormalExercise xp:100 skills:1
+--- type:NormalExercise xp:100 skills:1
 ## Solo pianeti con anelli (2)
 
 Dalle scuole superiori ti ricorderai che qualche pianeta nel Sistema Solare ha gli anelli e altri non li hanno. Ma, a seguito di altre priorità, non ti ricordi i nomi né tantomeno la velocità di rotazione, ecc... 
@@ -464,7 +464,7 @@ success_msg("Fantastico! Questa soluzione è un pò tediosa però. Il prossimo e
 ```
 
 
---- tipo:NormalExercise xp:100 skills:1
+--- type:NormalExercise xp:100 skills:1
 ## Solo pianeti con anelli (2)
 
 Quindi, cosa hai imparato negli esercizi precedenti? Hai selezionato un sottoinsieme di dati da un data frame (`pianeti_df`) sulla base di una certa condizione (pianeta con anelli oppure senza), e sei riuscito a recuperare tutti i dati relativi alle osservazioni interessate. Direi che sei a buon punto! La NASA sta probabilmente già flirtando con il tuo CV ;-). 
@@ -525,7 +525,7 @@ success_msg("Eccellente! Non solo la funzione `subset()` è più concisa, è pro
 ```
 
 
---- tipo:NormalExercise xp:100 skills:1
+--- type:NormalExercise xp:100 skills:1
 ## Riordinare
 
 Creare classifiche è una delle attività preferite degli analisti. Queste classifiche possono essere utili (ad esempio la classifica delle migliori università del mondo), effettuate puramente per divertimento (attori/attrici più seguiti) o inutili (persone che più assomigliano a 007).
@@ -576,7 +576,7 @@ success_msg("Molto bene! Adesso proviamo ad usare la funzione `order()` per ordi
 ```
 
 
---- tipo:NormalExercise xp:100 skills:1
+--- type:NormalExercise xp:100 skills:1
 ## Riordinare il tuo data frame
 
 Bene, ora che conosci la funzione [`order()`](http://www.rdocumentation.org/packages/base/functions/order), utilizziamola per qualcosa di utile. Supponi di voler riordinare il tuo dataframe cosi che inizi con il pianeta più piccolo e finisca con quello più grande. A sort on the `diametro` column.
