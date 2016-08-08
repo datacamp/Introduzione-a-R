@@ -106,7 +106,7 @@ success_msg("Perfetto! Nota che aggiungere uno spazio dopo ogni virgola nella fu
 
 Dopo una settimana a Las Vegas e ancora nessuna Ferrari nel tuo garage, decidi che è tempo di utilizzare i tuoi superpoteri di data scientist.
 
-Prima di effettuare una semplice analisi, decidi di raccogliere tutte le vincite e perdite per la settimana scorsa: 
+Prima di effettuare una semplice analisi, decidi di raccogliere tutte le vincite e perdite della scorsa settimana: 
 
 Per il vettore `vettore_poker`: 
 
@@ -165,7 +165,7 @@ success_msg("Molto bene! Per visualizzare il contenuto dei vettori, ricordati ch
 
 Dal punto di vista di un data analyst, è importante avere chiaro in mente che dati stai utilizzando. In particolare, è essenziale capire a cosa si riferisce ogni elemento.
 
-Nell'esempio precedente abbiamo creato un vettore con le vincite della settimana. Ogni elemento del vettore si riferisce ad un giorno della settimana, però è difficile a quale giorno si riferisce un particolare elemento. Nel nostro esempio è abbastanza semplice ricavare questa informazione ma nel caso in cui stessimo utilizzando ad esempio i giorni dell'anno potrebbe essere molto più complicato. Sarebbe quindi opportuno che il vettore contenesse anche questa informazione.
+Nell'esempio precedente abbiamo creato un vettore con le vincite della settimana. Ogni elemento del vettore si riferisce ad un giorno della settimana, però è difficile capire a quale giorno si riferisce un particolare elemento. Nel nostro esempio è relativamente semplice ricavare questa informazione ma nel caso in cui stessimo utilizzando, ad esempio, i giorni dell'anno potrebbe essere molto più complicato. Sarebbe quindi opportuno che il vettore contenesse anche questa informazione.
 
 Puoi assegnare dei nomi agli elementi di un vettore utilizzando la funzione `names()`. Osserva questo esempio:
 
@@ -174,7 +174,7 @@ un_vettore <- c("Mario Bianchi", "Giocatore di Poker")
 names(un_vettore) <- c("Nome", "Professione")
 ```
 
-La prima riga di codice crea il vettore `un_vettore` mentre la seconda assegna i nomi agli elementi del vettore. Al primo elemento è assegnato il nome `Nome`, mentre il secondo elemento è etichettato come `Professione`. Stampando il contenuto alla console si ottiene il seguente output:
+La prima riga di codice crea il vettore `un_vettore` mentre la seconda assegna i nomi agli elementi del vettore. Al primo elemento è assegnato il nome `Nome`, mentre il secondo elemento è etichettato come `Professione`. Stampando il contenuto nella console si ottiene il seguente output:
 
 ```
           Nome     Professione 
@@ -235,9 +235,9 @@ success_msg("Ben fatto! Prosegui al prossimo esercizio.")
 --- type:NormalExercise xp:100 skills:1 key:33b17b05db
 ## Assegnare un nome ad un vettore (2)
 
-Se vuoi diventare un buon programmatore devi diventare pigro. (Se sei già pigro, è molto probabile che tu sia già uno di quei talenti nell'ambito della programmazione in attesa di esprimerti.)
+Se vuoi diventare un buon programmatore devi diventare pigro. (Se sei già pigro, è molto probabile che tu sia già uno di quei talenti nell'ambito della programmazione in attesa di esprimerti).
 
-Negli esercizi precedenti, probabilmente hai già provato un pò di sana noia e frustrazione nel digitare più e più volte le stesse informazioni come ad esempio i giorni della settimana. Tuttavia, quando osservi il problema da un'altra prospettiva, esiste un modo più efficiente di effettuare queste operazioni, per esempio assegnando il vettore dei giorni della settimana ad una **variabile**! 
+Negli esercizi precedenti, probabilmente, hai già provato un pò di sana noia e frustrazione nel digitare più e più volte le stesse informazioni come ad esempio i giorni della settimana. Tuttavia, quando osservi il problema da un'altra prospettiva, esiste un modo più efficiente di effettuare queste operazioni, per esempio assegnando il vettore dei giorni della settimana ad una **variabile**! 
 
 Come hai fatto con i dati riguardanti il poker e la roulette, puoi creare una variabile che contenga i giorni della settimana. In questo modo puoi utilizzarli più volte senza dover digitare nuovamente tutto il contenuto della variabile.
 
@@ -308,8 +308,11 @@ success_msg("Ottimo! Un consiglio: cerca di evitare di duplicare il codice ogni 
 Ora che i dati sulle vincite sono stati immagazzinati in vettori puoi iniziare a fare alcuni conti. 
 
 Diciamo che sei interessato a ottenere le seguenti informazioni:
+
 - Quanto è stato il profitto/ la perdita medio/a per giorno della settimana?
+
 - Hai perso soldi in totale durante la settimana?
+
 - Stai vincendo/perdendo alla roulette/poker?
 
 Per ottenere le risposte, devi effettuare alcune operazioni aritmentiche sui vettori.
@@ -380,7 +383,7 @@ success_msg("Ottimo lavoro! Prosegui al prossimo esercizio.")
 --- type:NormalExercise xp:100 skills:1 key:49ee1d095a
 ## Calcola le vincite totali (2)
 
-Ora sai come R effettua operazioni aritmetiche con i vettori. Calcola ora a quanto ammonta il profitto o la perdita totale per giorno della settimana. Il profitto totale giornaliero è la somma dei profitti e delle perdite che hai realizzato a poker sommato al risultato giornaliero del gioco della roulette.
+Ora sai come R effettua operazioni aritmetiche con i vettori. Adesso calcola a quanto ammonta il profitto o la perdita totale per giorno della settimana. Il profitto totale giornaliero è la somma dei profitti e delle perdite che hai realizzato a poker sommato al risultato giornaliero del gioco della roulette.
 
 In R, questa operazione corrisponde semplicemente alla somma di `vettore_roulette` e `vettore_poker`.
 
