@@ -1,0 +1,428 @@
+--- 
+title_meta  : Capitolo 6
+title       : Liste
+description : Le liste, contrariamente ai vettori, possono contenere tipi di dato differenti tra loro. Questo capitolo introduttivo ti insegnerà come creare liste, assegnare loro nomi e selezionare elementi appartenenti a liste.
+
+--- type:NormalExercise xp:100 skills:1
+## Liste, a che cosa servono?
+
+Congratulazioni! A questo punto del corso conosci già i seguenti elementi:
+
+- **Vettori** (array monodimensionali): possono contenere valori di tipo numeric, character o logical. Gli elementi di un vettore devono essere tutti dello stesso tipo.
+- **Matrici** (array bidimensionali): possono contenere valori di tipo numeric, character o logical. Gli elementi di una matrice devono essere tutti dello stesso tipo.
+- **Data frames** (two-dimensional objects): possono contenere valori di tipo numeric, character o logical. Ogni colonna deve contenere valori dello stesso tipo ma colonne differenti possono contenere valori di tipo differente.
+
+Non male per un principiante eh? ;-)
+
+*** =instructions
+Clicca su 'Submit Answer' per iniziare a imparare tutto sulle liste!
+
+*** =hint
+Clicca semplicemente il pulsante 'Submit Answer'.
+
+*** =pre_exercise_code
+```{r}
+# no pec
+```
+
+*** =sample_code
+```{r}
+# Clicca semplicemente il pulsante 'Submit Answer'.
+```
+
+*** =solution
+```{r}
+# Clicca semplicemente il pulsante 'Submit Answer'.
+```
+
+*** =sct
+```{r}
+success_msg("Pronti, partenza, via! Prosegui al prossimo esercizio.")
+```
+
+
+--- type:NormalExercise xp:100 skills:1
+## Liste, a che cosa servono? (2)
+
+In R una **lista** è molto simile alle classiche to-do list utilizzate a scuola o al lavoro: gli elementi contenuti nella lista molto probabilmente differiscono in lunghezza, caratteristiche, tipo di attività a cui sono legati, ecc... 
+
+In R una lista ti permette di raccogliere una serie di oggetti sotto un "singolo nome" (ossia la lista) in modo ordinato. Questi oggetti possono essere matrici, vettori, data frames, altre liste, ecc... Non è nemmeno richiesto che questi oggetti siano in qualche modo collegati l'uno all'altro.
+
+Potresti dire che una lista è un tipo di dato "super": puoi immagazzinare praticamente qualsiasi informazione in una lista.
+
+*** =instructions
+Clicca su 'Submit Answer' per iniziare il primo esercizio sulle liste.
+
+*** =hint
+Clicca su 'Submit Answer' per iniziare il primo esercizio sulle liste.
+
+*** =pre_exercise_code
+```{r}
+# no pec
+```
+
+*** =sample_code
+```{r}
+# Clicca su 'Submit Answer' per iniziare il primo esercizio sulle liste.
+```
+
+*** =solution
+```{r}
+# Clicca su 'Submit Answer' per iniziare il primo esercizio sulle liste.
+```
+
+*** =sct
+```{r}
+success_msg("Bene! Iniziamo a sporcarci le mani con le liste!")
+```
+
+
+--- type:NormalExercise xp:100 skills:1
+## Creare una lista
+
+Creiamo la nostra prima lista! Per costruire una lista puoi utilizzare la funzione [`list()`](http://www.rdocumentation.org/packages/base/functions/list):
+
+```
+mia_lista <- list(elem1, elem2 ...)
+```
+
+Gli argomenti passati alla funzione list sono gli elementi della lista. Ricorda, questi elementi possono essere matrici, vettori, altre liste, ecc...
+
+*** =instructions
+Costruisci una lista chiamata `mia_lista`, that contains the variables `mio_vettore`, `mia_matrice` and `mio_df` as list components.
+
+*** =hint
+Usa la funzione [`list()`](http://www.rdocumentation.org/packages/base/functions/list) con `mio_vettore`, `mia_matrice` e `mio_df` come argomenti, separati da una virgola.
+
+*** =pre_exercise_code
+```{r}
+# no pec
+```
+
+*** =sample_code
+```{r}
+# Vettore con numeri da 1 a 10
+mio_vettore <- 1:10 
+
+# Matrice con numeri da 1 a 9
+mia_matrice <- matrix(1:9, ncol = 3)
+
+# Primi 10 elementi del data frame mtcars
+mio_df <- mtcars[1:10,]
+
+# Costruisci una lista con questi elementi
+mia_lista <- 
+```
+
+*** =solution
+```{r}
+# Vettore con numeri da 1 a 10
+mio_vettore <- 1:10 
+
+# Matrice con numeri da 1 a 9
+mia_matrice <- matrix(1:9, ncol = 3)
+
+# Primi 10 elementi del data frame mtcars
+mio_df <- mtcars[1:10,]
+
+# Costruisci una lista con questi elementi
+mia_lista <- list(mio_vettore, mia_matrice, mio_df)
+```
+
+*** =sct
+```{r}
+msg = "Non eliminare o modificare la definizione delle variabili `mio_vettore`, `mia_matrice` e `mio_df`!"
+test_object("mio_vettore", undefined_msg = msg, incorrect_msg = msg)
+test_object("mia_matrice", undefined_msg = msg, incorrect_msg = msg)
+test_object("mio_df", undefined_msg = msg, incorrect_msg = msg)
+test_object("mia_lista",
+            incorrect_msg = "Sembra che `mia_lista` non contenga gli elementi corretti. Assicurati di passare le variabili `mio_vettore`, `mia_matrice` e `mio_df` alla funzione `list()` separandole con una virgola e mantenendo l'ordine assegnato.")
+success_msg("Fantastico! Prosegui all'esercizio successivo.")
+```
+
+
+--- type:NormalExercise xp:100 skills:1
+## Creare una lista con i nomi
+
+Ottimo, stai andando benissimo!
+
+Così come per una semplice to-do list, vuoi evitare di dimenticarti cosa rappresenta ogni elemento. Per questo motivo dovresti assegnare nomi agli elementi della lista:
+
+```
+mia_lista <- list(nome1 = comp1, 
+                nome2 = comp2)
+``` 
+
+Questa operazione creerà una lista con 2 elementi il cui nome sarà `nome1` e `nome2`. Se vuoi assegnare nomi agli elementi di una lista dopo averla definita, puoi usare la funzione `names()` come avevi fatto in precedenza con i vettori. Il codice seguente è equivalenti al codice scritto sopra:
+
+```
+mia_lista <- list(comp1, comp2)
+names(mia_lista) <- c("nome1", "nome2")
+```
+
+*** =instructions
+- Cambia il codice dell'esercizio precedente (guarda nell'editor) aggiungendo i nomi agli elementi della lista. Utilizza il nome `vec` per `mio_vettore`, `mat` per `mia_matrice` e `df` per `mio_df`. 
+- Stampa nella console `mia_lista` in modo da poter ispezionare il risultato ottenuto.
+
+*** =hint
+Il primo metodo visto per assegnare nomi agli elementi di una lista è anche il più semplice, ad esempio per il vettore:
+```
+mia_lista <- list(vec = mio_vettore)
+```
+Aggiungi gli altri due componenti nello stesso modo.
+
+*** =pre_exercise_code
+```{r}
+# no pec
+```
+
+*** =sample_code
+```{r}
+# Vettore con numeri da 1 a 10
+mio_vettore <- 1:10 
+
+# Matrice con numeri da 1 a 9
+mia_matrice <- matrix(1:9, ncol = 3)
+
+# Primi 10 elementi del data frame mtcars
+mio_df <- mtcars[1:10,]
+
+# Adatta la chiamata a list() in modo da assegnare i nomi agli elementi della lista
+mia_lista <- list(mio_vettore, mia_matrice, mio_df)
+
+# Stampa mia_lista
+
+```
+
+*** =solution
+```{r}
+# Vettore con numeri da 1 a 10
+mio_vettore <- 1:10 
+
+# Matrice con numeri da 1 a 9
+mia_matrice <- matrix(1:9, ncol = 3)
+
+# Primi 10 elementi del data frame mtcars
+mio_df <- mtcars[1:10,]
+
+# Adatta la chiamata a list() in modo da assegnare i nomi agli elementi della lista
+mia_lista <- list(vec = mio_vettore, mat = mia_matrice, df = mio_df)
+
+# Stampa mia_lista
+mia_lista
+```
+
+*** =sct
+```{r}
+msg = "Non rimuovere né alterare la definizione delle variabili `mio_vettore`, `mia_matrice` e `mio_df`!"
+test_object("mio_vettore", undefined_msg = msg, incorrect_msg = msg)
+test_object("mia_matrice", undefined_msg = msg, incorrect_msg = msg)
+test_object("mio_df", undefined_msg = msg, incorrect_msg = msg)
+test_object("mia_lista",
+            incorrect_msg = "Sembra che `mia_lista` non contenga gli elementi corretti.")
+test_object("mia_lista", eq_condition = "equal",
+            incorrect_msg = "Sembra che i nomi degli elementi di `mia_lista` non siano corretti. Assicurati di utilizzare i seguenti nomi: `vec`, `mat` e `df`. Controlla il suggerimento (hint) se non riesci a trovare la soluzione.");
+test_output_contains("mia_lista", incorrect_msg = "Non dimenticarti di stampare `mia_lista` nella console! Aggiungi semplicemente `mia_lista` in una nuova riga nell'editor.")
+success_msg("Ottimo! Adesso non solo sai come costruire le liste, sai anche come assegnare nomi ai loro elementi. Tutto ciò ti tornerà molto utile nella pratica. Prosegui all'esercizio successivo.")
+```
+
+
+--- type:NormalExercise xp:100 skills:1
+## Creare una lista con i nomi (2)
+
+Siccome ti piacciono molto i film, decidi di iniziare a collezionare informazioni sui film interessanti che hai visto utilizzando le liste. 
+
+Inizia a creare una lista per il film "The Shining". Abbiamo già creato le variabili `film`, `attori` and `rev` nel workspace. Controlla il contenuto di queste variabili nella console R.
+
+*** =instructions
+Completa il codice sulla destra per creare la lista `shining_list`; questa lista deve contenere tre elementi:
+
+- nome_film: una stringa con il titolo del film (salvato in `film`)
+- attori: un vettore con i nomi degli attori principali (salvato in `attori`)
+- reviews: un data frame che contiene alcune review del film (salvato in `rev`)
+
+Non dimenticarti di assegnare i nomi agli elementi della lista (i nomi da assegnare sono nome_film, attori e reviews).
+
+*** =hint
+`shining_list <- list(nome_film = film)` è solo una parte della soluzione; tocca a te inserire anche `attori` e `rev` nella lista con i nomi opportuni.
+
+*** =pre_exercise_code
+```{r}
+film <- "The Shining"
+attori      <- c("Jack Nicholson","Shelley Duvall","Danny Lloyd","Scatman Crothers","Barry Nelson")
+sources     <- c("IMDb1","IMDb2","IMDb3")
+comments    <- c("Best Horror Film I Have Ever Seen","A truly brilliant and scary film from Stanley Kubrick","A masterpiece of psychological horror")
+scores      <- c(4.5,4,5)
+rev     <- data.frame(scores, sources, comments)
+rm(scores, sources, comments)
+```
+
+*** =sample_code
+```{r}
+# Le variabili film, attori e rev sono disponibili nel workspace
+
+# Completa il codice per costruire la lista shining_list
+shining_list <- list(nome_film = film)
+```
+
+*** =solution
+```{r}
+# Le variabili film, attori e rev sono disponibili nel workspace
+
+# Completa il codice per costruire la lista shining_list
+shining_list <- list(nome_film = film, actors = attori, reviews = rev)
+```
+
+*** =sct
+```{r}
+msg = "Non cancellare o modificare le variabili predefinite!"
+lapply(c("film", "rev", "attori"), test_object, undefined_msg = msg, incorrect_msg = msg)
+test_object("shining_list",
+            incorrect_msg = "Sembra che `shining_list` non contenga gli elementi corretti: il primo elemento dovrebbe essere `film`, il secondo `attori` e il terzo `rev`.")
+test_object("shining_list", eq_condition = "equal",
+            incorrect_msg = "Sembra che gli elementi di `shining_list` non abbiano i nomi corretti: il primo elemento va chiamato `nome_film`, il secondo `actors` e il terzo `reviews`.");
+success_msg("Fantastico! Hai imparato come costruire liste e assegnare nomi ai loro elementi. Come già fatto nei capitoli precedenti, impariamo a selezionare elementi di una lista. Avanti al prossimo esercizio.")
+```
+
+
+--- type:NormalExercise xp:100 skills:1
+## Selezionare elementi da una lista
+
+Le liste che userai conterranno spesso moltissimi elementi. Per questo motivo, selezionare un singolo elemento o più elementi non è sempre immediato.
+
+Un modo per selezionare un elemento di una lista è utilizzare l'indice della posizione di quel particolare elemento. Per esempio, per selezionare il primo elemento di `shining_list` dovresti digitare 
+
+```
+shining_list[[1]]
+```
+
+Un modo veloce per verificare che la seleziona sia corretta è digitare il codice nella console. Attenzione: per selezionare elementi dai vettori utilizzavi le parentesi quadre singole `[ ]`. Attento a non fare confusione!
+
+Puoi anche selezionare elementi utilizzando il loro nome, o all'interno di parentesi quadre doppie `[[ ]]` oppure utilizzando il simbolo `$`. Nell'esempio sotto, entrambe le soluzioni proposte selezioneranno il dataframe contenente le reviews: 
+
+```
+shining_list[["reviews"]]
+shining_list$reviews
+``` 
+
+Besides selecting components, you often need to select specific elements out of these components. For example, with `shining_list[[2]][1]` you select from the second component, `actors` (`shining_list[[2]]`), the first element (`[1]`). When you type this in the console, you will see the answer is Jack Nicholson.
+
+*** =instructions
+- Seleziona da `shining_list` il vettore dei nomi degli attori. Stampa il vettore nella console.
+- Seleziona da `shining_list` il secondo elemento del vettore dei nomi degli attori. Stampa anche questo valore nella console.
+
+*** =hint
+- Per selezionare il vettore con i nomi degli attori puoi utilizzare `$actors`.
+- Per selezionare il terzo elemento del vettore utilizzi `shining_list$actors[3]`. Cosa devi cambiare per selezionare il secondo elemento?
+
+*** =pre_exercise_code
+```{r}
+load(url("http://s3.amazonaws.com/assets.datacamp.com/course/intro_to_r/shining_list.RData"))
+```
+
+*** =sample_code
+```{r}
+# shining_list è già stata caricata nel workspace
+
+# Stampa il vettore contenente i nomi degli attori
+
+
+# Stampa il secondo elemento del vettore contenente il nome degli attori
+
+```
+
+*** =solution
+```{r}
+# shining_list è già stata caricata nel workspace
+
+# Stampa il vettore contenente i nomi degli attori
+shining_list$actors
+
+# Stampa il secondo elemento del vettore contenente il nome degli attori
+shining_list$actors[2]
+```
+
+*** =sct
+```{r}
+msg <- "Non cancellare o modificare `shining_list` che è già stata caricata nel workspace!"
+test_object("shining_list", undefined_msg = msg, incorrect_msg = msg)
+test_output_contains("shining_list$actors", incorrect_msg = "Hai selezionato correttamente, e poi stampato, il vettore contenente i nomi degli attori? Per farlo puoi utilizzare, ad esempio, `shining_list$actors`")
+test_output_contains("shining_list$actors[2]", incorrect_msg = "Per selezionare il secondo attore dal vettore degli attori devi effettuare due selezioni: `shining_list$actors` per selezionare il vettore degli attori e poi aggiungi `[2]` per selezionare il secondo elemento.")
+success_msg("Ottimo! Selezionare elementi dalle liste è abbastanza facile, no? Prosegui verso il prossimo esercizio.")
+```
+
+
+--- type:NormalExercise xp:100 skills:1
+## Aggiungere ancora più informazioni alla lista
+
+Orgoglioso della tua lista, la condividi con i membri del film club cui appartieni. Tuttavia, uno dei membri più anziani, un tale M. McDowell, nota che hai dimenticato di inserire l'anno di uscita del film. Date le tue ambizioni di diventare presidente del club l'anno prossimo, decidi di aggiungere questa informazione alla lista.
+
+Per aggiungere elementi alle liste, puoi utilizzare la funzione [`c()`](http://www.rdocumentation.org/packages/base/functions/c), che tra l'altro hai già utilizzato per costruire i vettori:
+
+```
+ext_list <- c(mia_lista , mio_val)
+``` 
+
+Questa operazione estenderà la lista originale, `mia_lista`, aggiungendo l'elemento `mio_val`. Questo elemento viene aggiunto in coda alla lista originale.
+
+Se vuoi assegnare un nome al nuovo elemento, puoi assegnare il nome in modo molto semplice, come abbiamo fatto prima:
+
+
+```
+ext_list <- c(mia_lista, my_name = my_val)
+```
+
+*** =instructions
+- Completa il codice sotto così che un nuovo valore, pari a 1980 ed il cui nome è `anno` venga aggiunto alla lista `shining_list`. Assegna il risultato ottenuto alla variabile `shining_list_completa`.
+- Osserva la struttura di `shining_list_completa` utilizzando la funzione [`str()`](http://www.rdocumentation.org/packages/utils/functions/str).
+
+*** =hint
+Osserva il codice di esempio nella consegna. Potrebbe esserti utile anche il seguente codice:
+```
+shining_list <- c(shining_list, ...)
+```
+Devi però sostituire i puntini con qualcos'altro.
+
+*** =pre_exercise_code
+```{r, eval = FALSE}
+load(url("http://s3.amazonaws.com/assets.datacamp.com/course/intro_to_r/shining_list.RData"))
+```
+
+*** =sample_code
+
+```{r}
+# shining_list è già stata caricata nel workspace
+
+# Ci siamo dimenticati qualcosa, aggiungi l'anno a shining_list
+# Usa c() per aggiungere l'anno a shining_list
+shining_list_completa <- 
+
+# Osserva la struttura di shining_list_completa
+
+```
+
+*** =solution
+
+```{r}
+# shining_list è già stata caricata nel workspace
+
+# Ci siamo dimenticati qualcosa, aggiungi l'anno a shining_list
+# Usa c() per aggiungere l'anno a shining_list
+shining_list_completa <- c(shining_list, anno = 1980)
+
+# Osserva la struttura di shining_list_completa
+str(shining_list_completa)
+```
+
+*** =sct
+```{r}
+msg = "Non modificare `shining_list` (già caricata nel workspace)."
+test_object("shining_list", undefined_msg = msg, incorrect_msg = msg)
+test_object("shining_list_completa", eq_condition = "equal",
+            incorrect_msg = paste("Hai esteso la lista `shining_list` aggiungendo l'elemento `anno`,",
+                                  "il cui valore è 1980? Puoi usare `c(shining_list, anno = 1980)`"))
+test_function("str", "object", incorrect_msg = "Non dimenticare di visualizzare la struttura di `shining_list_completa` utilizzando la funzione `str()`.")
+success_msg("Eccellente! Questo era l'ultimo esercizio sulle liste in R! Adesso hai una conoscenza solida delle basi di R. Ricordati però che c'è ancora moltissimo da imparare. Scopri tutti gli altri corsi offerti da DataCamp e diventa un data scientist esperto!")
+```
+
+
