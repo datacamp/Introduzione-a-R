@@ -3,7 +3,7 @@ title_meta  : Capitolo 6
 title       : Liste
 description : Le liste, contrariamente ai vettori, possono contenere tipi di dato differenti tra loro. Questo capitolo introduttivo ti insegnerà come creare liste, assegnare loro nomi e selezionare elementi appartenenti a liste.
 
---- type:NormalExercise xp:100 skills:1
+--- type:NormalExercise xp:100 skills:1 key:cb9dcfd168
 ## Liste, a che cosa servono?
 
 Congratulazioni! A questo punto del corso conosci già i seguenti elementi:
@@ -41,7 +41,7 @@ success_msg("Pronti, partenza, via! Prosegui al prossimo esercizio.")
 ```
 
 
---- type:NormalExercise xp:100 skills:1
+--- type:NormalExercise xp:100 skills:1 key:06accfdbbe
 ## Liste, a che cosa servono? (2)
 
 In R una **lista** è molto simile alle classiche to-do list utilizzate a scuola o al lavoro: gli elementi contenuti nella lista molto probabilmente differiscono in lunghezza, caratteristiche, tipo di attività a cui sono legati, ecc... 
@@ -77,7 +77,7 @@ success_msg("Bene! Iniziamo a sporcarci le mani con le liste!")
 ```
 
 
---- type:NormalExercise xp:100 skills:1
+--- type:NormalExercise xp:100 skills:1 key:c7e61bddc3
 ## Creare una lista
 
 Creiamo la nostra prima lista! Per costruire una lista puoi utilizzare la funzione [`list()`](http://www.rdocumentation.org/packages/base/functions/list):
@@ -141,7 +141,7 @@ success_msg("Fantastico! Prosegui all'esercizio successivo.")
 ```
 
 
---- type:NormalExercise xp:100 skills:1
+--- type:NormalExercise xp:100 skills:1 key:20f5def29b
 ## Creare una lista con i nomi
 
 Ottimo, stai andando benissimo!
@@ -227,7 +227,7 @@ success_msg("Ottimo! Adesso non solo sai come costruire le liste, sai anche come
 ```
 
 
---- type:NormalExercise xp:100 skills:1
+--- type:NormalExercise xp:100 skills:1 key:2e54192200
 ## Creare una lista con i nomi (2)
 
 Siccome ti piacciono molto i film, decidi di iniziare a collezionare informazioni sui film interessanti che hai visto utilizzando le liste. 
@@ -285,7 +285,7 @@ success_msg("Fantastico! Hai imparato come costruire liste e assegnare nomi ai l
 ```
 
 
---- type:NormalExercise xp:100 skills:1
+--- type:NormalExercise xp:100 skills:1 key:b61ab9eaba
 ## Selezionare elementi da una lista
 
 Le liste che userai conterranno spesso moltissimi elementi. Per questo motivo, selezionare un singolo elemento o più elementi non è sempre immediato.
@@ -352,7 +352,7 @@ success_msg("Ottimo! Selezionare elementi dalle liste è abbastanza facile, no? 
 ```
 
 
---- type:NormalExercise xp:100 skills:1
+--- type:NormalExercise xp:100 skills:1 key:3375d7ca45
 ## Aggiungere ancora più informazioni alla lista
 
 Orgoglioso della tua lista, la condividi con i membri del film club cui appartieni. Tuttavia, uno dei membri più anziani, un tale M. McDowell, nota che hai dimenticato di inserire l'anno di uscita del film. Date le tue ambizioni di diventare presidente del club l'anno prossimo, decidi di aggiungere questa informazione alla lista.
