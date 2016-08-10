@@ -9,7 +9,8 @@ description : La maggior parte dei data sets con cui lavorerai sarà immagazzina
 Potresti ricordarti, dal capitolo sulle matrici, che tutti gli elementi che inserisci in una matrice dovrebbero essere dello stesso tipo. Nell'esempio sulle matrici, il data set di Star Wars conteneva solo dati di tipo numerico.
 
 Quando, ad esempio, effettui una ricerca di mercato, tuttavia, hai diversi tipi di dato che riflettono le risposte a domande del tipo:
-- 'Sei spostato/a?' oppure altre domande a risposta chiusa 'si/no' (`logical`)
+
+- 'Sei sposato/a?' oppure altre domande a risposta chiusa 'si/no' (`logical`)
 - 'Quanti anni hai?' (`numeric`)
 - 'Qual è la tua opinione su questo prodotto?' oppure altre domande a risposta aperta (`character`)
 - ...
@@ -19,7 +20,7 @@ L'output, ossia la risposta di chi compila il questionario, è un data set compo
 Un data frame immagazzina le variabili di un data set nelle colonne e le osservazioni nelle righe. Questo modo di immagazzinare informazioni è un concetto già noto per coloro che utilizzano altri software statistici come SAS o SPSS.
 
 *** =instructions
-Clicca 'Submit Answer'. Il contenuto del data frame di esempio [`mtcars`](http://www.rdocumentation.org/packages/datasets/functions/mtcars) sarà stampato a video nella console.
+Clicca 'Submit Answer'. Il contenuto del data frame di esempio [`mtcars`](http://www.rdocumentation.org/packages/datasets/functions/mtcars) sarà stampato nella console.
 
 *** =hint
 Clicca semplicemente 'Submit Answer' e osserva la magia!
@@ -53,11 +54,13 @@ success_msg("Ottimo! Prosegui all'esercizio successivo.")
 
 Wow, contiene informazioni su una miriade di auto! 
 
-Lavorare con grandi data sets è molto comune nell'analisi dati. Quando lavori con data sets estremamente grandi, la tua priorità numero uno è comprendere la sua struttura e gli elementi principali. Per questo motivo, è spesso utile stampare a video una frazione dell'intero data set.
+Lavorare con grandi data sets è molto comune nell'analisi dati. Quando lavori con data sets estremamente grandi, la tua priorità numero uno è comprendere la loro struttura e gli elementi principali. Per questo motivo, è spesso utile stampare nella console una frazione dell'intero data set.
 
-Come puoi svolgere questa operazione in R? La funzione [`head()`](http://www.rdocumentation.org/packages/utils/functions/head) ti permette di visualizzare le prime osservazioni di un data frame. In modo duale, la funzione [`tail()`](http://www.rdocumentation.org/packages/utils/functions/head) stampa le ultime osservazioni contenute nel tuo data set.
+Come puoi svolgere questa operazione in R?
 
-Sia [`head()`](http://www.rdocumentation.org/packages/utils/functions/head) che [`tail()`](http://www.rdocumentation.org/packages/utils/functions/head) stampano una riga chiamata 'header', che contiene i nomi delle variabili contenute nel tuo data set.
+La funzione [`head()`](http://www.rdocumentation.org/packages/utils/functions/head) ti permette di visualizzare le prime osservazioni di un data frame. In modo duale, la funzione [`tail()`](http://www.rdocumentation.org/packages/utils/functions/head) stampa le ultime osservazioni contenute nel tuo data set.
+
+Sia [`head()`](http://www.rdocumentation.org/packages/utils/functions/head) che [`tail()`](http://www.rdocumentation.org/packages/utils/functions/head) stampano una riga chiamata 'header', che contiene i nomi delle variabili contenute nel data set.
 
 *** =instructions
 Chiama [`head()`](http://www.rdocumentation.org/packages/utils/functions/head) sul data set [`mtcars`](http://www.rdocumentation.org/packages/datasets/functions/mtcars) per stampare l'header e le prime osservazioni.
@@ -135,7 +138,7 @@ success_msg("Perfetto! Riesci a trovare tutte le informazioni elencate nella con
 --- type:NormalExercise xp:100 skills:1 key:fe82cda1f3
 ## Creare un data frame
 
-Siccome utilizzare data sets disponibili di default non è molto divertente, il resto del capitolo è focalizzato su un data set creato da te. Allacciati il ket pack siccome è tempo di esplorare lo spazio!
+Siccome utilizzare data sets disponibili di default non è molto divertente, il resto del capitolo è focalizzato su un data set creato da te. Allacciati il jet pack siccome è tempo di esplorare lo spazio!
 
 Come primo obiettivo, vuoi costruire un data frame che descrive le principali caratteristiche di otto pianeti nel nostro sistema solare. Secondo il tuo buon amico Buzz, le prinicipali caratteristiche di un pianeta sono:
 
@@ -221,7 +224,17 @@ Utilizza [`str()`](http://www.rdocumentation.org/packages/utils/functions/str) p
 
 *** =pre_exercise_code
 ```{r}
-load(url("http://s3.amazonaws.com/assets.datacamp.com/course/intro_to_r/planets.RData"))
+#load(url("http://s3.amazonaws.com/assets.datacamp.com/course/intro_to_r/planets.RData"))
+# Definizione dei vettori
+nome <- c("Mercury", "Venus", "Earth", "Mars", "Jupiter", "Saturn", "Uranus", "Neptune")
+tipo <- c("Terrestrial planet", "Terrestrial planet", "Terrestrial planet", 
+          "Terrestrial planet", "Gas giant", "Gas giant", "Gas giant", "Gas giant")
+diametro <- c(0.382, 0.949, 1, 0.532, 11.209, 9.449, 4.007, 3.883)
+rotazione <- c(58.64, -243.02, 1, 1.03, 0.41, 0.43, -0.72, 0.67)
+anelli <- c(FALSE, FALSE, FALSE, FALSE, TRUE, TRUE, TRUE, TRUE)
+
+# Crea un data frame con i vettori
+pianeti_df <- data.frame(nome, tipo, diametro, rotazione, anelli)
 ```
 
 *** =sample_code
