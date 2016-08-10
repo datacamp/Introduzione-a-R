@@ -38,7 +38,7 @@ vegas <- "Go!"
 
 *** =sct
 ```{r}
-test_object("vegas", incorrect_msg = "Assicurati di assegnare a `vegas` il corretto valore. Non dimenticarti che R è case sensitive!")
+test_object("vegas", incorrect_msg = "Assicurati di assegnare a `vegas` il corretto valore. Non dimenticarti che R &#232; case sensitive!")
 success_msg("Perfetto! Procedi all'esercizio successivo.")
 ```
 
