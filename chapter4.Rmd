@@ -226,7 +226,7 @@ factor_vettore_sondaggio
 msg = "Non cambiare la definizione di `vettore_sondaggio`!"
 test_object("vettore_sondaggio", undefined_msg = msg, incorrect_msg = msg)
 msg = "Non cancellare o modificare il codice per creare il fattore."
-test_function("factor","x",allow_extra = FALSE, not_called_msg = msg, incorrect_msg = msg)
+test_function("factor", "x", allow_extra = FALSE, not_called_msg = msg, incorrect_msg = msg)
 test_object("factor_vettore_sondaggio", eq_condition = "equal",
             incorrect_msg = paste("Hai assegnato correttamente i livelli a `factor_vettore_sondaggio`? Utilizza `levels(factor_vettore_sondaggio) <- c(\"Female\", \"Male\")`. Ricorda che R è case sensitive!"))
 success_msg("Fantastico! Procedi all'esercizio successivo.")
