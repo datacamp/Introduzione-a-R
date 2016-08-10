@@ -410,7 +410,7 @@ success_msg("Ottimo lavoro! Continua al prossimo esercizio.")
 --- type:NormalExercise xp:100 skills:1 key:6dacb53fc3
 ## Fattori ordinali (2)
 
-`vettore_velocita` dovrebbe essere convertito in un fattore ordinale siccome le sue categorie hanno un ordine "naturale". Di default, la funzione [`factor()`](http://www.rdocumentation.org/packages/base/functions/factor) trasforma `vettore_velocita` in un fattore non ordinale. Per creare un fattore ordinale, devi aggiungere due argomenti: `ordered` e `levels`. 
+`vettore_velocita` dovrebbe essere convertito in un fattore ordinale siccome le sue categorie hanno un ordine naturale. Di default, la funzione [`factor()`](http://www.rdocumentation.org/packages/base/functions/factor) trasforma `vettore_velocita` in un fattore non ordinale. Per creare un fattore ordinale, devi aggiungere due argomenti: `ordered` e `levels`. 
 
 ```
 factor(un_vettore, 
@@ -421,7 +421,7 @@ factor(un_vettore,
 Fissando l'argomento `ordered` a `TRUE` nella funzione [`factor()`](http://www.rdocumentation.org/packages/base/functions/factor), indichi che il fattore è ordinale. Con l'argomento `levels` assegni i livelli al fattore nel corretto ordine.
 
 *** =instructions
-Da `vettore_velocita`, crea un fattore ordinale: `factor_vettore_velocita`. Fissa `ordered` a `TRUE`, e fissa `levels` a `c("sBassa", "fast", "insane")`.
+Da `vettore_velocita`, crea un fattore ordinale: `factor_vettore_velocita`. Fissa `ordered` a `TRUE` e fissa `levels` a `c("lento", "veloce", "velocissimo")`.
 
 *** =hint
 Usa la funzione [`factor()`](http://www.rdocumentation.org/packages/base/functions/factor) per creare `factor_vettore_velocita`. L'argomento `ordered` dovrebbe essere fissato a `TRUE` siccome esiste un ordine naturale dei livelli. Infine, fissa `levels = c("lento", "veloce", "velocissimo")`.
@@ -463,9 +463,9 @@ msg = "Non cambiare nulla nella definizione della variabile `vettore_velocita`."
 test_object("vettore_velocita", undefined_msg = msg, incorrect_msg = msg)
 test_function("factor", "x", incorrect_msg = "Il primo argomento passato a `factor()` dovrebbe essere `vettore_velocita`.")
 test_function("factor", "ordered", incorrect_msg = "Assicurati di fissare `ordered = TRUE` nella chiamata della funzione `factor()`.")
-test_function("factor", "levels", incorrect_msg = "Assicurati di fissare `levels = c(\"sBassa\", \"fast\", \"insane\")` nella chiamata alla funzione `factor()`.")
+test_function("factor", "levels", incorrect_msg = "Assicurati di fissare `levels = c(\"lento\", \"veloce\", \"velocissimo\")` nella chiamata alla funzione `factor()`.")
 test_object("factor_vettore_velocita", eq_condition = "equal",
-            incorrect_msg = "C'è ancora qualcosa di errato in `factor_vettore_velocita`; assicurati di passare solo `vettore_velocita`, `ordered = TRUE` and `levels = c(\"sBassa\", \"fast\", \"insane\")` dentro la chiamata alla funzione `factor()`.")
+            incorrect_msg = "C'è ancora qualcosa di errato in `factor_vettore_velocita`; assicurati di passare solo `vettore_velocita`, `ordered = TRUE` and `levels = c(\"lento\", \"veloce\", \"velocissimo\")` dentro la chiamata alla funzione `factor()`.")
 success_msg("Ottimo! Osserva la console. Come puoi notare, viene indicato che esiste un ordine associato ai livelli, attraverso l'uso del simbolo `<`. Prosegui all'esercizio successivo.")
 ```
 
