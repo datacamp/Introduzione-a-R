@@ -385,7 +385,7 @@ success_msg("Molto bene! Prosegui all'esercizio successivo!")
 --- type:NormalExercise xp:100 skills:1 key:5986d74773
 ## Solo pianeti con anelli
 
-Speeso ti capiterà di voler scegliere una colonna intera, ossia una variabile specifica, dal tuo data frame. Se vuoi selezionare tutti gli elementi della variabile `diametro`, ad esempio, le seguenti linee di codice ti permetteranno entrambe di raggiungere l'obiettivo:
+Spesso ti capiterà di voler scegliere una colonna intera, ossia una variabile specifica, dal tuo data frame. Se vuoi selezionare tutti gli elementi della variabile `diametro`, ad esempio, entrambe le seguenti linee di codice ti permetteranno di raggiungere l'obiettivo:
 
 ```
 pianeti_df[,3]
@@ -514,9 +514,11 @@ success_msg("Fantastico! Questa soluzione è un pò tediosa però. Il prossimo e
 
 
 --- type:NormalExercise xp:100 skills:1 key:caee1bac7b
-## Solo pianeti con anelli (2)
+## Solo pianeti con anelli (3)
 
-Quindi, cosa hai imparato negli esercizi precedenti? Hai selezionato un sottoinsieme di dati da un data frame (`pianeti_df`) sulla base di una certa condizione (pianeta con anelli oppure senza), e sei riuscito a recuperare tutti i dati relativi alle osservazioni interessate. Direi che sei a buon punto! La NASA sta probabilmente già flirtando con il tuo CV ;-). 
+Quindi, cosa hai imparato negli esercizi precedenti?
+
+Hai selezionato un sottoinsieme di dati da un data frame (`pianeti_df`) sulla base di una certa condizione (pianeta con anelli oppure senza) e sei riuscito a recuperare tutti i dati relativi alle osservazioni rilevanti. Direi che sei a buon punto! La NASA sta probabilmente già flirtando con il tuo CV ;-). 
 
 Adesso facciamo un piccolo step e utilizziamo la funzione [`subset()`](http://www.rdocumentation.org/packages/base/functions/subset). La funzione [`subset()`](http://www.rdocumentation.org/packages/base/functions/subset) può essere vista come una scorciatoia per fare esattamente ciò che hai fatto negli esercizi precedenti. 
 
@@ -540,7 +542,17 @@ Usa `subset()` su `pianeti_df` per selezionare i pianeti che hanno un diametro i
 
 *** =pre_exercise_code
 ```{r}
-load(url("http://s3.amazonaws.com/assets.datacamp.com/course/intro_to_r/planets.RData"))
+# Definizione dei vettori
+nome <- c("Mercury", "Venus", "Earth", "Mars", "Jupiter", "Saturn", "Uranus", "Neptune")
+tipo <- c("Terrestrial planet", "Terrestrial planet", "Terrestrial planet", 
+          "Terrestrial planet", "Gas giant", "Gas giant", "Gas giant", "Gas giant")
+diametro <- c(0.382, 0.949, 1, 0.532, 11.209, 9.449, 4.007, 3.883)
+rotazione <- c(58.64, -243.02, 1, 1.03, 0.41, 0.43, -0.72, 0.67)
+anelli <- c(FALSE, FALSE, FALSE, FALSE, TRUE, TRUE, TRUE, TRUE)
+
+# Crea un data frame con i vettori
+pianeti_df <- data.frame(nome, tipo, diametro, rotazione, anelli)
+vettore_anelli <- pianeti_df$anelli
 ```
 
 *** =sample_code
@@ -640,7 +652,17 @@ Bene, ora che conosci la funzione [`order()`](http://www.rdocumentation.org/pack
 
 *** =pre_exercise_code
 ```{r}
-load(url("http://s3.amazonaws.com/assets.datacamp.com/course/intro_to_r/planets.RData"))
+# Definizione dei vettori
+nome <- c("Mercury", "Venus", "Earth", "Mars", "Jupiter", "Saturn", "Uranus", "Neptune")
+tipo <- c("Terrestrial planet", "Terrestrial planet", "Terrestrial planet", 
+          "Terrestrial planet", "Gas giant", "Gas giant", "Gas giant", "Gas giant")
+diametro <- c(0.382, 0.949, 1, 0.532, 11.209, 9.449, 4.007, 3.883)
+rotazione <- c(58.64, -243.02, 1, 1.03, 0.41, 0.43, -0.72, 0.67)
+anelli <- c(FALSE, FALSE, FALSE, FALSE, TRUE, TRUE, TRUE, TRUE)
+
+# Crea un data frame con i vettori
+pianeti_df <- data.frame(nome, tipo, diametro, rotazione, anelli)
+vettore_anelli <- pianeti_df$anelli
 ```
 
 *** =sample_code
