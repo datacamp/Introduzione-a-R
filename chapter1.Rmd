@@ -288,7 +288,7 @@ test_output_contains("mie_mele + mie_arance",
                      incorrect_msg = "Assicurati di stampare il risultato della somma di `mie_mele` e `mie_arance`. Il codice di esempio nella descrizione fornisce già la risposta.")
 msg <- "Hai utilizzato l'assegnazione `mia_frutta <- mie_mele + mie_arance` per creare la variabile `mia_frutta`?"
 test_object("mia_frutta", undefined_msg = msg, incorrect_msg = msg)
-success_msg("Molto bene! Il grande vantaggio di fare i conti utilizzando le variabili è la possibilità di riutilizzare il codice. Se assegnassi a `mie_mele` il valore 12 invece di 5 ed eseguissi nuovamente lo script, `mia_frutta` verrebbe aggiornata automaticamente. Procedi all'esercizio successivo.")
+success_msg("Molto bene! Il grande vantaggio di fare i conti utilizzando le variabili &#233; la possibilit&#225; di riutilizzare il codice. Se assegnassi a `mie_mele` il valore 12 invece di 5 ed eseguissi nuovamente lo script, `mia_frutta` verrebbe aggiornata automaticamente. Procedi all'esercizio successivo.")
 ```
 
 
