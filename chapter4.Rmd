@@ -87,7 +87,7 @@ fattore_vettore_genere <-
 *** =solution
 ```{r}
 # Vettore genere
-vettore_genere <- c("Male", "Female", "Female", "Male", "Male")
+vettore_genere <- c("Maschio", "Femmina", "Femmina", "Maschio", "Maschio")
 
 # Converti vettore_genere in un fattore
 fattore_vettore_genere <- factor(vettore_genere)
@@ -101,7 +101,7 @@ fattore_vettore_genere
 test_object("fattore_vettore_genere",
             incorrect_msg = "Hai assegnato il fattore di `vettore_genere` a `fattore_vettore_genere`?")
 test_output_contains("fattore_vettore_genere", incorrect_msg = "Non dimenticarti di stampare `fattore_vettore_genere`!")
-success_msg("Ottimo! Se vuoi scoprire qualcosa di più sulla funzione `factor()`, digita `?factor` nella console R. Questa operazione aprirà la relativa pagina di aiuto. Continua all'esercizio successivo.");
+success_msg("Ottimo! Se vuoi scoprire qualcosa di più sulla funzione `factor()`, digita `?factor` nella console R. Questa operazione aprirà la relativa pagina di aiuto. Continua all'esercizio successivo.")
 ```
 
 
