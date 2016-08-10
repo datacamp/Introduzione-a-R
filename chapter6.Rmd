@@ -10,7 +10,7 @@ Congratulazioni! A questo punto del corso conosci già i seguenti elementi:
 
 - **Vettori** (array monodimensionali): possono contenere valori di tipo numeric, character o logical. Gli elementi di un vettore devono essere tutti dello stesso tipo.
 - **Matrici** (array bidimensionali): possono contenere valori di tipo numeric, character o logical. Gli elementi di una matrice devono essere tutti dello stesso tipo.
-- **Data frames** (two-dimensional objects): possono contenere valori di tipo numeric, character o logical. Ogni colonna deve contenere valori dello stesso tipo ma colonne differenti possono contenere valori di tipo differente.
+- **Data frames** (oggetti bidimensionali): possono contenere valori di tipo numeric, character e logical. Ogni colonna deve contenere valori dello stesso tipo ma colonne differenti possono contenere valori di tipo diverso.
 
 Non male per un principiante eh? ;-)
 
@@ -46,7 +46,7 @@ success_msg("Pronti, partenza, via! Prosegui al prossimo esercizio.")
 
 In R una **lista** è molto simile alle classiche to-do list utilizzate a scuola o al lavoro: gli elementi contenuti nella lista molto probabilmente differiscono in lunghezza, caratteristiche, tipo di attività a cui sono legati, ecc... 
 
-In R una lista ti permette di raccogliere una serie di oggetti sotto un "singolo nome" (ossia la lista) in modo ordinato. Questi oggetti possono essere matrici, vettori, data frames, altre liste, ecc... Non è nemmeno richiesto che questi oggetti siano in qualche modo collegati l'uno all'altro.
+In R una lista ti permette di raccogliere una serie di oggetti sotto un "singolo nome" (ossia la lista) in modo ordinato. Questi oggetti possono essere matrici, vettori, data frames, altre liste, ecc... Non è nemmeno richiesto che gli oggetti siano in qualche modo collegati l'uno all'altro.
 
 Potresti dire che una lista è un tipo di dato "super": puoi immagazzinare praticamente qualsiasi informazione in una lista.
 
@@ -89,10 +89,10 @@ mia_lista <- list(elem1, elem2 ...)
 Gli argomenti passati alla funzione list sono gli elementi della lista. Ricorda, questi elementi possono essere matrici, vettori, altre liste, ecc...
 
 *** =instructions
-Costruisci una lista chiamata `mia_lista`, that contains the variables `mio_vettore`, `mia_matrice` and `mio_df` as list components.
+Costruisci una lista chiamata `mia_lista` che contenga le variabili `mio_vettore`, `mia_matrice` e `mio_df`.
 
 *** =hint
-Usa la funzione [`list()`](http://www.rdocumentation.org/packages/base/functions/list) con `mio_vettore`, `mia_matrice` e `mio_df` come argomenti, separati da una virgola.
+Usa la funzione [`list()`](http://www.rdocumentation.org/packages/base/functions/list) con `mio_vettore`, `mia_matrice` e `mio_df` come argomenti, e separali con una virgola.
 
 *** =pre_exercise_code
 ```{r}
@@ -153,7 +153,7 @@ mia_lista <- list(nome1 = comp1,
                 nome2 = comp2)
 ``` 
 
-Questa operazione creerà una lista con 2 elementi il cui nome sarà `nome1` e `nome2`. Se vuoi assegnare nomi agli elementi di una lista dopo averla definita, puoi usare la funzione `names()` come avevi fatto in precedenza con i vettori. Il codice seguente è equivalenti al codice scritto sopra:
+Questa operazione creerà una lista con 2 elementi il cui nome sarà `nome1` e `nome2`. Se vuoi assegnare nomi agli elementi di una lista dopo averla definita, puoi usare la funzione `names()` come avevi fatto in precedenza con i vettori. Il codice seguente è equivalenti a quello sopra:
 
 ```
 mia_lista <- list(comp1, comp2)
@@ -169,7 +169,7 @@ Il primo metodo visto per assegnare nomi agli elementi di una lista è anche il 
 ```
 mia_lista <- list(vec = mio_vettore)
 ```
-Aggiungi gli altri due componenti nello stesso modo.
+Aggiungi gli altri due elementi nello stesso modo.
 
 *** =pre_exercise_code
 ```{r}
@@ -230,9 +230,9 @@ success_msg("Ottimo! Adesso non solo sai come costruire le liste, sai anche come
 --- type:NormalExercise xp:100 skills:1 key:2e54192200
 ## Creare una lista con i nomi (2)
 
-Siccome ti piacciono molto i film, decidi di iniziare a collezionare informazioni sui film interessanti che hai visto utilizzando le liste. 
+Siccome ti piacciono molto i film, decidi di iniziare a collezionare informazioni sui film interessanti che hai visto, utilizzando le liste. 
 
-Inizia a creare una lista per il film "The Shining". Abbiamo già creato le variabili `film`, `attori` and `rev` nel workspace. Controlla il contenuto di queste variabili nella console R.
+Inizia a creare una lista per il film "The Shining". Abbiamo già creato le variabili `film`, `attori` e `rev` nel workspace. Controlla il contenuto di queste variabili nella console R.
 
 *** =instructions
 Completa il codice sulla destra per creare la lista `shining_list`; questa lista deve contenere tre elementi:
@@ -244,7 +244,7 @@ Completa il codice sulla destra per creare la lista `shining_list`; questa lista
 Non dimenticarti di assegnare i nomi agli elementi della lista (i nomi da assegnare sono nome_film, attori e reviews).
 
 *** =hint
-`shining_list <- list(nome_film = film)` è solo una parte della soluzione; tocca a te inserire anche `attori` e `rev` nella lista con i nomi opportuni.
+`shining_list <- list(nome_film = film)` è solo una parte della soluzione; tocca a te inserire anche `attori` e `rev` nella lista con gli opportuni nomi.
 
 *** =pre_exercise_code
 ```{r}
@@ -296,7 +296,7 @@ Un modo per selezionare un elemento di una lista è utilizzare l'indice della po
 shining_list[[1]]
 ```
 
-Un modo veloce per verificare che la seleziona sia corretta è digitare il codice nella console. Attenzione: per selezionare elementi dai vettori utilizzavi le parentesi quadre singole `[ ]`. Attento a non fare confusione!
+Un modo veloce per verificare che la seleziona sia corretta è digitare il codice nella console. Attenzione però: per selezionare elementi dai vettori utilizzavi le parentesi quadre singole `[ ]`. Attento a non fare confusione!
 
 Puoi anche selezionare elementi utilizzando il loro nome, o all'interno di parentesi quadre doppie `[[ ]]` oppure utilizzando il simbolo `$`. Nell'esempio sotto, entrambe le soluzioni proposte selezioneranno il dataframe contenente le reviews: 
 
@@ -305,7 +305,7 @@ shining_list[["reviews"]]
 shining_list$reviews
 ``` 
 
-Besides selecting components, you often need to select specific elements out of these components. For example, with `shining_list[[2]][1]` you select from the second component, `actors` (`shining_list[[2]]`), the first element (`[1]`). When you type this in the console, you will see the answer is Jack Nicholson.
+Oltre a selezionare gli elementi della lista, spesso potresti aver bisogno di selezionare soltanto alcune parti di questi elementi. Per esempio, utilizzando `shining_list[[2]][1]` selezioni dall'elemento `actors` (`shining_list[[2]]`) della lista, e da quell'elemento selezioni il suo primo elemento di (`[1]`). Se provi a digitare nella console questa selezione, vedrai che la risposta sarà Jack Nicholson.
 
 *** =instructions
 - Seleziona da `shining_list` il vettore dei nomi degli attori. Stampa il vettore nella console.
@@ -355,7 +355,7 @@ success_msg("Ottimo! Selezionare elementi dalle liste è abbastanza facile, no? 
 --- type:NormalExercise xp:100 skills:1 key:3375d7ca45
 ## Aggiungere ancora più informazioni alla lista
 
-Orgoglioso della tua lista, la condividi con i membri del film club cui appartieni. Tuttavia, uno dei membri più anziani, un tale M. McDowell, nota che hai dimenticato di inserire l'anno di uscita del film. Date le tue ambizioni di diventare presidente del club l'anno prossimo, decidi di aggiungere questa informazione alla lista.
+Orgoglioso della tua lista, la condividi con i membri del film club di cui fai parte. Tuttavia, uno dei membri più anziani, un tale M. McDowell, nota che hai dimenticato di inserire l'anno di uscita del film. Date le tue ambizioni di diventare presidente del club l'anno prossimo, decidi di aggiungere questa informazione alla lista.
 
 Per aggiungere elementi alle liste, puoi utilizzare la funzione [`c()`](http://www.rdocumentation.org/packages/base/functions/c), che tra l'altro hai già utilizzato per costruire i vettori:
 
@@ -365,7 +365,7 @@ ext_list <- c(mia_lista , mio_val)
 
 Questa operazione estenderà la lista originale, `mia_lista`, aggiungendo l'elemento `mio_val`. Questo elemento viene aggiunto in coda alla lista originale.
 
-Se vuoi assegnare un nome al nuovo elemento, puoi assegnare il nome in modo molto semplice, come abbiamo fatto prima:
+Se vuoi assegnare un nome al nuovo elemento, puoi farlo in modo molto semplice, esattamente come abbiamo fatto prima:
 
 
 ```
