@@ -593,7 +593,7 @@ Creare classifiche è una delle attività preferite degli analisti. Queste class
 
 Durante l'analisi dei tuoi dati, puoi ordinare le informazioni sulla base di una certa variabile contenuta nel tuo data set. In R questa operazione può essere effettuata utilizzando la funzione [`order()`](http://www.rdocumentation.org/packages/base/functions/order). 
 
-[`order()`](http://www.rdocumentation.org/packages/base/functions/order) è una funzione che ti ritorna l'ordine, ossia il modo in cui gli elementi del vettore passato come argomento dovrebbero essere disposti affinchè siano disposti in ordine crescente. Un esempio chiarirà meglio la nebulosa frase che ho appena scritto:
+[`order()`](http://www.rdocumentation.org/packages/base/functions/order) è una funzione che ti ritorna l'ordine, ossia il modo in cui gli elementi del vettore passato come argomento dovrebbero essere disposti affinchè siano ordinati in ordine crescente. Un esempio chiarirà meglio la nebulosa frase che hai appena letto:
 
 ```
 > a <- c(100, 10, 1000)
@@ -603,7 +603,7 @@ Durante l'analisi dei tuoi dati, puoi ordinare le informazioni sulla base di una
 
 10, che è il secondo elemento del vettore `a`, è l'elemento più piccolo, quindi 2 è il primo elemento del vettore di output ottenuto da `order(a)`. 100, che è il primo elemento di a `a` è il secondo elemento più piccolo, quindi 1 si trova nella seconda posizione nel vettore di output ottenuto da `order(a)`.
 
-Questo significa che possiamo utilizzare l'output di `order(a)` per riordinare il vettore `a`:
+Questo significa che possiamo utilizzare l'output di `order(a)` per riordinare il vettore `a` in ordine crescente:
     
 ```
 > a[order(a)]
@@ -640,15 +640,15 @@ success_msg("Molto bene! Adesso proviamo ad usare la funzione `order()` per ordi
 --- type:NormalExercise xp:100 skills:1 key:3fca809133
 ## Riordinare il tuo data frame
 
-Bene, ora che conosci la funzione [`order()`](http://www.rdocumentation.org/packages/base/functions/order), utilizziamola per qualcosa di utile. Supponi di voler riordinare il tuo dataframe cosi che inizi con il pianeta più piccolo e finisca con quello più grande. A sort on the `diametro` column.
+Bene, ora che conosci la funzione [`order()`](http://www.rdocumentation.org/packages/base/functions/order), utilizziamola per qualcosa di utile. Supponi di voler riordinare il tuo dataframe cosi che inizi con il pianeta più piccolo e finisca con quello più grande. Effettua il riordino sulla base della variabile `diametro`.
 
 *** =instructions
 - Chiama `order()` su `pianeti_df$diametro` (la colonna `diametro` di `pianeti_df`). Salva il risultato come `posizioni`.
-- Ora sistema `pianeti_df` utilizzando il `posizioni` come vettore degli indici di riga dentro le parentesi quadrate. Tieni tutte le colonne e poi stampa il risultato.
+- Ora sistema `pianeti_df` utilizzando `posizioni` come vettore degli indici di riga dentro le parentesi quadrate. Tieni tutte le colonne e poi stampa il risultato nella console.
 
 *** =hint
 - Usa `order(pianeti_df$diametro)` per creare `posizioni`.
-- Ora puoi utilizzare `posizioni` dentro le parentesi quadre: `pianeti_df[...]`; Riesci a riempier i puntini `...`?
+- Ora puoi utilizzare `posizioni` dentro le parentesi quadre: `pianeti_df[...]`; Riesci a riempire i puntini `...`?
 
 *** =pre_exercise_code
 ```{r}
