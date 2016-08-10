@@ -184,8 +184,8 @@ Quando inizi ad analizzare i dati del sondaggio, una delle tue priorità è mant
 **Attenzione:** l'ordine con cui asssegni i livelli è importante. Se digiti `levels(factor_vettore_sondaggio)`, vedrai che l'output ottenuto è `[1] "F" "M"`. Se non specifichi i livelli del fattore quando vai a creare il vettore, `R` li assegnerà automaticamente in ordine alfabetico. Per garantire la corretta corrispondenza di `"F"` con `"Femmina"` e `"M"` con `"Maschio"`, i livelli devono essere fissati utilizzando `c("Female", "Male")` in questo preciso ordine.
 
 *** =instructions
-- Controlla che il codice costruisca un fattore utilizzando `vettore_sondaggio`. Dovresti usare `fattore_vettore_sondaggio` nell'istruzione successiva.
-- Cambia i livelli di `fattore_vettore_sondaggio` da quelli attuali a `c("Female", "Male")`. Fai attenzione all'ordine degli elementi del vettore.
+- Controlla che il codice costruisca un fattore utilizzando `vettore_sondaggio`. Dovresti usare `factor_vettore_sondaggio` nell'istruzione successiva.
+- Cambia i livelli di `factor_vettore_sondaggio` da quelli attuali a `c("Female", "Male")`. Fai attenzione all'ordine degli elementi del vettore.
 
 *** =hint
 Fai attenzione all'ordine con cui inserisci i livelli del fattore. Suggerimento: osserva l'ordine con cui i livelli sono stampati quando digiti `levels(factor_vettore_sondaggio)`.
@@ -194,31 +194,31 @@ Fai attenzione all'ordine con cui inserisci i livelli del fattore. Suggerimento:
 ```{r}
 # no pec
 vettore_sondaggio <- c("M", "F", "F", "M", "M")
-fattore_vettore_sondaggio <- factor(vettore_sondaggio)
+factor_vettore_sondaggio <- factor(vettore_sondaggio)
 ```
 
 *** =sample_code
 ```{r}
 # Codice per costruire factor_vettore_sondaggio
 vettore_sondaggio <- c("M", "F", "F", "M", "M")
-fattore_vettore_sondaggio <- factor(vettore_sondaggio)
+factor_vettore_sondaggio <- factor(vettore_sondaggio)
 
 # Specifica i livelli di factor_vettore_sondaggio
 levels(factor_vettore_sondaggio) <- 
 
-fattore_vettore_sondaggio
+factor_vettore_sondaggio
 ```
 
 *** =solution
 ```{r}
 # Codice per costruire factor_vettore_sondaggio
 vettore_sondaggio <- c("M", "F", "F", "M", "M")
-fattore_vettore_sondaggio <- factor(vettore_sondaggio)
+factor_vettore_sondaggio <- factor(vettore_sondaggio)
 
 # Specifica i livelli di factor_vettore_sondaggio
-levels(fattore_vettore_sondaggio) <- c("Female", "Male")
+levels(factor_vettore_sondaggio) <- c("Female", "Male")
 
-fattore_vettore_sondaggio
+factor_vettore_sondaggio
 ```
 
 *** =sct
@@ -227,8 +227,8 @@ msg = "Non cambiare la definizione di `vettore_sondaggio`!"
 test_object("vettore_sondaggio", undefined_msg = msg, incorrect_msg = msg)
 msg = "Non cancellare o modificare il codice per creare il fattore."
 test_function("factor","x",allow_extra = FALSE, not_called_msg = msg, incorrect_msg = msg)
-test_object("fattore_vettore_sondaggio", eq_condition = "equal",
-            incorrect_msg = paste("Hai assegnato correttamente i livelli a `fattore_vettore_sondaggio`? Utilizza `levels(fattore_vettore_sondaggio) <- c(\"Female\", \"Male\")`. Ricorda che R è case sensitive!"))
+test_object("factor_vettore_sondaggio", eq_condition = "equal",
+            incorrect_msg = paste("Hai assegnato correttamente i livelli a `factor_vettore_sondaggio`? Utilizza `levels(factor_vettore_sondaggio) <- c(\"Female\", \"Male\")`. Ricorda che R è case sensitive!"))
 success_msg("Fantastico! Procedi all'esercizio successivo.")
 ```
 
