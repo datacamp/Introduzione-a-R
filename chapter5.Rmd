@@ -253,14 +253,14 @@ str(pianeti_df)
 msg = "Non cancellare o sovrascrivere il data frame `pianeti_df` che è già disponibile nel workspace!"
 test_object("pianeti_df", undefined_msg = msg, incorrect_msg = msg)
 test_output_contains("str(pianeti_df)", incorrect_msg = "Hai stampato correttamente la struttura di `pianeti_df`? Utilizza la funzione `str()` per farlo!")
-success_msg("Fantastico! Ora che hai una chiara immagine della struttura di `pianeti_df`, è tempo di vedere come puoi selezionare elementi dal tuo data frame. La selezione di elementi da un data frame è trattata nell'esercizio successivo!")
+success_msg("Fantastico! Ora che hai una chiara immagine della struttura di `pianeti_df`, è tempo di vedere come puoi selezionare elementi dal tuo data frame. La selezione di elementi da un data frame è trattata nell'esercizio successivo!");
 ```
 
 
 --- type:NormalExercise xp:100 skills:1 key:6e3f02e5cf
 ## Selezione di elementi da un data frame
 
-In modo simile ai vettori e alle matrici, puoi selezionare elementi da un data frame utilizzando le parentesi quadre `[ ]`. Utilizzando una virgola, puoi indicare cosa selezionare, rispettivamente, dalle righe e dalle colonne. Per esempio:
+In modo simile ai vettori e alle matrici, puoi selezionare elementi da un data frame utilizzando le parentesi quadre `[ ]`. Utilizzando una virgola come separatore, puoi indicare cosa selezionare, rispettivamente dalle righe e dalle colonne. Per esempio:
 
 - `mio_df[1,2]` seleziona il valore nella prima riga e seconda colonna di `mio_df`.
 - `mio_df[1:3,2:4]` seleziona le righe 1, 2, 3 e le colonne 2, 3, 4 di `mio_df`.
@@ -276,7 +276,16 @@ Per selezionare il diametro di Venere (seconda riga), dovresti digitare: `pianet
 
 *** =pre_exercise_code
 ```{r}
-load(url("http://s3.amazonaws.com/assets.datacamp.com/course/intro_to_r/planets.RData"))
+# Definizione dei vettori
+nome <- c("Mercury", "Venus", "Earth", "Mars", "Jupiter", "Saturn", "Uranus", "Neptune")
+tipo <- c("Terrestrial planet", "Terrestrial planet", "Terrestrial planet", 
+          "Terrestrial planet", "Gas giant", "Gas giant", "Gas giant", "Gas giant")
+diametro <- c(0.382, 0.949, 1, 0.532, 11.209, 9.449, 4.007, 3.883)
+rotazione <- c(58.64, -243.02, 1, 1.03, 0.41, 0.43, -0.72, 0.67)
+anelli <- c(FALSE, FALSE, FALSE, FALSE, TRUE, TRUE, TRUE, TRUE)
+
+# Crea un data frame con i vettori
+pianeti_df <- data.frame(nome, tipo, diametro, rotazione, anelli)
 ```
 
 *** =sample_code
