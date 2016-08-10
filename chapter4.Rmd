@@ -236,13 +236,13 @@ success_msg("Fantastico! Procedi all'esercizio successivo.")
 --- type:NormalExercise xp:100 skills:1 key:82549565df
 ## Ottenere un sommario di un fattore
 
-Alla fine di questo corso, una delle tue funzioni preferite sarà [`summary()`](http://www.rdocumentation.org/packages/base/functions/summary). Questa funzione ti permetterà di ottenere un'overview del contenuto di una variabile: 
+Alla fine di questo corso una delle tue funzioni preferite sarà [`summary()`](http://www.rdocumentation.org/packages/base/functions/summary). Questa funzione ti permetterà di ottenere un'overview del contenuto di una variabile: 
 
 ```
 summary(mia_variabile)
 ``` 
 
-Tornando al nostro sondaggio, vorresti sapere quante risposte hai ottenuto da ciascun sesso. La funzione [`summary()`](http://www.rdocumentation.org/packages/base/functions/summary) ti permette di ottenere la risposta a questa domanda.
+Tornando al nostro sondaggio, vorresti sapere quante risposte hai ottenuto dai rispondenti di ciascun sesso. La funzione [`summary()`](http://www.rdocumentation.org/packages/base/functions/summary) ti permette di ottenere la risposta a questa domanda.
 
 *** =instructions
 Utilizza la funziona  [`summary()`](http://www.rdocumentation.org/packages/base/functions/summary) su `vettore_sondaggio` e `factor_vettore_sondaggio`. Interpreta i due risultati ottenuti. Sono entrambi utili in questo caso?
@@ -300,13 +300,13 @@ success_msg("Ottimo! Osserva il risultato. Il fatto che hai identificato `\"Masc
 --- type:NormalExercise xp:100 skills:1 key:fd66688336
 ## Battaglia dei sessi
 
-In `factor_vettore_sondaggio` abbiamo un fattore con due livelli: Maschio e Femmina. Ma in che modo R valuta questi livelli tra di loro? In altre parole, quale è il migliore dei due, secondo R?
+In `factor_vettore_sondaggio` abbiamo un fattore con due livelli: Maschio e Femmina. Ma in che modo R valuta questi livelli tra di loro? In altre parole, qual è il migliore dei due secondo R?
 
 *** =instructions
 Leggi il codice nell'editore e clicca 'Submit Answer' per vedere quale dei due sessi R preferisce.
 
 *** =hint
-Clicca semplicemente 'Submit Answer' e osserva l'output che viene stampato a video nella console.
+Clicca semplicemente 'Submit Answer' e osserva l'output che viene stampato nella console.
 
 *** =pre_exercise_code
 ```{r}
@@ -364,23 +364,23 @@ success_msg("Sembra che R sia gender-neutral. O forse preferisce tirarsi fuori d
 
 Siccome `"Maschio"` e `"Femmina"` non sono ordinabili, R ritorna un messaggio di avviso dicendoti che l'operatore di confronto applicato non ha senso in questo caso. Come visto in precedenza, R giudica i livelli sullo stesso piano nel caso in cui essi non siano ordinabili. 
 
-Tuttavia non è sempre così! Alcune volte avrai a che fare con fattori i cui livelli presentano un ordinamento naturale. In questo caso, dobbiamo assicurarci di passsare l'informazione sull'ordinamento a R.
+Tuttavia non è sempre così! Alcune volte avrai a che fare con fattori i cui livelli presentano un ordinamento naturale. In questo secondo caso, dobbiamo assicurarci di passare l'informazione sull'ordinamento a R.
 
-Diciamo che sei a capo di un gruppo di ricerca composto da 5 analisti e che vuoi valutare le loro performances. Per fare la tua valutazione, prendi nota della loro velocità e classifichi ogni analista come `"lento"`, `"veloce"` o `"velocissimo"`, e salva i risultati in `vettore_velocita`.
+Diciamo che sei a capo di un gruppo di ricerca composto da 5 analisti e che vuoi valutare le loro performances. Per fare la tua valutazione, prendi nota della loro velocità, classifichi ogni analista come `"lento"`, `"veloce"` o `"velocissimo"`, e salvi i risultati in `vettore_velocita`.
 
 *** =instructions
 Come primo passo, assegna il corretto valore a `vettore_velocita` sapendo che: 
 
-- Analyst 1 è veloce, 
-- Analyst 2 è lento, 
-- Analyst 3 è lento,
-- Analyst 4 è veloce e
-- Analyst 5 è velocissimo.
+- L'analista 1 è veloce, 
+- L'analista 2 è lento, 
+- L'analista 3 è lento,
+- L'analista 4 è veloce e
+- L'analista 5 è velocissimo.
 
 Non è necessario specificare che si tratta di fattori al momento.
 
 *** =hint
-Assegna a `vettore_velocita` un vettore contenente le stringhe `"fast"`, `"slow"` ...
+Assegna a `vettore_velocita` un vettore contenente le stringhe `"veloce"`, `"lento"` ...
 
 *** =pre_exercise_code
 ```{r}
@@ -396,7 +396,7 @@ vettore_velocita <-
 *** =solution
 ```{r}
 # Crea vettore_velocita
-vettore_velocita <- c("fast", "sBassa", "sBassa", "fast", "insane")
+vettore_velocita <- c("veloce", "lento", "lento", "veloce", "velocissimo")
 ```
 
 *** =sct
