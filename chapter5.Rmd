@@ -345,7 +345,16 @@ Puoi selezionare i primi cinque elementi utilizzando `pianeti_df[1:5, ...]`. Rie
 
 *** =pre_exercise_code
 ```{r}
-load(url("http://s3.amazonaws.com/assets.datacamp.com/course/intro_to_r/planets.RData"))
+# Definizione dei vettori
+nome <- c("Mercury", "Venus", "Earth", "Mars", "Jupiter", "Saturn", "Uranus", "Neptune")
+tipo <- c("Terrestrial planet", "Terrestrial planet", "Terrestrial planet", 
+          "Terrestrial planet", "Gas giant", "Gas giant", "Gas giant", "Gas giant")
+diametro <- c(0.382, 0.949, 1, 0.532, 11.209, 9.449, 4.007, 3.883)
+rotazione <- c(58.64, -243.02, 1, 1.03, 0.41, 0.43, -0.72, 0.67)
+anelli <- c(FALSE, FALSE, FALSE, FALSE, TRUE, TRUE, TRUE, TRUE)
+
+# Crea un data frame con i vettori
+pianeti_df <- data.frame(nome, tipo, diametro, rotazione, anelli)
 ```
 
 *** =sample_code
