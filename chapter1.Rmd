@@ -130,7 +130,7 @@ Un altro esempio dell'operatore modulo: `9 %% 2` (leggi: '9 modulo 2') è uguale
 *** =sct
 ```{r}
 msg = "Non rimuovere gli altri esempi di operazioni aritmetiche!"
-test_output_contains("2^5", incorrect_msg = "L'esempio di elevamento a potenza non è corretto. Immetti `2 ^ 5` su una nuova riga.")
+test_output_contains("2^5", incorrect_msg = "L'esempio di elevamento a potenza non &#232; corretto. Immetti `2 ^ 5` su una nuova riga.")
 test_output_contains("28 %% 6", incorrect_msg = "Sembra esserci un problema con l'esempio dell'operazione modulo. Scrivi `28 %% 6` su una nuova riga.")
 success_msg("Perfetto! Procediamo alla sezione successiva.")
 ```
@@ -285,10 +285,10 @@ mia_frutta <- mie_mele + mie_arance
 test_object("mie_mele", incorrect_msg = "Assegna il valore 5 a `mie_mele`.")
 test_object("mie_arance", incorrect_msg = "Assegna il valore 6 a `mie_arance`.")
 test_output_contains("mie_mele + mie_arance",
-                     incorrect_msg = "Assicurati di stampare il risultato della somma di `mie_mele` e `mie_arance`. Il codice di esempio nella descrizione fornisce già la risposta.")
+                     incorrect_msg = "Assicurati di stampare il risultato della somma di `mie_mele` e `mie_arance`. Il codice di esempio nella descrizione fornisce gi&#224; la risposta.")
 msg <- "Hai utilizzato l'assegnazione `mia_frutta <- mie_mele + mie_arance` per creare la variabile `mia_frutta`?"
 test_object("mia_frutta", undefined_msg = msg, incorrect_msg = msg)
-success_msg("Molto bene! Il grande vantaggio di fare i conti utilizzando le variabili &#233; la possibilit&#225; di riutilizzare il codice. Se assegnassi a `mie_mele` il valore 12 invece di 5 ed eseguissi nuovamente lo script, `mia_frutta` verrebbe aggiornata automaticamente. Procedi all'esercizio successivo.")
+success_msg("Molto bene! Il grande vantaggio di fare i conti utilizzando le variabili &#232; la possibilit&#224; di riutilizzare il codice. Se assegnassi a `mie_mele` il valore 12 invece di 5 ed eseguissi nuovamente lo script, `mia_frutta` verrebbe aggiornata automaticamente. Procedi all'esercizio successivo.")
 ```
 
 
@@ -340,7 +340,7 @@ mia_frutta
 test_error(incorrect_msg = "Per superare questo esercizio, alla variabile `mie_arance` deve essere assegnato un valore numerico, non una stringa!")
 test_object("mie_mele", incorrect_msg = "Assicurati che `mie_mele` contenga `5`.")
 test_object("mie_arance", incorrect_msg = "Assicurati che `mie_arance` contenga `6`.")
-test_object("mia_frutta", incorrect_msg = "Il valore di `mia_frutta` non è corretto. Dovrebbe essere 11, ossia la somma di `mie_mele` e `mie_arance`.")
+test_object("mia_frutta", incorrect_msg = "Il valore di `mia_frutta` non &#232; corretto. Dovrebbe essere 11, ossia la somma di `mie_mele` e `mie_arance`.")
 test_output_contains("mia_frutta", incorrect_msg = "Non rimuovere la riga che stampa la variabile `mia_frutta`.")
 success_msg("Eccellente, continua così! Procedi all'esercizio successivo.")
 ```
