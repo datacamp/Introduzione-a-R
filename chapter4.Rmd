@@ -101,7 +101,7 @@ fattore_vettore_genere
 test_object("fattore_vettore_genere",
             incorrect_msg = "Hai assegnato il fattore di `vettore_genere` a `fattore_vettore_genere`?")
 test_output_contains("fattore_vettore_genere", incorrect_msg = "Non dimenticarti di stampare `fattore_vettore_genere`!")
-success_msg("Ottimo! Se vuoi scoprire qualcosa di più sulla funzione `factor()`, digita `?factor` nella console R. Questa operazione aprirà la relativa pagina di aiuto. Continua all'esercizio successivo.")
+success_msg("Ottimo! Se vuoi scoprire qualcosa di più sulla funzione `factor()`, digita `?factor` nella console R. Questa operazione aprirà la relativa pagina di aiuto. Continua all'esercizio successivo.");
 ```
 
 
@@ -110,9 +110,9 @@ success_msg("Ottimo! Se vuoi scoprire qualcosa di più sulla funzione `factor()`
 
 Esistono due tipi di variabili categoriche: le **variabili categoriche nominali** e le **variabili categoriche ordinali**. 
 
-Una variabile categorica nominale è una variabile categorica che non è possibile ordinare naturalmente. Per esempio, pensa alla variabile categorica `vettore_animali` contenente le categorie `"Elefante"`, `"Giraffa"`, `"Asino"` e `"Cavallo"`. In questo caso è abbastanza difficile ordinare le categorie. (Qualcuno potrebbe anche non essere d'accordo però ;-) ). 
+Una variabile categorica nominale è una variabile che non è possibile ordinare naturalmente. Per esempio, pensa alla variabile categorica `vettore_animali` contenente le categorie `"Elefante"`, `"Giraffa"`, `"Asino"` e `"Cavallo"`. In questo caso è abbastanza difficile ordinare le categorie. (Qualcuno potrebbe anche non essere d'accordo però ;-) ). 
 
-In senso opposto, le variabili categoriche ordinali hanno un ordine naturale. Considera la variabile categorica `vettore_temperatura` con le categorie: `"Bassa"`, `"Media"` e `"Alta"`. Qui è abbastanza ovvio che, in un certo senso, `"Media"` si trova sopra a `"Bassa"` e`"Alta"` si trova sopra a `"Media"`.
+In senso opposto, le variabili categoriche ordinali hanno un ordine naturale. Considera la variabile categorica `vettore_temperatura` con le categorie `"Bassa"`, `"Media"` e `"Alta"`. Qui è abbastanza ovvio che, in un certo senso, `"Media"` si trova sopra a `"Bassa"` e`"Alta"` si trova sopra a `"Media"`.
 
 *** =instructions
 Clicca su 'Submit Answer' per verificare come R costruisce e stampa le variabili nominali e ordinali. Non ti preoccupare se non capisci tutto il codice, ci arriveremo.
@@ -160,7 +160,7 @@ test_object("factor_vettore_animali", undefined_msg = msg, incorrect_msg = msg)
 test_output_contains("factor_vettore_animali", incorrect_msg = msg)
 test_object("factor_vettore_temperatura", undefined_msg = msg, incorrect_msg = msg)
 test_output_contains("factor_vettore_temperatura", incorrect_msg = msg)
-success_msg("Riesci ad intuire il risultato dell'operazione effettuata in questo esercizio? Eccezionale! Continua con il prossimo esercizio e studia in dettaglio i livelli dei fattori.")
+success_msg("Riesci ad intuire il risultato dell'operazione effettuata in questo esercizio? Ottimo! Continua con il prossimo esercizio e studia in dettaglio i livelli dei fattori.")
 ```
 
 
@@ -181,11 +181,11 @@ vettore_sondaggio <- c("M", "F", "F", "M", "M")
 
 Quando inizi ad analizzare i dati del sondaggio, una delle tue priorità è mantenere una visione d'insieme chiara di tutte le variabili e del loro significato. A questo punto, ti sarà conveniente per semplificarti la vita, cambiare i livelli da `"M"` e `"F"` a `"Maschio"` e `"Femmina"`.
 
-**Attenzione:** l'ordine con cui asssegni i livelli è importante. Se digiti `levels(factor_vettore_sondaggio)`, vedrai che l'outup ottenuto è `[1] "F" "M"`. Se non specifichi i livelli del fattore quando vai a creare il vettore, `R` li assegnerà automaticamente in ordine alfabetico. Per garantire la corretta corrispondenza di `"F"` con `"Femmina"` e `"M"` con `"Maschio"`, i livelli devono essere fissati utilizzando `c("Female", "Male")`, in questo preciso ordine.
+**Attenzione:** l'ordine con cui asssegni i livelli è importante. Se digiti `levels(factor_vettore_sondaggio)`, vedrai che l'output ottenuto è `[1] "F" "M"`. Se non specifichi i livelli del fattore quando vai a creare il vettore, `R` li assegnerà automaticamente in ordine alfabetico. Per garantire la corretta corrispondenza di `"F"` con `"Femmina"` e `"M"` con `"Maschio"`, i livelli devono essere fissati utilizzando `c("Female", "Male")` in questo preciso ordine.
 
 *** =instructions
-- Controlla che il codice costruisca un fattore utilizzando `vettore_sondaggio`. Dovresti usare `factor_vettore_sondaggio` nell'istruzione successiva.
-- Cambia i livelli di `factor_vettore_sondaggio` da quelli attuali a `c("Female", "Male")`. Fai attenzione all'ordine degli elementi del vettore.
+- Controlla che il codice costruisca un fattore utilizzando `vettore_sondaggio`. Dovresti usare `fattore_vettore_sondaggio` nell'istruzione successiva.
+- Cambia i livelli di `fattore_vettore_sondaggio` da quelli attuali a `c("Female", "Male")`. Fai attenzione all'ordine degli elementi del vettore.
 
 *** =hint
 Fai attenzione all'ordine con cui inserisci i livelli del fattore. Suggerimento: osserva l'ordine con cui i livelli sono stampati quando digiti `levels(factor_vettore_sondaggio)`.
@@ -194,31 +194,31 @@ Fai attenzione all'ordine con cui inserisci i livelli del fattore. Suggerimento:
 ```{r}
 # no pec
 vettore_sondaggio <- c("M", "F", "F", "M", "M")
-factor_vettore_sondaggio <- factor(vettore_sondaggio)
+fattore_vettore_sondaggio <- factor(vettore_sondaggio)
 ```
 
 *** =sample_code
 ```{r}
 # Codice per costruire factor_vettore_sondaggio
 vettore_sondaggio <- c("M", "F", "F", "M", "M")
-factor_vettore_sondaggio <- factor(vettore_sondaggio)
+fattore_vettore_sondaggio <- factor(vettore_sondaggio)
 
 # Specifica i livelli di factor_vettore_sondaggio
 levels(factor_vettore_sondaggio) <- 
 
-factor_vettore_sondaggio
+fattore_vettore_sondaggio
 ```
 
 *** =solution
 ```{r}
 # Codice per costruire factor_vettore_sondaggio
 vettore_sondaggio <- c("M", "F", "F", "M", "M")
-factor_vettore_sondaggio <- factor(vettore_sondaggio)
+fattore_vettore_sondaggio <- factor(vettore_sondaggio)
 
 # Specifica i livelli di factor_vettore_sondaggio
-levels(factor_vettore_sondaggio) <- c("Female", "Male")
+levels(fattore_vettore_sondaggio) <- c("Female", "Male")
 
-factor_vettore_sondaggio
+fattore_vettore_sondaggio
 ```
 
 *** =sct
@@ -227,8 +227,8 @@ msg = "Non cambiare la definizione di `vettore_sondaggio`!"
 test_object("vettore_sondaggio", undefined_msg = msg, incorrect_msg = msg)
 msg = "Non cancellare o modificare il codice per creare il fattore."
 test_function("factor","x",allow_extra = FALSE, not_called_msg = msg, incorrect_msg = msg)
-test_object("factor_vettore_sondaggio", eq_condition = "equal",
-            incorrect_msg = paste("Hai assegnato correttamente i livelli a `factor_vettore_sondaggio`? Utilizza `levels(factor_vettore_sondaggio) <- c(\"Female\", \"Male\")`. Ricorda che R è case sensitive!"))
+test_object("fattore_vettore_sondaggio", eq_condition = "equal",
+            incorrect_msg = paste("Hai assegnato correttamente i livelli a `fattore_vettore_sondaggio`? Utilizza `levels(fattore_vettore_sondaggio) <- c(\"Female\", \"Male\")`. Ricorda che R è case sensitive!"))
 success_msg("Fantastico! Procedi all'esercizio successivo.")
 ```
 
