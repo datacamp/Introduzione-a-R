@@ -185,7 +185,7 @@ Quando inizi ad analizzare i dati del sondaggio, una delle tue priorità è mant
 
 *** =instructions
 - Controlla che il codice costruisca un fattore utilizzando `vettore_sondaggio`. Dovresti usare `factor_vettore_sondaggio` nell'istruzione successiva.
-- Cambia i livelli di `factor_vettore_sondaggio` da quelli attuali a `c("Female", "Male")`. Fai attenzione all'ordine degli elementi del vettore.
+- Cambia i livelli di `factor_vettore_sondaggio` da quelli attuali a `c("Femmina", "Maschio")`. Fai attenzione all'ordine degli elementi del vettore.
 
 *** =hint
 Fai attenzione all'ordine con cui inserisci i livelli del fattore. Suggerimento: osserva l'ordine con cui i livelli sono stampati quando digiti `levels(factor_vettore_sondaggio)`.
@@ -216,7 +216,7 @@ vettore_sondaggio <- c("M", "F", "F", "M", "M")
 factor_vettore_sondaggio <- factor(vettore_sondaggio)
 
 # Specifica i livelli di factor_vettore_sondaggio
-levels(factor_vettore_sondaggio) <- c("Female", "Male")
+levels(factor_vettore_sondaggio) <- c("Femmina", "Maschio")
 
 factor_vettore_sondaggio
 ```
@@ -228,7 +228,7 @@ test_object("vettore_sondaggio", undefined_msg = msg, incorrect_msg = msg)
 msg = "Non cancellare o modificare il codice per creare il fattore."
 test_function("factor", "x", allow_extra = FALSE, not_called_msg = msg, incorrect_msg = msg)
 test_object("factor_vettore_sondaggio", eq_condition = "equal",
-            incorrect_msg = paste("Hai assegnato correttamente i livelli a `factor_vettore_sondaggio`? Utilizza `levels(factor_vettore_sondaggio) <- c(\"Female\", \"Male\")`. Ricorda che R è case sensitive!"))
+            incorrect_msg = paste("Hai assegnato correttamente i livelli a `factor_vettore_sondaggio`? Utilizza `levels(factor_vettore_sondaggio) <- c(\"Femmina\", \"Maschio\")`. Ricorda che R è case sensitive!"))
 success_msg("Fantastico! Procedi all'esercizio successivo.")
 ```
 
