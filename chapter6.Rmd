@@ -226,7 +226,7 @@ test_object("mia_lista",
 test_object("mia_lista", eq_condition = "equal",
             incorrect_msg = "Sembra che i nomi degli elementi di `mia_lista` non siano corretti. Assicurati di utilizzare i seguenti nomi: `vec`, `mat` e `df`. Controlla il suggerimento (hint) se non riesci a trovare la soluzione.");
 test_output_contains("mia_lista", incorrect_msg = "Non dimenticarti di stampare `mia_lista` nella console! Aggiungi semplicemente `mia_lista` in una nuova riga nell'editor.")
-success_msg("Ottimo! Adesso non solo sai come costruire le liste, sai anche come assegnare nomi ai loro elementi. Tutto ciò ti tornerà molto utile nella pratica. Prosegui all'esercizio successivo.")
+success_msg("Ottimo! Adesso non solo sai come costruire le liste, sai anche come assegnare nomi ai loro elementi. Tutto ci&#242; ti tornerà molto utile nella pratica. Prosegui all'esercizio successivo.")
 ```
 
 
@@ -284,7 +284,7 @@ test_object("shining_list",
             incorrect_msg = "Sembra che `shining_list` non contenga gli elementi corretti: il primo elemento dovrebbe essere `film`, il secondo `attori` e il terzo `rev`.")
 test_object("shining_list", eq_condition = "equal",
             incorrect_msg = "Sembra che gli elementi di `shining_list` non abbiano i nomi corretti: il primo elemento va chiamato `nome_film`, il secondo `actors` e il terzo `reviews`.");
-success_msg("Fantastico! Hai imparato come costruire liste e assegnare nomi ai loro elementi. Come già fatto nei capitoli precedenti, impariamo a selezionare elementi di una lista. Avanti al prossimo esercizio.")
+success_msg("Fantastico! Hai imparato come costruire liste e assegnare nomi ai loro elementi. Come gi&#224; fatto nei capitoli precedenti, impariamo a selezionare elementi di una lista. Avanti al prossimo esercizio.")
 ```
 
 
@@ -351,7 +351,7 @@ msg <- "Non cancellare o modificare `shining_list` che è già stata caricata ne
 test_object("shining_list", undefined_msg = msg, incorrect_msg = msg)
 test_output_contains("shining_list$actors", incorrect_msg = "Hai selezionato correttamente, e poi stampato, il vettore contenente i nomi degli attori? Per farlo puoi utilizzare, ad esempio, `shining_list$actors`")
 test_output_contains("shining_list$actors[2]", incorrect_msg = "Per selezionare il secondo attore dal vettore degli attori devi effettuare due selezioni: `shining_list$actors` per selezionare il vettore degli attori e poi aggiungi `[2]` per selezionare il secondo elemento.")
-success_msg("Ottimo! Selezionare elementi dalle liste è abbastanza facile, no? Prosegui verso il prossimo esercizio.")
+success_msg("Ottimo! Selezionare elementi dalle liste &#232; abbastanza facile, no? Prosegui verso il prossimo esercizio.")
 ```
 
 
