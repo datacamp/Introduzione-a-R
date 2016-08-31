@@ -156,7 +156,7 @@ test_object("vettore_poker",
             incorrect_msg = "Assicurati di aver assegnato i valori corretti al vettore `vettore_poker`.")
 test_object("vettore_roulette",
             incorrect_msg = "Assicurati di aver assegnato i valori corretti al vettore `vettore_roulette`. Assicurati inoltre di rispettare l'ordine dei valori!")
-success_msg("Molto bene! Per visualizzare il contenuto dei vettori, ricordati che puoi sempre immettere semplicemente la variabile nella console e premere invio. Così facendo stamperai a video il vettore. Avanti al prossimo esercizio!")
+success_msg("Molto bene! Per visualizzare il contenuto dei vettori, ricordati che puoi sempre immettere semplicemente la variabile nella console e premere invio. Cos&#236; facendo stamperai a video il vettore. Avanti al prossimo esercizio!")
 ```
 
 
@@ -649,7 +649,7 @@ test_object("vettore_roulette", eq_condition = "equal", undefined_msg = msg, inc
 test_object("poker_mercoledi", 
             undefined_msg = "Assicurati di definire una variabile `poker_mercoledi`.",
             incorrect_msg = "Sembra che `poker_mercoledi` il corretto valore selezionato da `vettore_poker`.")
-success_msg("Eccellente! R permette anche di selezionare più valori. Impara come nell'esercizio successivo!")
+success_msg("Eccellente! R permette anche di selezionare pi&#249; valori. Impara come nell'esercizio successivo!")
 ```
 
 
@@ -762,7 +762,7 @@ test_object("vettore_roulette", eq_condition = "equal", undefined_msg = msg, inc
 test_object("vettore_selezione_roulette", 
             undefined_msg = "Assicurati di definire una variabile `vettore_selezione_roulette`.",
             incorrect_msg = "Sembra che `vettore_selezione_roulette` non contenga gli elementi corretti selezionati da `vettore_roulette`. Assicurati di utilizzare gli indici corretti.")
-success_msg("Fantastico! L'operatore due punti è estremamente utile ed &#232; spesso utilizzato nella programmazione in R, quindi ricordatelo bene! Procedi al prossimo esercizio.")
+success_msg("Fantastico! L'operatore due punti &#232; estremamente utile ed &#232; spesso utilizzato nella programmazione in R, quindi ricordatelo bene! Procedi al prossimo esercizio.")
 ```
 
 

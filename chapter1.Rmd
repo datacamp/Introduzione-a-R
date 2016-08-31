@@ -4,9 +4,6 @@ title       : Introduzione alle basi di R
 description : "In questo capitolo compirai i tuoi primi passi su R, imparerai ad utilizzare la console come una calcolatrice e come effettuare l'assegnazione delle variabili. Imparerai inoltre a conoscere i principali tipi di dato utilizzati in R. Pronto? Iniziamo!"
 
 --- type:NormalExercise xp:100 skills:1 key:c44b81c96e
-```{r setup, include=FALSE}
-Sys.setlocale("LC_CTYPE", "it_IT.UTF-8")
-```
 ## Come funziona
 
 Nell'editor alla tua destra puoi inserire codice R per risolvere gli esercizi proposti.
@@ -51,7 +48,7 @@ Immetti la riga di codice R per il calcolo della somma 6 + 12, come nell'esempio
 *** =sct
 ```{r}
 test_output_contains("18", incorrect_msg = "Assicurati di effettuare l'operazione `6 + 12` su una nuova riga. Non mettere `#` prima delle istruzioni altrimenti il codice non viene eseguito!")
-success_msg("Ottimo! La console ritorna il risultato dell'operazione immessa. Adesso che hai preso un minimo di confidenza con l'interfaccia procediamo con qualcosa di più interessante!")
+success_msg("Ottimo! La console ritorna il risultato dell'operazione immessa. Adesso che hai preso un minimo di confidenza con l'interfaccia procediamo con qualcosa di pi&#249; interessante!")
 ```
 
 --- type:NormalExercise xp:100 skills:1 key:031440ec4b
