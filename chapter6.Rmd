@@ -425,7 +425,7 @@ test_object("shining_list_completa", eq_condition = "equal",
             incorrect_msg = paste("Hai esteso la lista `shining_list` aggiungendo l'elemento `anno`,",
                                   "il cui valore è 1980? Puoi usare `c(shining_list, anno = 1980)`"))
 test_function("str", "object", incorrect_msg = "Non dimenticare di visualizzare la struttura di `shining_list_completa` utilizzando la funzione `str()`.")
-success_msg("Eccellente! Questo era l'ultimo esercizio sulle liste in R! Adesso hai una conoscenza solida delle basi di R. Ricordati però che c'è ancora moltissimo da imparare. Scopri tutti gli altri corsi offerti da DataCamp e diventa un data scientist esperto!")
+success_msg("Eccellente! Questo era l'ultimo esercizio sulle liste in R! Adesso hai una conoscenza solida delle basi di R. Ricordati per&#242; che c'&#232; ancora moltissimo da imparare. Scopri tutti gli altri corsi offerti da DataCamp e diventa un data scientist esperto!")
 ```
 
 
