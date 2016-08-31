@@ -45,9 +45,9 @@ matrix(1:9, byrow = TRUE, nrow = 3)
 *** =sct
 ```{r}
 test_function("matrix", c("data", "byrow", "nrow"),
-              incorrect_msg = "Hai creato la matrice in modo corretto? Leggi la consegna, la risposta è già stata data!")
+              incorrect_msg = "Hai creato la matrice in modo corretto? Leggi la consegna, la risposta è gi&#224; stata data!")
 test_output_contains("matrix(1:9, byrow=TRUE, nrow=3)",
-                     incorrect_msg = "Sembra esserci un problema nella dichiarazione della matrice. Leggi la consegna, la risposta è già stata data!")
+                     incorrect_msg = "Sembra esserci un problema nella dichiarazione della matrice. Leggi la consegna, la risposta &#232; gi&#224; stata data!")
 success_msg("Ottimo! Procedi all'esercizio successivo!")
 ```
 
@@ -119,7 +119,7 @@ test_function("matrix", c("data", "nrow", "byrow"),
 test_object("matrice_star_wars",
             incorrect_msg = "Hai assegnato il risultato della chiamata alla funzione `matrix()` alla variabile `matrice_star_wars`?")
 
-success_msg("La forza è effettivamente con te! Prosegui al prossimo esercizio.")
+success_msg("La forza &#232; effettivamente con te! Prosegui al prossimo esercizio.")
 ```
 
 
@@ -343,7 +343,7 @@ test_what(
   feedback = msg)
 
 test_object("all_wars_matrix", incorrect_msg = msg)
-success_msg("Ottimo lavoro! Dopo aver aggiunto una colonna ad una matrice, il prossimo step è aggiungere righe! Impara come nell'esercizio successivo.")
+success_msg("Ottimo lavoro! Dopo aver aggiunto una colonna ad una matrice, il prossimo step &#232; aggiungere righe! Impara come nell'esercizio successivo.")
 ```
 
 
@@ -431,7 +431,7 @@ test_what(
 
 test_object("all_wars_matrix", incorrect_msg = "Hai utilizzato `rbind()` in modo corretto per creare `all_wars_matrix()`? `rbind()` dovrebbe prendere due argomenti: `matrice_star_wars` e `matrice_star_wars2`, in questo ordine.")
 
-success_msg("Fantastico! Continua con l'esercizio successivo e scopri come puoi combinare i risultati della funzione `rbind()` con la funzione `colSums()`!")
+success_msg("Fantastico! Continua con l'esercizio successivo e scopri come combinare i risultati della funzione `rbind()` con la funzione `colSums()`!")
 ```
 
 
@@ -477,7 +477,7 @@ vettore_ricavi_totali
 
 *** =sct
 ```{r}
-msg = "Non modificare il contenuto di `all_wars_matrix`; è stata già caricata per te nel workspace."
+msg = "Non modificare il contenuto di `all_wars_matrix`; &#232; stata già caricata per te nel workspace."
 test_object("all_wars_matrix", eq_condition = "equal", undefined_msg = msg, incorrect_msg = msg)
 test_function("colSums", "x", incorrect_msg = "Hai utilizzato la funzione `colSums()` sulla matrice all_wars_matrix?")
 test_object("vettore_ricavi_totali",
@@ -554,7 +554,7 @@ mean(alcuni_non_usa)
 
 *** =sct
 ```{r}
-msg = "Non cambiare il contenuto di `all_wars_matrix`; questa matrice è già stata caricata per te nel workspace."
+msg = "Non cambiare il contenuto di `all_wars_matrix`; questa matrice &#232; gi&#224; stata caricata per te nel workspace."
 test_object("all_wars_matrix", undefined_msg = msg, incorrect_msg = msg)
 
 test_object("tutti_non_usa",
@@ -616,7 +616,7 @@ spettatori
 
 *** =sct
 ```{r}
-msg = "Non cambiare il contenuto di `all_wars_matrix`; questa matrice è già stata caricata per te nel workspace."
+msg = "Non cambiare il contenuto di `all_wars_matrix`; questa matrice &#232; gi&#224; stata caricata per te nel workspace."
 test_object("all_wars_matrix", undefined_msg = msg, incorrect_msg = msg)
 
 test_object("spettatori",
@@ -686,7 +686,7 @@ mean(spettatori_usa)
 
 *** =sct
 ```{r}
-msg <- "Non cambiare il contenuto di `all_wars_matrix`; questa matrice è già stata caricata per te nel workspace."
+msg <- "Non cambiare il contenuto di `all_wars_matrix`; questa matrice &#232; gi&#224; stata caricata per te nel workspace."
 test_object("all_wars_matrix", undefined_msg = msg, incorrect_msg = msg)
 test_object("matrice_prezzo_biglietto", undefined_msg = msg, incorrect_msg = msg)
 
