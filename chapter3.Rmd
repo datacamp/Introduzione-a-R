@@ -695,7 +695,7 @@ test_object("spettatori",
 test_object("spettatori_usa", incorrect_msg = "Per creare `spettatori_usa`, dovresti selezionare tutta la prima colonna da `spettatori`. Per farlo puoi utilizzare `[,1]`!")
 test_output_contains("mean(spettatori_usa)", incorrect_msg = "Una volta che hai creato `spettatori_usa`, puoi usare `mean()` per calcolare il numero medio di visitatori negli Stati Uniti. Assicurati di stampare a video il risultato.")
 
-success_msg("E' un fatto! La forza di R è con te! Questo esercizio conclude il capitolo sulle matrici. Prossima tappa del tuo viaggio in R: i fattori.")
+success_msg("E' un fatto! La forza di R &#232; con te! Questo esercizio conclude il capitolo sulle matrici. Prossima tappa del tuo viaggio in R: i fattori.")
 ```
 
 

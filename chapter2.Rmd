@@ -97,7 +97,7 @@ test_object("numeric_vettore", undefined_msg = msg, incorrect_msg = msg)
 test_object("character_vettore", undefined_msg = msg, incorrect_msg = msg)
 test_object("boolean_vettore",
             incorrect_msg = "Assicurati di effettuare l'assegnazione di `boolean_vettore` correttamente. Utilizza `c(TRUE, FALSE, TRUE)`. Non utilizzare le virgolette per inserire i valori `TRUE` and `FALSE`! Infine, assicurati di mantenere lo stesso ordine richiesto dalle istruzioni.")
-success_msg("Perfetto! Nota che aggiungere uno spazio dopo ogni virgola nella funzione `c()` migliora la leggibilità del codice. Facciamo un poco di pratica con la dichiarazione di alcuni vettori nel prossimo esercizio!")
+success_msg("Perfetto! Nota che aggiungere uno spazio dopo ogni virgola nella funzione `c()` migliora la leggibilit&#224; del codice. Facciamo un poco di pratica con la dichiarazione di alcuni vettori nel prossimo esercizio!")
 ```
 
 
@@ -219,9 +219,9 @@ names(vettore_roulette) <- c("Lunedì", "Martedì", "Mercoledì", "Giovedì", "V
 *** =sct
 ```{r}
 test_object("vettore_poker",
-            incorrect_msg = "Non cambiare i valori dentro `vettore_poker`; Sono già stati inseriti per te.")
+            incorrect_msg = "Non cambiare i valori dentro `vettore_poker`; Sono gi&#224; stati inseriti per te.")
 test_object("vettore_roulette",
-            incorrect_msg = "Non cambiare i valori dentro `vettore_roulette`; Sono già stati inseriti per te.")
+            incorrect_msg = "Non cambiare i valori dentro `vettore_roulette`; Sono gi&#224; stati inseriti per te.")
 test_object("vettore_poker",
             eq_condition = "equal",
             incorrect_msg = "Non cambiare il codice che assegna i nomi a `vettore_poker`; Concentrati su `vettore_roulette`!")
@@ -519,7 +519,7 @@ test_object("totale_settimana",
             incorrect_msg = "Assicurati di assegnare a `totale_settimana` le somme dei due vettori: `totale_roulette` e `totale_poker`.")
 
 test_output_contains("totale_settimana", incorrect_msg = "Non dimenticarti di digitare `total_week` su una nuova riga per stampare il contenuto della variabile.")
-success_msg("Ottimo. Questa però è una cattiva notizia...")
+success_msg("Ottimo. Questa per&#242; &#232; una cattiva notizia...")
 ```
 
 
@@ -589,7 +589,7 @@ test_object("totale_poker",
 test_object("totale_roulette",
             incorrect_msg = "Assicurati di assegnare a `total_roulette` la somma di `vettore_roulette`. Usa `sum()`.")
 test_output_contains("totale_poker > totale_roulette",
-                     incorrect_msg = "Hai effettuato il confronto in modo corretto? Per verificare se `total_poker` è maggiore di `total_roulette`, puoi utilizzare il codice seguente `total_poker > total_roulette`.")
+                     incorrect_msg = "Hai effettuato il confronto in modo corretto? Per verificare se `total_poker` &#232; maggiore di `total_roulette`, puoi utilizzare il codice seguente `total_poker > total_roulette`.")
 success_msg("Ottimo lavoro! Procedi al prossimo esercizio.")
 ```
 
@@ -649,7 +649,7 @@ test_object("vettore_roulette", eq_condition = "equal", undefined_msg = msg, inc
 test_object("poker_mercoledi", 
             undefined_msg = "Assicurati di definire una variabile `poker_mercoledi`.",
             incorrect_msg = "Sembra che `poker_mercoledi` il corretto valore selezionato da `vettore_poker`.")
-success_msg("Eccellente! R permette anche di selezionari più valori. Impara come nell'esercizio successivo!")
+success_msg("Eccellente! R permette anche di selezionare più valori. Impara come nell'esercizio successivo!")
 ```
 
 
@@ -762,7 +762,7 @@ test_object("vettore_roulette", eq_condition = "equal", undefined_msg = msg, inc
 test_object("vettore_selezione_roulette", 
             undefined_msg = "Assicurati di definire una variabile `vettore_selezione_roulette`.",
             incorrect_msg = "Sembra che `vettore_selezione_roulette` non contenga gli elementi corretti selezionati da `vettore_roulette`. Assicurati di utilizzare gli indici corretti.")
-success_msg("Fantastico! L'operatore due punti è estremamente utile ed è spesso utilizzato nella programmazione in R, quindi ricordatelo bene! Procedi al prossimo esercizio.")
+success_msg("Fantastico! L'operatore due punti è estremamente utile ed &#232; spesso utilizzato nella programmazione in R, quindi ricordatelo bene! Procedi al prossimo esercizio.")
 ```
 
 
@@ -837,7 +837,7 @@ test_object("vettore_roulette", eq_condition = "equal", undefined_msg = msg, inc
 test_object("poker_inizio_settimana", 
             incorrect_msg = "Sembra che `poker_inizio_settimana` non contenga i primi tre elementi di `vettore_poker`. Puoi utilizzare `c(\"Lunedì\", \"Martedì\", \"Mercoledì\")` dentro le parentesi quadre per ottenere il risultato desiderato.")
 test_output_contains("mean(poker_inizio_settimana)", incorrect_msg = "Hai calcolato la media dei valori contenuti in `poker_inizio_settimana` e li hai stampati? Utilizza `mean(poker_inizio_settimana)`.")
-success_msg("Ottimo lavoro! Oltre a partizionare i vettori utilizzando gli indici e i nomi, puoi effettuare la stessa operazione effettuando dei confronti. L'esercizio successivo ti mostrerà come fare!");
+success_msg("Ottimo lavoro! Oltre a partizionare i vettori utilizzando gli indici e i nomi, puoi effettuare la stessa operazione effettuando dei confronti. L'esercizio successivo ti mostrer&#224; come fare!");
 ```
 
 
@@ -985,7 +985,7 @@ msg = "Non cambiare nulla nella dichiarazione e assegnazione nomi dei vettori `v
 test_object("vettore_giorni", undefined_msg = msg, incorrect_msg = msg)
 test_object("vettore_poker", eq_condition = "equal", undefined_msg = msg, incorrect_msg = msg)
 test_object("vettore_roulette", eq_condition = "equal", undefined_msg = msg, incorrect_msg = msg)
-test_object("vettore_selezione", incorrect_msg = "Non cambiare il modo in cui `vettore_selezione` è calcolato.")
+test_object("vettore_selezione", incorrect_msg = "Non cambiare il modo in cui `vettore_selezione` &#232; calcolato.")
 test_object("poker_giorni_vincenti",
             incorrect_msg =  "Sembra che `poker_giorni_vincenti` non contenga il risultato corretto. Utilizza `vettore_poker[vettore_selezione]`.")
 success_msg("Ottimo lavoro! Continua verso il prossimo esercizio.")
