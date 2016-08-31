@@ -88,8 +88,8 @@ head(mtcars)
 *** =sct
 ```{r}
 test_function("head", "x", incorrect_msg = "Hai passato correttamente `mtcars` alla funzione `head()`?")
-test_output_contains("head(mtcars)", incorrect_msg = "Stampa semplicemente il risultato della chiamata a `head()`, non è necessario assegnare il risultato ad una nuova variabile.")
-success_msg("Fantastico! Quindi, cosa abbiamo in questo data set? Per esempio, `hp` rappresenta il numero di cavalli del motore dell' auto (horse power); la Datsun ha il numero di cavalli più basso delle 6 auto mostrate nella console. Per maggiori informazioni sul significato delle variabili, digita `?mtcars` nella console e leggi la pagina di help. Continua verso il prossimo esercizio!");
+test_output_contains("head(mtcars)", incorrect_msg = "Stampa semplicemente il risultato della chiamata a `head()`, non &#232; necessario assegnare il risultato ad una nuova variabile.")
+success_msg("Fantastico! Quindi, cosa abbiamo in questo data set? Per esempio, `hp` rappresenta il numero di cavalli del motore dell' auto (horse power); la Datsun ha il numero di cavalli pi&#249; basso delle 6 auto mostrate nella console. Per maggiori informazioni sul significato delle variabili, digita `?mtcars` nella console e leggi la pagina di help. Continua verso il prossimo esercizio!");
 ```
 
 
@@ -207,7 +207,7 @@ test_object("anelli", undefined_msg = msg, incorrect_msg = msg)
 test_object("pianeti_df",
             incorrect_msg = "Hai chiamato correttamente `data.frame()` per creare `pianeti_df`?. Assicurati di passare a `data.frame()` tutti i vettori nell'ordine corretto: `nome`, `tipo`, `diametro`, `rotazione` ed infine `anelli`.")
 
-success_msg("Ottimo lavoro! Prosegui al prossimo esercizio. Il prossimo passo, come avrai già intuito, è ispezionare il data frame appena creato. Via al prossimo esercizio!");
+success_msg("Ottimo lavoro! Prosegui al prossimo esercizio. Il prossimo passo, come avrai già intuito, &#232; ispezionare il data frame appena creato. Via al prossimo esercizio!");
 ```
 
 
@@ -250,10 +250,10 @@ str(pianeti_df)
 
 *** =sct
 ```{r}
-msg = "Non cancellare o sovrascrivere il data frame `pianeti_df` che è già disponibile nel workspace!"
+msg = "Non cancellare o sovrascrivere il data frame `pianeti_df` che &#232; gi&#224; disponibile nel workspace!"
 test_object("pianeti_df", undefined_msg = msg, incorrect_msg = msg)
 test_output_contains("str(pianeti_df)", incorrect_msg = "Hai stampato correttamente la struttura di `pianeti_df`? Utilizza la funzione `str()` per farlo!")
-success_msg("Fantastico! Ora che hai una chiara immagine della struttura di `pianeti_df`, è tempo di vedere come puoi selezionare elementi dal tuo data frame. La selezione di elementi da un data frame è trattata nell'esercizio successivo!");
+success_msg("Fantastico! Ora che hai una chiara immagine della struttura di `pianeti_df`, &#232; tempo di vedere come puoi selezionare elementi dal tuo data frame. La selezione di elementi da un data frame &#232; trattata nell'esercizio successivo!");
 ```
 
 
@@ -509,7 +509,7 @@ msg <- "Non rimuovere o sovrascrivere `pianeti_df` e `vettore_anelli`!"
 test_object("pianeti_df", undefined_msg = msg, incorrect_msg = msg)
 test_object("vettore_anelli", undefined_msg = msg, incorrect_msg = msg)
 test_output_contains('pianeti_df[vettore_anelli, ]', incorrect_msg = "Hai adattato correttamente il codice per selezionare __tutte__ le colonne dei pianeti che hanno gli anelli? Puoi utilizzare `pianeti_df[vettore_anelli, ]`. Assicurati di digitare la virgola, è essenziale!")
-success_msg("Fantastico! Questa soluzione è un pò tediosa però. Il prossimo esercizio ti mostrerà un modo più conciso.")
+success_msg("Fantastico! Questa soluzione &#232; un p&#242; tediosa per&#242;. Il prossimo esercizio ti mostrer&#224; un modo pi&#249; conciso.")
 ```
 
 
@@ -576,13 +576,13 @@ subset(pianeti_df, subset = diametro < 1)
 msg = "Non rimuovere o sovrascrivere il data frame `pianeti_df`!"
 test_object("pianeti_df", undefined_msg = msg, incorrect_msg = msg)
 test_correct({
-  test_output_contains("subset(pianeti_df, subset = diametro < 1)", incorrect_msg = "Hai specificato correttamente l'argomento `subset = ...` dentro la funzione `subset()`?. La condizione, in questo caso, è `diametro < 1`. Stampa semplicemente il risultato.")  
+  test_output_contains("subset(pianeti_df, subset = diametro < 1)", incorrect_msg = "Hai specificato correttamente l'argomento `subset = ...` dentro la funzione `subset()`?. La condizione, in questo caso, &#232; `diametro < 1`. Stampa semplicemente il risultato.")  
 }, {
   test_function("subset", args = "x", 
                 not_called_msg = "Assicurati di utilizzare la funzione `subset()` per effettuare la selezione!",
                 incorrect_msg = "Il primo argomento passato a `subset()` dovrebbe essere `pianeti_df`.")
 })
-success_msg("Eccellente! Non solo la funzione `subset()` è più concisa, è probabilmente anche più chiara per chi legge il codice. Prosegui verso il prossimo esercizio!");
+success_msg("Eccellente! Non solo la funzione `subset()` &#232; più concisa, &#232; probabilmente anche più chiara per chi legge il codice. Prosegui verso il prossimo esercizio!");
 ```
 
 
@@ -694,8 +694,8 @@ test_object("pianeti_df", undefined_msg = msg, incorrect_msg = msg)
 test_object("posizioni",
             incorrect_msg = "Hai calcolato correttamente la variabile `posizioni`? Puoi utilizzare `sort(pianeti_df$diametro)`.")
 test_output_contains("pianeti_df[posizioni,]",
-                     incorrect_msg = "Usa `pianeti_df[posizioni, ]` per riordinare `pianeti_df`; la virgola dentro le parentesi quadre è essenziale!")
-success_msg("Fantastico! Questo esercizio conclude il capitolo sui data frames. Ricorda che i data frames sono estremamente importanti in R, li utilizzerai praticamente sempre. Un'altra struttura dati molto utilizzata è la lista. Le liste saranno oggetto del capitolo successivo!")
+                     incorrect_msg = "Usa `pianeti_df[posizioni, ]` per riordinare `pianeti_df`; la virgola dentro le parentesi quadre &#232; essenziale!")
+success_msg("Fantastico! Questo esercizio conclude il capitolo sui data frames. Ricorda che i data frames sono estremamente importanti in R, li utilizzerai praticamente sempre. Un'altra struttura dati molto utilizzata &#232; la lista. Le liste saranno oggetto del capitolo successivo!")
 ```
 
 
