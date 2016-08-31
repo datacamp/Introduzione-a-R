@@ -4,6 +4,9 @@ title       : Liste
 description : Le liste, contrariamente ai vettori, possono contenere tipi di dato differenti tra loro. Questo capitolo introduttivo ti insegnerà come creare liste, assegnare loro nomi e selezionare elementi appartenenti a liste.
 
 --- type:NormalExercise xp:100 skills:1 key:cb9dcfd168
+```{r setup, include=FALSE}
+Sys.setlocale("LC_CTYPE", "it_IT.UTF-8")
+```
 ## Liste, a che cosa servono?
 
 Congratulazioni! A questo punto del corso conosci già i seguenti elementi:
