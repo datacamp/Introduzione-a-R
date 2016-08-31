@@ -101,7 +101,7 @@ fattore_vettore_genere
 test_object("fattore_vettore_genere",
             incorrect_msg = "Hai assegnato il fattore di `vettore_genere` a `fattore_vettore_genere`?")
 test_output_contains("fattore_vettore_genere", incorrect_msg = "Non dimenticarti di stampare `fattore_vettore_genere`!")
-success_msg("Ottimo! Se vuoi scoprire qualcosa di più sulla funzione `factor()`, digita `?factor` nella console R. Questa operazione aprirà la relativa pagina di aiuto. Continua all'esercizio successivo.");
+success_msg("Ottimo! Se vuoi scoprire qualcosa di pi&#249; sulla funzione `factor()`, digita `?factor` nella console R. Questa operazione aprir&#224; la relativa pagina di aiuto. Continua all'esercizio successivo.");
 ```
 
 
@@ -228,7 +228,7 @@ test_object("vettore_sondaggio", undefined_msg = msg, incorrect_msg = msg)
 msg = "Non cancellare o modificare il codice per creare il fattore."
 test_function("factor", "x", allow_extra = FALSE, not_called_msg = msg, incorrect_msg = msg)
 test_object("factor_vettore_sondaggio", eq_condition = "equal",
-            incorrect_msg = paste("Hai assegnato correttamente i livelli a `factor_vettore_sondaggio`? Utilizza `levels(factor_vettore_sondaggio) <- c(\"Femmina\", \"Maschio\")`. Ricorda che R è case sensitive!"))
+            incorrect_msg = paste("Hai assegnato correttamente i livelli a `factor_vettore_sondaggio`? Utilizza `levels(factor_vettore_sondaggio) <- c(\"Femmina\", \"Maschio\")`. Ricorda che R &#232; case sensitive!"))
 success_msg("Fantastico! Procedi all'esercizio successivo.")
 ```
 
@@ -287,7 +287,7 @@ summary(factor_vettore_sondaggio)
 
 *** =sct
 ```{r}
-msg = "Do not change anything about the first few lines that define `vettore_sondaggio` and `factor_vettore_sondaggio`."
+msg = "Non cambiare la definizione delle variabili `vettore_sondaggio` e `factor_vettore_sondaggio`."
 test_object("vettore_sondaggio", undefined_msg = msg, incorrect_msg = msg)
 test_object("factor_vettore_sondaggio", eq_condition = "equal", undefined_msg = msg, incorrect_msg = msg)
 msg <- "Hai utilizzato correttamente la funzione `summary()` per generare un sommario della variabile `%s`?"
@@ -349,7 +349,7 @@ maschio > femmina
 
 *** =sct
 ```{r}
-msg = "Do not change anything about the code; simply hit Submit Answer and look at the result."
+msg = "Non modificare il codice; clicca su Submit Answer e osserva il risultato."
 test_object("vettore_sondaggio", undefined_msg = msg, incorrect_msg = msg)
 test_object("factor_vettore_sondaggio", eq_condition = "equal", undefined_msg = msg, incorrect_msg = msg)
 test_object("maschio", undefined_msg = msg, incorrect_msg = msg)
@@ -402,7 +402,7 @@ vettore_velocita <- c("veloce", "lento", "lento", "veloce", "velocissimo")
 *** =sct
 ```{r}
 test_object("vettore_velocita", 
-            incorrect_msg = "Assicurati di assegnare il giusto vettore a vettore_velocita. Non usare lettere maiuscole; R è case sensitive!")
+            incorrect_msg = "Assicurati di assegnare il giusto vettore a vettore_velocita. Non usare lettere maiuscole; R &#232; case sensitive!")
 success_msg("Ottimo lavoro! Continua al prossimo esercizio.")
 ```
 
@@ -465,7 +465,7 @@ test_function("factor", "x", incorrect_msg = "Il primo argomento passato a `fact
 test_function("factor", "ordered", incorrect_msg = "Assicurati di fissare `ordered = TRUE` nella chiamata della funzione `factor()`.")
 test_function("factor", "levels", incorrect_msg = "Assicurati di fissare `levels = c(\"lento\", \"veloce\", \"velocissimo\")` nella chiamata alla funzione `factor()`.")
 test_object("factor_vettore_velocita", eq_condition = "equal",
-            incorrect_msg = "C'è ancora qualcosa di errato in `factor_vettore_velocita`; assicurati di passare solo `vettore_velocita`, `ordered = TRUE` and `levels = c(\"lento\", \"veloce\", \"velocissimo\")` dentro la chiamata alla funzione `factor()`.")
+            incorrect_msg = "C'&#232; ancora qualcosa di errato in `factor_vettore_velocita`; assicurati di passare solo `vettore_velocita`, `ordered = TRUE` and `levels = c(\"lento\", \"veloce\", \"velocissimo\")` dentro la chiamata alla funzione `factor()`.")
 success_msg("Ottimo! Osserva la console. Come puoi notare, viene indicato che esiste un ordine associato ai livelli, attraverso l'uso del simbolo `<`. Prosegui all'esercizio successivo.")
 ```
 
@@ -534,7 +534,7 @@ test_object("da2", eq_condition = "equal", incorrect_msg = sprintf(msg, "secondo
 test_object("da5", eq_condition = "equal", incorrect_msg = sprintf(msg, "quinto", "5"))
 test_output_contains("da2 > da5", incorrect_msg = "Hai effettuato correttamente il confronto tra `da2` e `da5`? Puoi utilizzare l'operatore `>`. Stampa il risultato.")
 
-success_msg("Fantastico! Quali conclusioni hai tratto dal risultato? Il secondo analista si sta lamentando del quinto quando invece è lui che sta rallentando tutto il processo! Questo esercizio conclude il capitolo sui fattori. Con una solida base sui vettori, sulle matrici e sui fattori, sei finalmente pronto per entrare nel meraviglioso mondo dei data frames, una delle più importanti strutture dati in R!")
+success_msg("Fantastico! Quali conclusioni hai tratto dal risultato? Il secondo analista si sta lamentando del quinto quando invece &#232; lui che sta rallentando tutto il processo! Questo esercizio conclude il capitolo sui fattori. Con una solida base sui vettori, sulle matrici e sui fattori, sei finalmente pronto per entrare nel meraviglioso mondo dei data frames, una delle pi&#249; importanti strutture dati in R!")
 ```
 
 
