@@ -4,6 +4,9 @@ title       : Introduzione alle basi di R
 description : "In questo capitolo compirai i tuoi primi passi su R, imparerai ad utilizzare la console come una calcolatrice e come effettuare l'assegnazione delle variabili. Imparerai inoltre a conoscere i principali tipi di dato utilizzati in R. Pronto? Iniziamo!"
 
 --- type:NormalExercise xp:100 skills:1 key:c44b81c96e
+```{r}
+Sys.setlocale("LC_CTYPE", "it_IT.UTF-8")
+```
 ## Come funziona
 
 Nell'editor alla tua destra puoi inserire codice R per risolvere gli esercizi proposti.
