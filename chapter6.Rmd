@@ -4,9 +4,6 @@ title       : Liste
 description : Le liste, contrariamente ai vettori, possono contenere tipi di dato differenti tra loro. Questo capitolo introduttivo ti insegnerà come creare liste, assegnare loro nomi e selezionare elementi appartenenti a liste.
 
 --- type:NormalExercise xp:100 skills:1 key:cb9dcfd168
-```{r setup, include=FALSE}
-Sys.setlocale("LC_CTYPE", "it_IT.UTF-8")
-```
 ## Liste, a che cosa servono?
 
 Congratulazioni! A questo punto del corso conosci già i seguenti elementi:
@@ -226,7 +223,7 @@ test_object("mia_lista",
 test_object("mia_lista", eq_condition = "equal",
             incorrect_msg = "Sembra che i nomi degli elementi di `mia_lista` non siano corretti. Assicurati di utilizzare i seguenti nomi: `vec`, `mat` e `df`. Controlla il suggerimento (hint) se non riesci a trovare la soluzione.");
 test_output_contains("mia_lista", incorrect_msg = "Non dimenticarti di stampare `mia_lista` nella console! Aggiungi semplicemente `mia_lista` in una nuova riga nell'editor.")
-success_msg("Ottimo! Adesso non solo sai come costruire le liste, sai anche come assegnare nomi ai loro elementi. Tutto ci&#242; ti tornerà molto utile nella pratica. Prosegui all'esercizio successivo.")
+success_msg("Ottimo! Adesso non solo sai come costruire le liste, sai anche come assegnare nomi ai loro elementi. Tutto ci&#242; ti torner&#224; molto utile nella pratica. Prosegui all'esercizio successivo.")
 ```
 
 
