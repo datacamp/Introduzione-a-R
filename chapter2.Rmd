@@ -499,7 +499,7 @@ totale_poker <- sum(vettore_poker)
 totale_roulette <-  sum(vettore_roulette)
 
 # Vincite complessive
-totale_settimana <- total_roulette + total_poker
+totale_settimana <- totale_roulette + totale_poker
 
 # Stampa total_week
 totale_settimana
@@ -585,11 +585,11 @@ test_object("vettore_poker", eq_condition = "equal", undefined_msg = msg, incorr
 test_object("vettore_roulette", eq_condition = "equal", undefined_msg = msg, incorrect_msg = msg)
 
 test_object("totale_poker", 
-            incorrect_msg = "Assicurati di assegnare a `total_poker` la somma di `vettore_poker`. Usa `sum()`.")
+            incorrect_msg = "Assicurati di assegnare a `totale_poker` la somma di `vettore_poker`. Usa `sum()`.")
 test_object("totale_roulette",
-            incorrect_msg = "Assicurati di assegnare a `total_roulette` la somma di `vettore_roulette`. Usa `sum()`.")
+            incorrect_msg = "Assicurati di assegnare a `totale_roulette` la somma di `vettore_roulette`. Usa `sum()`.")
 test_output_contains("totale_poker > totale_roulette",
-                     incorrect_msg = "Hai effettuato il confronto in modo corretto? Per verificare se `total_poker` &#232; maggiore di `total_roulette`, puoi utilizzare il codice seguente `total_poker > total_roulette`.")
+                     incorrect_msg = "Hai effettuato il confronto in modo corretto? Per verificare se `total_poker` &#232; maggiore di `totale_roulette`, puoi utilizzare il codice seguente `total_poker > totale_roulette`.")
 success_msg("Ottimo lavoro! Procedi al prossimo esercizio.")
 ```
 
