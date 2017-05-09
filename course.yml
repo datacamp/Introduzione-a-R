@@ -1,14 +1,8 @@
 title: Introduzione a R
 author_field: Michy Alice @Quantide
 difficulty_level: 1
-programming_language: R
+programming_language: r
+from: "base-r-prod:24"
 time_needed: 4 hours
-description: "In questo corso introduttivo a R imparerai le basi di questo meraviglioso linguaggio open source. In particolare, imparerai ad utilizzare i vettori, i fattori, le liste e i data frames.
-<br> Questo corso ti permetterà di acquisire le basi per iniziare ad effettuare le tue prime analisi dati.
-<br><br>Con più di 2 milioni di utenti in tutto il mondo, R sta rapidamente diventando il principale linguaggio utilizzato nelle analisi statistiche e nel mondo data science. Ogni anno, il numero di utenti R aumenta circa del 40% e un numero crescente di organizzazioni lo utilizzano quotidianamente. Approfitta di questo corso gratuito per imparare le basi di R e iniziare ad utilizzare questo potente linguaggio!"
-author_bio: "Michy Alice è uno studente presso il Politecnico di Milano e un R-enthusiast. La passione per il mondo data science, inizialmente coltivata come hobby e poi cresciuta esponenzialmente, lo ha portato a collaborare con <a href='http://www.quantide.com' target='_blank'>Quantide</a>.<br><br>
-
-<a href='http://www.quantide.com' target='_blank'>Quantide</a> è un'azienda con sede a Milano specializzata in formazione e consulenza con R.<br>
-
-Quantide da dieci anni supporta i propri clienti nella conoscenza e nell'utilizzo di R, sviluppa pacchetti R ad hoc, eroga corsi di formazione R per aziende ed università, divulga la conoscenza di R tramite il blog <a href='http://www.quantide.com/website/blog/' target='_blank'>Quantide.com</a> e il supporto alla community <a href='http://www.milanor.net/blog' target='_blank'>MilanoR</a>."
-
+description: "In questo corso introduttivo a R imparerai le basi di questo meraviglioso linguaggio open source. In particolare, imparerai ad utilizzare i vettori, i fattori, le liste e i data frames. Questo corso ti permetterà di acquisire le basi per iniziare ad effettuare le tue prime analisi dati. Con più di 2 milioni di utenti in tutto il mondo, R sta rapidamente diventando il principale linguaggio utilizzato nelle analisi statistiche e nel mondo data science. Ogni anno, il numero di utenti R aumenta circa del 40% e un numero crescente di organizzazioni lo utilizzano quotidianamente. Approfitta di questo corso gratuito per imparare le basi di R e iniziare ad utilizzare questo potente linguaggio!"
+author_bio: "Michy Alice è uno studente presso il Politecnico di Milano e un R-enthusiast. La passione per il mondo data science, inizialmente coltivata come hobby e poi cresciuta esponenzialmente, lo ha portato a collaborare con <a href='http://www.quantide.com' target='_blank'>Quantide</a>. <a href='http://www.quantide.com' target='_blank'>Quantide</a> è un'azienda con sede a Milano specializzata in formazione e consulenza con R.<br>Quantide da dieci anni supporta i propri clienti nella conoscenza e nell'utilizzo di R, sviluppa pacchetti R ad hoc, eroga corsi di formazione R per aziende ed università, divulga la conoscenza di R tramite il blog <a href='http://www.quantide.com/website/blog/' target='_blank'>Quantide.com</a> e il supporto alla community <a href='http://www.milanor.net/blog' target='_blank'>MilanoR</a>."
