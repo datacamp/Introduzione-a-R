@@ -335,13 +335,6 @@ test_object("risultato_mondo",
 
 # TODO: Fix in testwhat
 msg <- "Hai usato `cbind()` per aggiungere `risultato_mondo` a `matrice_star_wars`? Dovresti passare `matrice_star_wars` e `world_wide_vector` a `cbind()`, in questo ordine. La matrice risultante, `all_wars_matrix`, dovrebbe avere tre righe e tre colonne."
-test_object("all_wars_matrix", eval = FALSE)
-test_what(
-  expect_equal(
-    dim(get("all_wars_matrix", get_solution_env())), 
-    dim(get("all_wars_matrix", .GlobalEnv))),
-  feedback = msg)
-
 test_object("all_wars_matrix", incorrect_msg = msg)
 success_msg("Ottimo lavoro! Dopo aver aggiunto una colonna ad una matrice, il prossimo step &#232; aggiungere righe! Impara come nell'esercizio successivo.")
 ```
@@ -416,19 +409,6 @@ all_wars_matrix <- rbind(matrice_star_wars, matrice_star_wars2)
 msg = "Non sovrascrivere le variabili predefinite nel workspace (`matrice_star_wars` e `matrice_star_wars2`)."
 test_object("matrice_star_wars", eq_condition = "equal", undefined_msg = msg, incorrect_msg = msg)
 test_object("matrice_star_wars2", eq_condition = "equal", undefined_msg = msg, incorrect_msg = msg)
-
-# Fix until testwhat gets updated again
-# TODO: Fix in testwhat
-test_object("all_wars_matrix", eval = FALSE)
-test_what(
-  expect_equal(
-    dim(get("all_wars_matrix", get_solution_env())), 
-    dim(get("all_wars_matrix", .GlobalEnv))),
-  feedback = 
-    paste("Assicurati di utilizzare la funzione `rbind()` con 2 argomenti: `matrice_star_wars`",
-          "e `matrice_star_wars2`. Dovresti ottenere una matrice",
-          "con le seguenti dimensioni: 6 righe e 2 colonne."))
-
 test_object("all_wars_matrix", incorrect_msg = "Hai utilizzato `rbind()` in modo corretto per creare `all_wars_matrix()`? `rbind()` dovrebbe prendere due argomenti: `matrice_star_wars` e `matrice_star_wars2`, in questo ordine.")
 
 success_msg("Fantastico! Continua con l'esercizio successivo e scopri come combinare i risultati della funzione `rbind()` con la funzione `colSums()`!")
